@@ -57,27 +57,10 @@ nav {
 }
 
 /* HERO BANNER */
-.hero {
-  position: relative;
-  background: url('images/main-banner.png') no-repeat center/cover;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  z-index: 1;
-}
+
 
 /* OVERLAY */
 .hero::before,
-.footer-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 0;
-}
 
 /* TEXT ABOVE OVERLAY */
 .hero-text {
@@ -210,4 +193,23 @@ button {
     height: auto;
     display: block;
   }
+}
+/* COMMON BANNER IMAGE */
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* FOOTER SECTION */
+.footer-banner {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px; /* spacing from content */
 }
