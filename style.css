@@ -85,3 +85,11 @@ button {
   padding: 10px;
   border: none;
 }
+.hero::before,
+.footer-banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
