@@ -1,0 +1,35 @@
+body {
+  font-family: Arial;
+  background: var(--background-light);
+  color: var(--text-dark);
+}
+
+header {
+  background: var(--primary-purple);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: var(--light-purple);
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+}
+
+button {
+  background: var(--gold-accent);
+  color: white;
+  padding: 10px;
+  border: none;
+}
