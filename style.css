@@ -57,13 +57,13 @@ nav {
 /* HERO BANNER */
 .hero {
   position: relative;
-  background: url('images/main-banner.png') no-repeat center/cover;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  color: white;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* OVERLAY FIX */
@@ -80,8 +80,11 @@ nav {
 
 /* TEXT ABOVE OVERLAY */
 .hero-text {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 .hero-text h1 {
