@@ -158,12 +158,31 @@ button {
     font-size: 14px;
   }
 
+  /* ✅ HERO FIX */
+  .hero {
+    height: auto;                  /* remove fixed height */
+    min-height: unset;
+    padding: 0;                    /* remove extra space */
+    background-size: contain;      /* show full image */
+    background-position: center;
+  }
+
+  /* ✅ FOOTER FIX */
+  .footer-banner {
+    height: auto;                  /* remove fixed height */
+    min-height: unset;
+    padding: 0;
+    background-size: contain;
+    background-position: center;
+  }
+
+  /* TEXT ADJUST */
   .hero-text h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .hero-text p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   section {
