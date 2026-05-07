@@ -12,6 +12,7 @@ body {
   font-family: Arial, sans-serif;
   background: var(--background-light);
   color: var(--text-dark);
+  overflow-x: hidden; /* ✅ prevents side cut */
 }
 
 /* HEADER */
@@ -54,20 +55,26 @@ nav {
   padding-right: 15px;
 }
 
-/* HERO & FOOTER IMAGE */
+/* ================= BANNERS ================= */
+
+/* REMOVE padding ONLY for banners */
+.hero,
+.footer-banner {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* FULL WIDTH IMAGE */
 .banner-img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.hero,
-.footer-banner {
-  width: 100%;
-  overflow: hidden;
-}
+/* ================= CONTENT ================= */
 
-/* SECTION */
 section {
   padding: 20px;
 }
@@ -75,16 +82,19 @@ section {
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
 }
 
 /* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
 
+  /* SHOW HAMBURGER */
   .menu-icon {
     display: block;
   }
 
+  /* HIDE MENU INITIALLY */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -93,6 +103,7 @@ footer {
     width: 100%;
   }
 
+  /* SHOW WHEN CLICKED */
   .nav-links.show {
     display: flex;
   }
@@ -102,6 +113,7 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.3);
   }
 
+  /* TEXT RESIZE */
   header h1 {
     font-size: 22px;
   }
