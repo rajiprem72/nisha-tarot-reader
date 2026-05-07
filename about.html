@@ -3,21 +3,74 @@
 <head>
   <title>About Nisha</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #9b4d96;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .about-content {
+      flex: 2;
+    }
+
+    .about-content h1 {
+      color: #9b4d96;
+    }
+
+    .about-content ul {
+      margin-top: 10px;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>About Nisha</h1>
+<div class="about-container">
 
-<p>Nisha Tiwari is a Tarot Reader & Life Coach with 10+ years of experience.</p>
+  <!-- IMAGE SECTION -->
+  <div class="about-image">
+    <img src="images/nisha.jpg" alt="Nisha Tiwari">
+  </div>
 
-<ul>
-  <li>Combines Tarot + NLP + EFT + TFT</li>
-  <li>Helps in emotional healing</li>
-  <li>Transforms beginners into professionals</li>
-</ul>
+  <!-- CONTENT SECTION -->
+  <div class="about-content">
+    <h1>About Nisha</h1>
 
-<h3>Mission</h3>
-<p>To awaken intuition and empower people to heal and grow.</p>
+    <p>
+      Nisha Tiwari is an experienced Tarot Reader and Life Coach with over 10 years of guiding clients and students.
+    </p>
+
+    <ul>
+      <li>Combines Tarot with NLP, EFT and TFT techniques</li>
+      <li>Helps in emotional healing and clarity</li>
+      <li>Transforms beginners into confident tarot readers</li>
+    </ul>
+
+    <h3>Mission</h3>
+    <p>
+      To awaken intuition, remove blockages, and empower individuals to heal, grow, and create a meaningful life.
+    </p>
+  </div>
+
+</div>
 
 </body>
 </html>
