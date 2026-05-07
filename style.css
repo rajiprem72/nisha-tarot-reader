@@ -1,3 +1,5 @@
+//DESKTOP VIEW
+
 :root {
   --primary-purple: #9b4d96;
   --light-purple: #c77dbb;
@@ -9,7 +11,7 @@
 /* RESET */
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: var(--background-light);
   color: var(--text-dark);
 }
@@ -57,34 +59,30 @@ nav {
 /* HERO BANNER */
 .hero {
   position: relative;
+  background: url('images/main-banner.png') no-repeat center/cover;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: white;
+  z-index: 1;
 }
 
-.hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* OVERLAY FIX */
+/* OVERLAY */
 .hero::before,
 .footer-banner::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.4);
+  z-index: 0;
 }
 
 /* TEXT ABOVE OVERLAY */
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-text h1 {
@@ -99,12 +97,14 @@ nav {
 .footer-banner {
   position: relative;
   background: url('images/footer-banner.png') no-repeat center/cover;
-  height: 30vh;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
+  z-index: 1;
+  clear: both;
 }
 
 .footer-banner h2 {
@@ -116,6 +116,7 @@ nav {
 /* SECTION */
 section {
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 /* BUTTON */
@@ -124,11 +125,16 @@ button {
   color: white;
   padding: 10px;
   border: none;
+  cursor: pointer;
 }
 
-/* MOBILE */
+
+// MOBILE VIEW
+
+
 @media (max-width: 768px) {
 
+  /* MENU */
   .menu-icon {
     display: block;
   }
@@ -150,6 +156,7 @@ button {
     border-top: 1px solid rgba(255,255,255,0.3);
   }
 
+  /* HEADER TEXT */
   header h1 {
     font-size: 22px;
   }
@@ -158,25 +165,27 @@ button {
     font-size: 14px;
   }
 
-  /* ✅ HERO FIX */
+  /* HERO FIX */
   .hero {
-    height: auto;                  /* remove fixed height */
-    min-height: unset;
-    padding: 0;                    /* remove extra space */
-    background-size: contain;      /* show full image */
+    background-size: contain;   /* show full image */
     background-position: center;
-  }
-
-  /* ✅ FOOTER FIX */
-  .footer-banner {
-    height: auto;                  /* remove fixed height */
+    background-repeat: no-repeat;
+    height: auto;
     min-height: unset;
     padding: 0;
-    background-size: contain;
-    background-position: center;
   }
 
-  /* TEXT ADJUST */
+  /* FOOTER FIX */
+  .footer-banner {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    min-height: unset;
+    padding: 0;
+  }
+
+  /* TEXT SCALE */
   .hero-text h1 {
     font-size: 20px;
   }
@@ -185,13 +194,20 @@ button {
     font-size: 13px;
   }
 
+  .footer-banner h2 {
+    font-size: 18px;
+  }
+
+  /* CONTENT */
   section {
     padding: 15px;
     font-size: 14px;
   }
 
+  /* IMAGE SAFETY */
   img {
     max-width: 100%;
     height: auto;
+    display: block;
   }
 }
