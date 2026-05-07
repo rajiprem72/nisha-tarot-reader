@@ -6,47 +6,15 @@
   --text-dark: #333333;
 }
 
-/* HERO BANNER */
-.hero {
-  background: url('images/main-banner.png') no-repeat center/cover;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.hero-text h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.hero-text p {
-  font-size: 20px;
-}
-
-/* FOOTER BANNER */
-.footer-banner {
-  background: url('images/footer-banner.png') no-repeat center/cover;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
-
-.footer-banner h2 {
-  font-size: 28px;
-}
-
+/* RESET */
 body {
+  margin: 0;
   font-family: Arial;
   background: var(--background-light);
   color: var(--text-dark);
 }
 
+/* HEADER */
 header {
   background: var(--primary-purple);
   color: white;
@@ -54,60 +22,16 @@ header {
   padding: 20px;
 }
 
+/* NAVBAR */
 nav {
   background: var(--light-purple);
-  padding: 15px;
-  text-align: center;
+  padding: 10px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-nav a:hover {
-  color: var(--gold-accent);
-}
-
-section {
-  padding: 20px;
-}
-
-button {
-  background: var(--gold-accent);
-  color: white;
-  padding: 10px;
-  border: none;
-}
-.hero::before,
-.footer-banner::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-}
-
-/* RESET */
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-/* NAVBAR */
-nav {
-  background: var(--light-purple);
-  padding: 10px;
-  position: relative;
-}
-
-/* MENU LINKS */
+/* NAV LINKS */
 .nav-links {
   display: flex;
   justify-content: center;
@@ -120,7 +44,7 @@ nav {
   font-weight: bold;
 }
 
-/* HAMBURGER ICON */
+/* HAMBURGER */
 .menu-icon {
   display: none;
   font-size: 26px;
@@ -130,7 +54,76 @@ nav {
   padding-right: 15px;
 }
 
-/* MOBILE VIEW */
+/* HERO BANNER */
+.hero {
+  position: relative;
+  background: url('images/main-banner.png') no-repeat center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* OVERLAY FIX */
+.hero::before,
+.footer-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+/* TEXT ABOVE OVERLAY */
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+/* FOOTER BANNER */
+.footer-banner {
+  position: relative;
+  background: url('images/footer-banner.png') no-repeat center/cover;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.footer-banner h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 28px;
+}
+
+/* SECTION */
+section {
+  padding: 20px;
+}
+
+/* BUTTON */
+button {
+  background: var(--gold-accent);
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
 
   .menu-icon {
@@ -145,13 +138,13 @@ nav {
     width: 100%;
   }
 
+  .nav-links.show {
+    display: flex;
+  }
+
   .nav-links a {
     padding: 12px;
     border-top: 1px solid rgba(255,255,255,0.3);
-  }
-
-  .nav-links.show {
-    display: flex;
   }
 
   header h1 {
@@ -159,6 +152,14 @@ nav {
   }
 
   header p {
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p {
     font-size: 14px;
   }
 
