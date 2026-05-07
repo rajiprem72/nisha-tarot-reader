@@ -6,6 +6,41 @@
   --text-dark: #333333;
 }
 
+/* HERO BANNER */
+.hero {
+  background: url('images/main-banner.jpg') no-repeat center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+/* FOOTER BANNER */
+.footer-banner {
+  background: url('images/footer-banner.jpg') no-repeat center/cover;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.footer-banner h2 {
+  font-size: 28px;
+}
+
 body {
   font-family: Arial;
   background: var(--background-light);
