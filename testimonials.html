@@ -3,24 +3,87 @@
 <head>
   <title>Testimonials</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .testimonial-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .testimonial-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #9b4d96;
+    }
+
+    .testimonial-card h3 {
+      margin: 10px 0 5px;
+      color: #9b4d96;
+    }
+
+    .testimonial-card p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Testimonials</h1>
+<h1 style="text-align:center;">Testimonials</h1>
 
-<section>
-  <h3>Prateema Sharma</h3>
-  <p>“Life-changing experience. I started my own consulting office!”</p>
+<div class="testimonial-container">
 
-  <h3>Sethulakshmi G</h3>
-  <p>“She is not just a reader but a healer.”</p>
+  <!-- Testimonial 1 -->
+  <div class="testimonial-card">
+    <img src="images/prateema.jpg" alt="Prateema Sharma">
+    <h3>Prateema Sharma</h3>
+    <p><strong>Founder – Creative Art School</strong></p>
+    <p><b>A Mentor Who inspires</b><br>
+Learning from her has been a life changing experience. She explains tarot with clarity, patience and deep insights making even complex concepts easy to understand. She even went extra to help us improve our intuitive skills and build our confidence to read tarot with accuracy. I personal liked the moon healing therapy, as it helped me a lot in self-love, growth and healing.  The programs are highly interactive and all my concerns were solved. She inspires, self-growth, emotional healing, removes blockages and spiritual alignment.
+I feel empowered, confident and ready to guide others. I have started my own consulting office and make money too !! Thanks to her coaching.</p>
+  </div>
 
-  <h3>Suyash Tyagi</h3>
-  <p>“Clarity, confidence, and transformation.”</p>
+  <!-- Testimonial 2 -->
+  <div class="testimonial-card">
+    <img src="images/sethulakshmi.jpg" alt="Sethulakshmi">
+    <h3>Sethulakshmi G</h3>
+    <p><strong>HR Manager</strong></p>
+    <p><b>Guidance that Transforms me</b><br>She is not just a Tarot reader – she is a healer. Her insights helped me break my career and emotional blocks and now I see life from a new perspective. Her calm, confident, accurate and compassionate energy helped me progress step by step to my success journey. I feel more confident and universally aligned, Thanks to her guidance.</p>
+  </div>
 
-  <h3>Hitesh Rathore</h3>
-  <p>“Deeply transformative learning experience.”</p>
-</section>
+  <!-- Testimonial 3 -->
+  <div class="testimonial-card">
+    <img src="images/suyash.jpg" alt="Suyash Tyagi">
+    <h3>Suyash Tyagi</h3>
+    <p><strong>Compliance Manager</strong></p>
+    <p><b>Clarity and Growth </b><br>
+Her coaching helped me move my past confusions and self-doubts. She is patient, apt, clear and intuitive making tarot a joyful and transformative journey. Every session left me motivated, especially the Q&A session at the end helped me revalidate my understanding about TAROT, I now feel more aligned, intuitive and capable as a tarot reader. As a mystic traveller, my journey continues.</p>
+  </div>
+
+  <!-- Testimonial 4 -->
+  <div class="testimonial-card">
+    <img src="images/hitesh.jpg" alt="Hitesh Rathore">
+    <h3>Hitesh Rathore</h3>
+    <p><strong>IT Program Director</strong></p>
+    <p> <b>Life-Changing Tarot Coaching</b><br>
+Learning under her guidance has been a deeply transformative experience. She balances, practical knowledge with spiritual and mystic insights helping me become a skilled, confident and intuitive tarot card reader. She is always available to guide us in case of any issues in our readings or need guidance. I feel empowered to help others and grow in this journey.</p>
+  </div>
+
+</div>
 
 </body>
 </html>
