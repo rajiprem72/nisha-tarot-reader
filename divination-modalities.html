@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarot by Nisha</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <h1>Welcome to the Hall of Tarot</h1>
+  <p>Where Every Card Tells a Story</p>
+</header>
+
+<div id="navbar"></div>
+
+<script>
+fetch("navigation.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+<!-- HERO / HEADER BANNER -->
+<section class="hero">
+  <img src="images/main-banner.png" alt="Tarot Banner" class="banner-img">
+</section>
+
+
+<!-- ================= OTHER DIVINATION MODALITIES SECTION ================= -->
+
+<section class="modalities-section">
+
+  <div class="container">
+
+    <h2 class="section-title">Other Divination Modalities</h2>
+
+    <div class="modalities-grid">
+
+      <!-- Runes Divination -->
+      <div class="modality-card">
+        <div class="icon">ᚱ</div>
+        <h3>Runes Divination</h3>
+        <p>
+          Runes divination is a spiritual and symbolic practice that uses ancient alphabet symbols
+          called “runes” for guidance, reflection, and intuitive insight.
+          It is deeply connected with old Norse and Germanic traditions from Northern Europe.
+        </p>
+      </div>
+
+      <!-- Candle Wax Reading -->
+      <div class="modality-card">
+        <div class="icon">🕯️</div>
+        <h3>Candle Wax Reading</h3>
+        <p>
+          Candle wax reading, also known as ceromancy, is a form of divination where the shapes,
+          patterns, and residue left behind after a candle burns are interpreted for spiritual
+          symbolism, reflection, and guidance.
+        </p>
+      </div>
+
+      <!-- Life Coach Mastery -->
+      <div class="modality-card">
+        <div class="icon">🌟</div>
+        <h3>Life Coach Mastery</h3>
+        <p>
+          Advanced learning and personal development programs focused on becoming a skilled life coach.
+          A life coach helps individuals improve areas such as:
+        </p>
+
+        <ul>
+          <li>Goals and Motivation</li>
+          <li>Confidence Building</li>
+          <li>Career Direction</li>
+          <li>Relationships</li>
+          <li>Productivity</li>
+          <li>Mindset and Habits</li>
+        </ul>
+      </div>
+
+      <!-- EFT / TFT -->
+      <div class="modality-card">
+        <div class="icon">💫</div>
+        <h3>EFT / TFT</h3>
+        <p>
+          EFT (Emotional Freedom Techniques) and TFT (Thought Field Therapy) are emotional wellness,
+          stress-management, and self-help tapping techniques.
+        </p>
+
+        <h4>Classes Include:</h4>
+
+        <ul>
+          <li>Learning tapping points</li>
+          <li>Guided tapping exercises</li>
+          <li>Discussion about emotions and mindset</li>
+        </ul>
+      </div>
+
+      <!-- Crystal Healing -->
+      <div class="modality-card">
+        <div class="icon">🔮</div>
+        <h3>Crystal Healing Courses</h3>
+        <p>
+          Learn how crystals are used in spiritual and holistic wellness practices.
+          Courses focus on energy work, meditation, chakra concepts, relaxation techniques,
+          and symbolic meanings associated with different crystals.
+        </p>
+
+        <h4>Courses Designed For:</h4>
+
+        <ul>
+          <li>Personal Spiritual Learning</li>
+          <li>Self-Reflection and Mindfulness</li>
+          <li>Holistic Wellness Practices</li>
+          <li>Becoming a Wellness or Spiritual Practitioner</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CSS ================= -->
+
+<style>
+
+.modalities-section{
+    padding: 80px 20px;
+    background: #f8f4ff;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 42px;
+    color: #5b2c83;
+    margin-bottom: 55px;
+    font-weight: bold;
+}
+
+.modalities-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.modality-card{
+    background: #ffffff;
+    padding: 35px 28px;
+    border-radius: 22px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.modality-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 14px 30px rgba(91,44,131,0.18);
+}
+
+.icon{
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.modality-card h3{
+    font-size: 26px;
+    color: #5b2c83;
+    margin-bottom: 15px;
+}
+
+.modality-card h4{
+    margin-top: 18px;
+    margin-bottom: 10px;
+    color: #7a3cb0;
+    font-size: 18px;
+}
+
+.modality-card p{
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.modality-card ul{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.modality-card ul li{
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.6;
+}
+
+@media(max-width:768px){
+
+.section-title{
+    font-size: 32px;
+}
+
+.modality-card{
+    padding: 28px 20px;
+}
+
+.modality-card h3{
+    font-size: 22px;
+}
+
+.modality-card p,
+.modality-card ul li{
+    font-size: 15px;
+}
+
+}
+
+</style>
+
+
+
+<!-- FOOTER BANNER -->
+<section class="footer-banner">
+  <img src="images/footer-banner.png" alt="Tarot Footer" class="banner-img">
+</section>
+
+  
+<footer>
+  <p>© 2026 Tarot by Nisha</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
