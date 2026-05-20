@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarot by Nisha</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <h1>Welcome to the Hall of Tarot</h1>
+  <p>Where Every Card Tells a Story</p>
+</header>
+
+<div id="navbar"></div>
+
+<script>
+fetch("navigation.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+<!-- HERO / HEADER BANNER -->
+<section class="hero">
+  <img src="images/main-banner.png" alt="Tarot Banner" class="banner-img">
+</section>
+
+
+<!-- ================= Blog / Spiritual Insights ================= -->
+
+<section class="blog-section">
+
+  <div class="container">
+
+    <h2 class="section-title">Blog / Spiritual Insights</h2>
+
+        <div class="update-icon">🚧</div>
+
+        <h3>Page Will Be Updated Shortly</h3>
+
+        <p>
+          We are currently working on improving our online booking
+          and appointment system to provide a better experience.
+          Please check back soon.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- FOOTER BANNER -->
+<section class="footer-banner">
+  <img src="images/footer-banner.png" alt="Tarot Footer" class="banner-img">
+</section>
+
+  
+<footer>
+  <p>© 2026 Tarot by Nisha</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
