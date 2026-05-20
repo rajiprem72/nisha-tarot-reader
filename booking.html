@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarot by Nisha</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <h1>Welcome to the Hall of Tarot</h1>
+  <p>Where Every Card Tells a Story</p>
+</header>
+
+<div id="navbar"></div>
+
+<script>
+fetch("navigation.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+<!-- HERO / HEADER BANNER -->
+<section class="hero">
+  <img src="images/main-banner.png" alt="Tarot Banner" class="banner-img">
+</section>
+
+
+<!-- ================= BOOKING / APPOINTMENT SECTION ================= -->
+
+<section class="booking-section">
+
+  <div class="container">
+
+    <h2 class="section-title">Booking / Appointment</h2>
+
+    <div class="booking-wrapper">
+
+      <!-- Left Content -->
+      <div class="booking-content">
+
+        <div class="booking-item">
+          <span>⏰</span>
+          <h3>Time Slots</h3>
+          <p>
+            Flexible appointment scheduling with convenient time slot selection
+            for students and clients.
+          </p>
+        </div>
+
+        <div class="booking-item">
+          <span>💳</span>
+          <h3>Payment Gateway</h3>
+          <p>
+            Secure online payment options for course enrollment,
+            workshops, and consultations.
+          </p>
+        </div>
+
+        <div class="booking-item">
+          <span>✅</span>
+          <h3>Auto Confirmation</h3>
+          <p>
+            Instant booking confirmation through email or mobile notification
+            after successful registration.
+          </p>
+        </div>
+
+        <div class="booking-item">
+          <span>📱</span>
+          <h3>WhatsApp Integration</h3>
+          <p>
+            Quick communication and support through WhatsApp for guidance,
+            reminders, and appointment updates.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Right Content -->
+      <div class="update-box">
+
+        <div class="update-icon">🚧</div>
+
+        <h3>Page Will Be Updated Shortly</h3>
+
+        <p>
+          We are currently working on improving our online booking
+          and appointment system to provide a better experience.
+          Please check back soon.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CSS ================= -->
+
+<style>
+
+.booking-section{
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f8f5ff, #efe5ff);
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 42px;
+    color: #5b2c83;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+.booking-wrapper{
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.booking-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.booking-item{
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.booking-item:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(91,44,131,0.18);
+}
+
+.booking-item span{
+    font-size: 42px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.booking-item h3{
+    font-size: 24px;
+    color: #5b2c83;
+    margin-bottom: 12px;
+}
+
+.booking-item p{
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Update Box */
+
+.update-box{
+    background: #ffffff;
+    padding: 50px 35px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.update-icon{
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.update-box h3{
+    font-size: 32px;
+    color: #5b2c83;
+    margin-bottom: 20px;
+}
+
+.update-box p{
+    color: #666;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.booking-wrapper{
+    grid-template-columns: 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.section-title{
+    font-size: 32px;
+}
+
+.booking-item{
+    padding: 25px 20px;
+}
+
+.booking-item h3{
+    font-size: 21px;
+}
+
+.booking-item p{
+    font-size: 15px;
+}
+
+.update-box{
+    padding: 40px 25px;
+}
+
+.update-box h3{
+    font-size: 26px;
+}
+
+.update-box p{
+    font-size: 15px;
+}
+
+}
+
+</style>
+
+<!-- FOOTER BANNER -->
+<section class="footer-banner">
+  <img src="images/footer-banner.png" alt="Tarot Footer" class="banner-img">
+</section>
+
+  
+<footer>
+  <p>© 2026 Tarot by Nisha</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
