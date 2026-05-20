@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarot by Nisha</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <h1>Welcome to the Hall of Tarot</h1>
+  <p>Where Every Card Tells a Story</p>
+</header>
+
+<div id="navbar"></div>
+
+<script>
+fetch("navigation.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+<!-- HERO / HEADER BANNER -->
+<section class="hero">
+  <img src="images/main-banner.png" alt="Tarot Banner" class="banner-img">
+</section>
+
+<!-- ================= COURSES OFFERED SECTION ================= -->
+
+<section class="courses-section">
+  <div class="container">
+    
+    <h2 class="section-title">Courses Offered</h2>
+
+    <div class="courses-grid">
+
+      <div class="course-card">
+        <span>🕯️</span>
+        <h3>Candle Magick</h3>
+      </div>
+
+      <div class="course-card">
+        <span>🔢</span>
+        <h3>Numerology – Vedic and Spiritual</h3>
+      </div>
+
+      <div class="course-card">
+        <span>ᚱ</span>
+        <h3>Runes Divination and Magick</h3>
+      </div>
+
+      <div class="course-card">
+        <span>👼</span>
+        <h3>Angelic Healing</h3>
+      </div>
+
+      <div class="course-card">
+        <span>✨</span>
+        <h3>Certified Abundance Manifestation Course</h3>
+      </div>
+
+      <div class="course-card">
+        <span>🧘</span>
+        <h3>Chakra Healing</h3>
+      </div>
+
+      <div class="course-card">
+        <span>💫</span>
+        <h3>Certified Energy Tapping Therapy Course</h3>
+      </div>
+
+      <div class="course-card">
+        <span>🪔</span>
+        <h3>Lamps, Rituals and Energy Manifestation Course</h3>
+      </div>
+
+      <div class="course-card">
+        <span>🔺</span>
+        <h3>Destiny Activation Yantra Course</h3>
+      </div>
+
+      <div class="course-card">
+        <span>💰</span>
+        <h3>Money Manifestation Workshops</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CSS ================= -->
+
+<style>
+
+.courses-section{
+    padding: 80px 20px;
+    background: #f8f5ff;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 42px;
+    color: #5b2c83;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.courses-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.course-card{
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.course-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 24px rgba(91,44,131,0.18);
+}
+
+.course-card span{
+    font-size: 42px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.course-card h3{
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+}
+
+@media(max-width:768px){
+
+.section-title{
+    font-size: 32px;
+}
+
+.course-card{
+    padding: 25px 15px;
+}
+
+.course-card h3{
+    font-size: 18px;
+}
+
+}
+
+</style>
+
+
+
+<!-- FOOTER BANNER -->
+<section class="footer-banner">
+  <img src="images/footer-banner.png" alt="Tarot Footer" class="banner-img">
+</section>
+
+  
+<footer>
+  <p>© 2026 Tarot by Nisha</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
