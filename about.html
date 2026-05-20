@@ -48,17 +48,15 @@
   <p>Where Every Card Tells a Story</p>
 </header>
 
-<nav>
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+<div id="navbar"></div>
 
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+<script>
+fetch("navigation.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
 
 <!-- HERO / HEADER BANNER -->
 <section class="hero">
