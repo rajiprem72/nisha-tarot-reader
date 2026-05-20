@@ -337,10 +337,3 @@ footer {
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-
-  .logo img {
-    height: 65px;
-  }
-
-}
