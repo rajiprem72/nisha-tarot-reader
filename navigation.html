@@ -3,11 +3,11 @@
 <nav class="navbar">
 
   <!-- LOGO -->
- <div class="logo">
-  <a href="index.html">
-    <img src="images/logo.png" alt="Logo">
-  </a>
-</div>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Logo">
+    </a>
+  </div>
 
   <!-- HAMBURGER -->
   <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -41,69 +41,32 @@
       </a>
     </li>
 
-    <!-- OTHERS DROPDOWN -->
+    <!-- OTHERS MENU -->
     <li class="dropdown">
 
-      <button class="dropbtn" onclick="toggleDropdown()">
+      <a href="#" onclick="toggleDropdown(event)">
         Others ▼
-      </button>
+      </a>
 
-      <!-- SUB MENU -->
       <ul class="dropdown-content" id="othersMenu">
 
-        <li>
-          <a href="blogs.html">
-            Blog / Spiritual Insights
-          </a>
-        </li>
+        <li><a href="blogs.html">Blog / Spiritual Insights</a></li>
 
-        <li>
-          <a href="contact.html">
-            Contact
-          </a>
-        </li>
+        <li><a href="contact.html">Contact</a></li>
 
-        <li>
-          <a href="faq.html">
-            FAQ
-          </a>
-        </li>
+        <li><a href="faq.html">FAQ</a></li>
 
-        <li>
-          <a href="privacy.html">
-            Privacy Policy
-          </a>
-        </li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
 
-        <li>
-          <a href="terms.html">
-            Terms and Conditions
-          </a>
-        </li>
+        <li><a href="terms.html">Terms and Conditions</a></li>
 
-        <li>
-          <a href="refund.html">
-            Refund and Cancellation
-          </a>
-        </li>
+        <li><a href="refund.html">Refund and Cancellation</a></li>
 
-        <li>
-          <a href="free-tarot.html">
-            Free Tarot Reading
-          </a>
-        </li>
+        <li><a href="free-tarot.html">Free Tarot Reading</a></li>
 
-        <li>
-          <a href="membership.html">
-            Membership / Subscription
-          </a>
-        </li>
+        <li><a href="membership.html">Membership / Subscription</a></li>
 
-        <li>
-          <a href="shop.html">
-            Shop Page
-          </a>
-        </li>
+        <li><a href="shop.html">Shop Page</a></li>
 
       </ul>
 
@@ -117,18 +80,19 @@
 
 <script>
 
-  /* MOBILE MENU */
-  function toggleMenu() {
-    document
-      .getElementById("navLinks")
-      .classList.toggle("show");
-  }
+function toggleMenu() {
+  document
+    .getElementById("navLinks")
+    .classList.toggle("show");
+}
 
-  /* OTHERS DROPDOWN */
-  function toggleDropdown() {
-    document
-      .getElementById("othersMenu")
-      .classList.toggle("show-dropdown");
-  }
+function toggleDropdown(event) {
+
+  event.preventDefault();
+
+  document
+    .getElementById("othersMenu")
+    .classList.toggle("show-dropdown");
+}
 
 </script>
