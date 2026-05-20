@@ -1,0 +1,129 @@
+:root {
+  --primary-purple: #9b4d96;
+  --light-purple: #c77dbb;
+  --gold-accent: #d4a017;
+  --background-light: #f7f5f9;
+  --text-dark: #333333;
+}
+
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background-light);
+  color: var(--text-dark);
+  overflow-x: hidden; /* ✅ prevents side cut */
+}
+
+/* HEADER */
+header {
+  background: var(--primary-purple);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* NAVBAR */
+nav {
+  background: var(--light-purple);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* NAV LINKS (DESKTOP) */
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HAMBURGER */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  text-align: right;
+  padding-right: 15px;
+}
+
+/* ================= BANNERS ================= */
+
+/* REMOVE padding ONLY for banners */
+.hero,
+.footer-banner {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* FULL WIDTH IMAGE */
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= CONTENT ================= */
+
+section {
+  padding: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  /* SHOW HAMBURGER */
+  .menu-icon {
+    display: block;
+  }
+
+  /* HIDE MENU INITIALLY */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--light-purple);
+    text-align: center;
+    width: 100%;
+  }
+
+  /* SHOW WHEN CLICKED */
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
+
+  /* TEXT RESIZE */
+  header h1 {
+    font-size: 22px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
