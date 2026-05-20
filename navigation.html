@@ -42,12 +42,12 @@
     <!-- OTHERS DROPDOWN -->
     <li class="dropdown">
 
-      <a href="javascript:void(0)" class="dropbtn">
+      <button class="dropbtn" onclick="toggleDropdown()">
         Others ▼
-      </a>
+      </button>
 
       <!-- SUB MENU -->
-      <ul class="dropdown-content">
+      <ul class="dropdown-content" id="othersMenu">
 
         <li>
           <a href="blogs.html">
@@ -114,9 +114,19 @@
 <!-- ================= JAVASCRIPT ================= -->
 
 <script>
+
+  /* MOBILE MENU */
   function toggleMenu() {
     document
       .getElementById("navLinks")
       .classList.toggle("show");
   }
+
+  /* OTHERS DROPDOWN */
+  function toggleDropdown() {
+    document
+      .getElementById("othersMenu")
+      .classList.toggle("show-dropdown");
+  }
+
 </script>
