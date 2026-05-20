@@ -9,13 +9,13 @@
     </a>
   </div>
 
-  <!-- HAMBURGER -->
-  <div class="menu-icon" onclick="toggleMenu()">
+  <!-- MENU BUTTON -->
+  <div class="menu-toggle" id="menuToggle">
     ☰
   </div>
 
-  <!-- MENU -->
-  <ul class="nav-links" id="navLinks">
+  <!-- NAVIGATION -->
+  <ul class="nav-menu" id="navMenu">
 
     <li><a href="index.html">Home</a></li>
 
@@ -32,13 +32,13 @@
     <li><a href="testimonials.html">Testimonials</a></li>
 
     <!-- DROPDOWN -->
-    <li class="dropdown">
+    <li class="has-dropdown">
 
-      <button type="button" class="others-btn" onclick="toggleDropdown()">
+      <a href="#" class="dropdown-link">
         Others ▼
-      </button>
+      </a>
 
-      <ul class="dropdown-content" id="othersMenu">
+      <ul class="sub-menu">
 
         <li><a href="blogs.html">Blog / Spiritual Insights</a></li>
 
@@ -48,9 +48,9 @@
 
         <li><a href="privacy.html">Privacy Policy</a></li>
 
-        <li><a href="terms.html">Terms and Conditions</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
 
-        <li><a href="refund.html">Refund and Cancellation</a></li>
+        <li><a href="refund.html">Refund & Cancellation</a></li>
 
         <li><a href="free-tarot.html">Free Tarot Reading</a></li>
 
@@ -90,88 +90,79 @@ body{
   align-items:center;
   padding:12px 5%;
   position:relative;
+  z-index:999;
 }
 
 /* LOGO */
 
 .logo img{
-  width:90px;
-  height:auto;
+  width:110px;
   display:block;
 }
 
 /* MENU */
 
-.nav-links{
+.nav-menu{
   display:flex;
   align-items:center;
   gap:25px;
   list-style:none;
 }
 
-.nav-links li{
+.nav-menu li{
   position:relative;
 }
 
-.nav-links a,
-.others-btn{
+.nav-menu li a{
   color:#fff;
   text-decoration:none;
   font-size:16px;
-  background:none;
-  border:none;
-  cursor:pointer;
-  font-weight:500;
+  transition:0.3s;
 }
 
-.nav-links a:hover,
-.others-btn:hover{
+.nav-menu li a:hover{
   color:#ffd700;
 }
 
-/* DROPDOWN */
+/* SUB MENU */
 
-.dropdown-content{
-  display:none;
+.sub-menu{
   position:absolute;
   top:45px;
   left:0;
   background:#fff;
-  min-width:260px;
-  border-radius:10px;
+  min-width:280px;
+  border-radius:12px;
+  list-style:none;
+  display:none;
   overflow:hidden;
-  box-shadow:0 5px 15px rgba(0,0,0,0.15);
-  z-index:999;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-.dropdown-content li{
-  width:100%;
-}
+/* THIS METHOD WORKS WITHOUT JAVASCRIPT */
 
-.dropdown-content li a{
-  color:#333;
-  padding:14px 18px;
+.has-dropdown:hover .sub-menu{
   display:block;
+}
+
+.sub-menu li a{
+  color:#333;
+  display:block;
+  padding:14px 18px;
   transition:0.3s;
 }
 
-.dropdown-content li a:hover{
+.sub-menu li a:hover{
   background:#f3ebff;
   color:#5b2c83;
 }
 
-/* THIS IS IMPORTANT */
+/* MOBILE MENU BUTTON */
 
-.dropdown-content.active-dropdown{
-  display:block;
-}
-
-/* HAMBURGER */
-
-.menu-icon{
+.menu-toggle{
   display:none;
-  font-size:32px;
   color:#fff;
+  font-size:32px;
   cursor:pointer;
 }
 
@@ -179,11 +170,11 @@ body{
 
 @media(max-width:992px){
 
-  .menu-icon{
+  .menu-toggle{
     display:block;
   }
 
-  .nav-links{
+  .nav-menu{
     display:none;
     flex-direction:column;
     align-items:flex-start;
@@ -193,22 +184,45 @@ body{
     width:100%;
     background:#5b2c83;
     padding:20px;
-    gap:18px;
-    z-index:999;
+    gap:20px;
   }
 
-  .nav-links.show{
+  .nav-menu.active{
     display:flex;
   }
 
-  .dropdown{
+  /* MOBILE SUB MENU */
+
+  .sub-menu{
+    position:static;
+    display:block;
+    background:#6f3ca1;
+    box-shadow:none;
+    margin-top:10px;
     width:100%;
   }
 
-  .dropdown-content{
-    position:static;
-    width:100%;
-    margin-top:10px;
+  .sub-menu li a{
+    color:#fff;
+  }
+
+  .sub-menu li a:hover{
+    background:#7f49b4;
+    color:#fff;
+  }
+
+}
+
+/* DESKTOP ONLY */
+
+@media(min-width:993px){
+
+  .sub-menu{
+    display:none;
+  }
+
+  .has-dropdown:hover .sub-menu{
+    display:block;
   }
 
 }
@@ -219,18 +233,11 @@ body{
 
 <script>
 
-function toggleMenu() {
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-  document
-    .getElementById("navLinks")
-    .classList.toggle("show");
-}
-
-function toggleDropdown() {
-
-  document
-    .getElementById("othersMenu")
-    .classList.toggle("active-dropdown");
-}
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
 
 </script>
