@@ -1,6 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-  // HAMBURGER MENU
+function initializeNavbar() {
 
   const menuToggle = document.getElementById("menuToggle");
   const navMenu = document.getElementById("navMenu");
@@ -14,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   }
-
-  // MOBILE DROPDOWN
 
   const dropdownLink = document.querySelector(".dropdown-link");
   const dropdownItem = document.querySelector(".has-dropdown");
@@ -36,4 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-});
+}
+
+// RUN AFTER PAGE LOAD
+
+window.onload = function () {
+
+  initializeNavbar();
+
+};
