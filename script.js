@@ -3,7 +3,11 @@ function initializeNavbar() {
   const menuToggle = document.getElementById("menuToggle");
   const navMenu = document.getElementById("navMenu");
 
-  if (menuToggle && navMenu) {
+  // PREVENT MULTIPLE EVENT BINDINGS
+
+  if (menuToggle && navMenu && !menuToggle.hasAttribute("data-loaded")) {
+
+    menuToggle.setAttribute("data-loaded", "true");
 
     menuToggle.addEventListener("click", function () {
 
@@ -13,10 +17,14 @@ function initializeNavbar() {
 
   }
 
+  // MOBILE DROPDOWN
+
   const dropdownLink = document.querySelector(".dropdown-link");
   const dropdownItem = document.querySelector(".has-dropdown");
 
-  if (dropdownLink && dropdownItem) {
+  if (dropdownLink && dropdownItem && !dropdownLink.hasAttribute("data-loaded")) {
+
+    dropdownLink.setAttribute("data-loaded", "true");
 
     dropdownLink.addEventListener("click", function (e) {
 
@@ -36,8 +44,14 @@ function initializeNavbar() {
 
 // RUN AFTER PAGE LOAD
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-  initializeNavbar();
+  // SMALL DELAY ENSURES NAVIGATION.HTML IS LOADED
 
-};
+  setTimeout(function () {
+
+    initializeNavbar();
+
+  }, 300);
+
+});
