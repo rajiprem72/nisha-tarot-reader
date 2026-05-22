@@ -155,10 +155,7 @@ section h3 {
 section p {
   color: var(--text-muted);
 }
-section p,
-section li{
-  font-size:17px;
-}
+
 /* ================= BUTTONS ================= */
 
 button,
