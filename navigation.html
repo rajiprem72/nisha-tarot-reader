@@ -229,12 +229,20 @@ body{
 <!-- ================= JAVASCRIPT ================= -->
 
 <script>
-
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
+const dropdownLink = document.querySelector(".dropdown-link");
+const dropdownItem = document.querySelector(".has-dropdown");
 
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
+dropdownLink.addEventListener("click", (e) => {
+  if (window.innerWidth <= 992) {
+    e.preventDefault();
+    dropdownItem.classList.toggle("active");
+  }
+});
 </script>
+
