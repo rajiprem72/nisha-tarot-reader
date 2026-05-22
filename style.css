@@ -155,7 +155,10 @@ section h3 {
 section p {
   color: var(--text-muted);
 }
-
+section p,
+section li{
+  font-size:17px;
+}
 /* ================= BUTTONS ================= */
 
 button,
@@ -272,19 +275,20 @@ footer {
   /* HEADER TEXT */
 
   header h1 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   header p {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   /* CONTENT */
 
   section {
-    padding: 18px;
-    font-size: 14px;
-    margin: 12px;
-  }
+  padding: 20px;
+  font-size: 20px;
+  margin: 14px;
+  line-height: 1.8;
+}
 
 }
