@@ -69,7 +69,6 @@
 <!-- ================= CSS ================= -->
 
 <style>
-
 *{
   margin:0;
   padding:0;
@@ -77,10 +76,8 @@
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
-
-/* NAVBAR */
 
 .navbar{
   width:100%;
@@ -93,14 +90,10 @@ body{
   z-index:999;
 }
 
-/* LOGO */
-
 .logo img{
   width:110px;
   display:block;
 }
-
-/* MENU */
 
 .nav-menu{
   display:flex;
@@ -124,8 +117,7 @@ body{
   color:#ffd700;
 }
 
-/* SUB MENU */
-
+/* DESKTOP SUBMENU */
 .sub-menu{
   position:absolute;
   top:45px;
@@ -138,8 +130,6 @@ body{
   overflow:hidden;
   box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
-
-/* THIS METHOD WORKS WITHOUT JAVASCRIPT */
 
 .has-dropdown:hover .sub-menu{
   display:block;
@@ -157,8 +147,6 @@ body{
   color:#5b2c83;
 }
 
-/* MOBILE MENU BUTTON */
-
 .menu-toggle{
   display:none;
   color:#fff;
@@ -167,8 +155,7 @@ body{
 }
 
 /* MOBILE */
-
-@media(max-width:992px){
+@media (max-width: 992px){
 
   .menu-toggle{
     display:block;
@@ -179,31 +166,49 @@ body{
     flex-direction:column;
     align-items:flex-start;
     position:absolute;
-    top:80px;
+    top:100%;
     left:0;
     width:100%;
     background:#5b2c83;
-    padding:20px;
-    gap:20px;
+    padding:20px 5%;
+    gap:18px;
   }
 
   .nav-menu.active{
     display:flex;
   }
 
-  /* MOBILE SUB MENU */
+  .nav-menu li{
+    width:100%;
+  }
 
+  .nav-menu li a{
+    display:block;
+    width:100%;
+  }
+
+  /* MOBILE SUBMENU HIDDEN BY DEFAULT */
   .sub-menu{
     position:static;
-    display:block;
+    display:none;
     background:#6f3ca1;
     box-shadow:none;
     margin-top:10px;
     width:100%;
+    border-radius:8px;
+  }
+
+  .has-dropdown:hover .sub-menu{
+    display:none;
+  }
+
+  .has-dropdown.active .sub-menu{
+    display:block;
   }
 
   .sub-menu li a{
     color:#fff;
+    padding:12px 15px;
   }
 
   .sub-menu li a:hover{
@@ -211,21 +216,13 @@ body{
     color:#fff;
   }
 
+  .dropdown-link{
+    display:flex !important;
+    justify-content:space-between;
+    align-items:center;
+  }
 }
 
-/* DESKTOP ONLY */
-
-@media(min-width:993px){
-
-  .sub-menu{
-    display:none;
-  }
-
-  .has-dropdown:hover .sub-menu{
-    display:block;
-  }
-
-}
 
 </style>
 
