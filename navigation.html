@@ -54,6 +54,7 @@
 <!-- ================= CSS ================= -->
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -61,8 +62,11 @@
 }
 
 body{
-  font-family: Arial, sans-serif;
+  font-family:Arial,sans-serif;
+  overflow-x:hidden;
 }
+
+/* ================= NAVBAR ================= */
 
 .navbar{
   width:100%;
@@ -70,20 +74,32 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 5%;
+  padding:12px 4%;
   position:relative;
-  z-index:999;
+  z-index:9999;
+  border-top:2px solid #d4af37;
+  border-bottom:2px solid #d4af37;
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+  display:flex;
+  align-items:center;
 }
 
 .logo img{
-  width:110px;
+  width:80px;
+  height:auto;
   display:block;
 }
+
+/* ================= MENU ================= */
 
 .nav-menu{
   display:flex;
   align-items:center;
-  gap:25px;
+  gap:28px;
   list-style:none;
 }
 
@@ -95,6 +111,7 @@ body{
   color:#fff;
   text-decoration:none;
   font-size:16px;
+  white-space:nowrap;
   transition:0.3s;
 }
 
@@ -102,29 +119,53 @@ body{
   color:#ffd700;
 }
 
-/* DESKTOP SUBMENU */
+/* ================= DROPDOWN ================= */
+
 .sub-menu{
   position:absolute;
   top:45px;
-  left:0;
-  background:#fff;
-  min-width:280px;
+  right:0;
+
+  background:#ffffff;
+
+  min-width:320px;
+  max-height:420px;
+
+  overflow-y:auto;
+
   border-radius:12px;
+
   list-style:none;
+
   display:none;
-  overflow:hidden;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+  z-index:99999;
 }
 
-.has-dropdown:hover .sub-menu{
-  display:block;
+/* SCROLLBAR */
+
+.sub-menu::-webkit-scrollbar{
+  width:8px;
+}
+
+.sub-menu::-webkit-scrollbar-thumb{
+  background:#b48be0;
+  border-radius:10px;
+}
+
+.sub-menu li{
+  width:100%;
 }
 
 .sub-menu li a{
   color:#333;
   display:block;
   padding:14px 18px;
-  transition:0.3s;
+  line-height:1.4;
+  white-space:normal;
+  word-break:break-word;
 }
 
 .sub-menu li a:hover{
@@ -132,15 +173,36 @@ body{
   color:#5b2c83;
 }
 
+/* DESKTOP DROPDOWN */
+
+@media (min-width: 993px){
+
+  .has-dropdown:hover .sub-menu{
+    display:block;
+  }
+
+}
+
+/* ================= HAMBURGER ================= */
+
 .menu-toggle{
   display:none;
   color:#fff;
-  font-size:32px;
+  font-size:34px;
   cursor:pointer;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
+
 @media (max-width: 992px){
+
+  .navbar{
+    padding:14px 20px;
+  }
+
+  .logo img{
+    width:55px;
+  }
 
   .menu-toggle{
     display:block;
@@ -148,15 +210,25 @@ body{
 
   .nav-menu{
     display:none;
+
     flex-direction:column;
+
     align-items:flex-start;
+
     position:absolute;
+
     top:100%;
     left:0;
+
     width:100%;
+
     background:#5b2c83;
-    padding:20px 5%;
+
+    padding:20px;
+
     gap:18px;
+
+    border-top:1px solid rgba(255,255,255,0.1);
   }
 
   .nav-menu.active{
@@ -168,23 +240,33 @@ body{
   }
 
   .nav-menu li a{
-    display:block;
     width:100%;
+    display:block;
+    font-size:17px;
   }
 
-  /* MOBILE SUBMENU HIDDEN BY DEFAULT */
+  /* MOBILE SUBMENU */
+
   .sub-menu{
     position:static;
-    display:none;
-    background:#6f3ca1;
-    box-shadow:none;
-    margin-top:10px;
-    width:100%;
-    border-radius:8px;
-  }
 
-  .has-dropdown:hover .sub-menu{
     display:none;
+
+    width:100%;
+
+    min-width:100%;
+
+    max-height:300px;
+
+    overflow-y:auto;
+
+    margin-top:12px;
+
+    border-radius:8px;
+
+    background:#6f3ca1;
+
+    box-shadow:none;
   }
 
   .has-dropdown.active .sub-menu{
@@ -193,41 +275,42 @@ body{
 
   .sub-menu li a{
     color:#fff;
-    padding:12px 15px;
+    padding:12px 14px;
   }
 
   .sub-menu li a:hover{
-    background:#7f49b4;
+    background:#8750be;
     color:#fff;
   }
 
-  .dropdown-link{
-    display:flex !important;
-    justify-content:space-between;
-    align-items:center;
-  }
 }
 
-
 </style>
-
 <!-- ================= JAVASCRIPT ================= -->
 
 <script>
+
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
-const dropdownLink = document.querySelector(".dropdown-link");
-const dropdownItem = document.querySelector(".has-dropdown");
 
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-dropdownLink.addEventListener("click", (e) => {
-  if (window.innerWidth <= 992) {
+const dropdownLink = document.querySelector(".dropdown-link");
+const dropdownItem = document.querySelector(".has-dropdown");
+
+dropdownLink.addEventListener("click", function(e){
+
+  if(window.innerWidth <= 992){
+
     e.preventDefault();
+
     dropdownItem.classList.toggle("active");
+
   }
+
 });
+
 </script>
 
