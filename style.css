@@ -97,69 +97,6 @@ header p {
 
 /* ================= MENU ================= */
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.nav-links li {
-  list-style: none;
-}
-
-.nav-links a,
-.others-btn {
-  color: #d4af37;
-
-  text-decoration: none;
-
-  font-size: 16px;
-  font-weight: 600;
-
-  background: none;
-  border: none;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-
-  position: relative;
-}
-
-/* GOLD HOVER EFFECT */
-
-.nav-links a::after,
-.others-btn::after {
-  content: "";
-
-  position: absolute;
-
-  width: 0%;
-  height: 2px;
-
-  left: 0;
-  bottom: -5px;
-
-  background: var(--gold-light);
-
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover,
-.others-btn:hover {
-  color: var(--gold-light);
-}
-
-.nav-links a:hover::after,
-.others-btn:hover::after {
-  width: 100%;
-}
-
 /* ================= DROPDOWN ================= */
 
 .dropdown {
@@ -168,76 +105,12 @@ header p {
 
 /* OTHERS BUTTON */
 
-.others-btn {
-  padding: 0;
-}
+
 
 /* DROPDOWN MENU */
 
-.dropdown-content {
-  display: none;
-
-  position: absolute;
-
-  top: 42px;
-  left: 0;
-
-  background: #111111;
-
-  min-width: 260px;
-
-  border-radius: 10px;
-
-  border: 1px solid rgba(212,175,55,0.3);
-
-  padding: 10px 0;
-
-  z-index: 9999;
-}
-
-/* SHOW WHEN CLICKED */
-
-.dropdown-content.active-dropdown {
-  display: block;
-}
-
-/* REMOVE BULLETS */
-
-.dropdown-content,
-.dropdown-content li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* DROPDOWN LINKS */
-
-.dropdown-content a {
-  display: block;
-
-  padding: 12px 18px;
-
-  color: #d4af37;
-
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background: rgba(212,175,55,0.1);
-  color: #f5d76e;
-}
-
 /* ================= HAMBURGER ================= */
 
-.menu-icon {
-  display: none;
-
-  color: #d4af37;
-
-  font-size: 28px;
-
-  cursor: pointer;
-}
 
 /* ================= BANNERS ================= */
 
@@ -377,50 +250,18 @@ footer {
 
   /* HAMBURGER */
 
-  .menu-icon {
-    display: block;
-  }
+  
 
   /* MOBILE MENU */
 
-  .nav-links {
-    display: none;
-
-    flex-direction: column;
-
-    width: 100%;
-
-    margin-top: 15px;
-
-    gap: 15px;
-
-    text-align: center;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
+  
   /* MOBILE MENU LINKS */
 
-  .nav-links a,
-  .others-btn {
-    padding: 10px 0;
-  }
+  
 
   /* MOBILE DROPDOWN */
 
-  .dropdown-content {
-    position: static;
-
-    width: 100%;
-
-    background: #1a1a1a;
-
-    border: none;
-
-    margin-top: 10px;
-  }
+  
 
   /* MOBILE LOGO */
 
