@@ -1,7 +1,3 @@
-function toggleMenu() {
-  var menu = document.getElementById("navLinks");
-  menu.classList.toggle("show");
-}
 document.addEventListener("DOMContentLoaded", function () {
 
   // HAMBURGER MENU
