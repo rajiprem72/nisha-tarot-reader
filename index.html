@@ -9,9 +9,12 @@
 <body>
 <!-- PROMOTIONAL POPUP START -->
 
-<div id="promoPopup" class="promo-popup">
+  <div id="promoPopup"
+     class="promo-popup"
+     onclick="closePromo()">
 
-    <div class="promo-content">
+    <div class="promo-content"
+     onclick="event.stopPropagation();">
 
         <span class="close-popup" onclick="closePromo()">&times;</span>
 
