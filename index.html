@@ -16,7 +16,11 @@
     <div class="promo-content"
      onclick="event.stopPropagation();">
 
-        <span class="close-popup" onclick="closePromo()">&times;</span>
+       <span class="close-popup"
+      onclick="closePromo();"
+      ontouchend="closePromo();">
+      &times;
+      </span>
 
         <a href="learn-tarot.html">
             <img src="images/tarot-promo-square.png"
@@ -107,5 +111,27 @@ fetch("navigation.html")
   <p>© 2026 Tarot by Nisha</p>
 </footer>
 <script src="script.js"></script>
+<script>
+
+function closePromo()
+{
+    document.getElementById("promoPopup").style.display = "none";
+}
+
+document.querySelector(".close-popup").addEventListener("click", closePromo);
+document.querySelector(".close-popup").addEventListener("touchend", closePromo);
+
+document.getElementById("promoPopup").addEventListener("click", closePromo);
+document.getElementById("promoPopup").addEventListener("touchend", closePromo);
+
+document.querySelector(".promo-content").addEventListener("click", function(e){
+    e.stopPropagation();
+});
+
+document.querySelector(".promo-content").addEventListener("touchend", function(e){
+    e.stopPropagation();
+});
+
+</script>  
 </body>
 </html>
