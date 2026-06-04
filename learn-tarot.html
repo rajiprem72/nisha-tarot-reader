@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarot Registration</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+    max-width:700px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+
+h1{
+    text-align:center;
+    color:#4b006e;
+}
+
+.subheading{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.submit-btn{
+    width:100%;
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#e68900;
+}
+
+.note{
+    margin-top:20px;
+    text-align:center;
+    color:#666;
+}
+
+.success{
+    display:none;
+    margin-top:20px;
+    background:#d4edda;
+    color:#155724;
+    padding:15px;
+    border-radius:5px;
+    text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Tarot Strategy Call Registration</h1>
+
+<p class="subheading">
+Fill in your details below and proceed for payment.
+</p>
+
+<form id="registrationForm">
+
+<div class="form-group">
+<label>Full Name</label>
+<input type="text" id="fullname" required>
+</div>
+
+<div class="form-group">
+<label>Mobile Number</label>
+<input type="tel" id="mobile" required>
+</div>
+
+<div class="form-group">
+<label>Email ID</label>
+<input type="email" id="email" required>
+</div>
+
+<div class="form-group">
+<label>Age</label>
+<input type="number" id="age" min="18" max="100" required>
+</div>
+
+<div class="form-group">
+<label>Profession</label>
+
+<select id="profession" required>
+
+<option value="">Select Profession</option>
+
+<option>Student</option>
+
+<option>Working Professional</option>
+
+<option>Business Owner</option>
+
+<option>Homemaker</option>
+
+<option>Retired</option>
+
+<option>Others</option>
+
+</select>
+
+</div>
+
+<button type="submit" class="submit-btn">
+Submit and Pay
+</button>
+
+</form>
+
+<div class="success" id="successMessage">
+Thank You! Your registration has been received.<br>
+Payment integration will be added in the next phase.
+</div>
+
+<p class="note">
+Your details are kept confidential.
+</p>
+
+</div>
+
+<script>
+
+document.getElementById("registrationForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let data = {
+        fullname: document.getElementById("fullname").value,
+        mobile: document.getElementById("mobile").value,
+        email: document.getElementById("email").value,
+        age: document.getElementById("age").value,
+        profession: document.getElementById("profession").value
+    };
+
+    console.log(data);
+
+    document.getElementById("successMessage").style.display = "block";
+
+    document.getElementById("registrationForm").reset();
+
+});
+
+</script>
+
+</body>
+</html>
