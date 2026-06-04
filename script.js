@@ -55,3 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 300);
 
 });
+function closePromo()
+{
+    document.getElementById("promoPopup").style.display="none";
+}
