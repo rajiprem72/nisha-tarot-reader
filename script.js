@@ -57,5 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 function closePromo()
 {
-    document.getElementById("promoPopup").style.display="none";
+    document.getElementById("promoPopup").style.display = "none";
 }
+
+document.addEventListener("keydown", function(event)
+{
+    if(event.key === "Escape")
+    {
+        closePromo();
+    }
+});
