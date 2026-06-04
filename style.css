@@ -309,28 +309,42 @@ footer {
     position:relative;
     max-width:600px;
     width:90%;
+    max-height:90vh;
+    overflow:auto;
 }
 
 .promo-image{
     width:100%;
+    height:auto;
+    max-height:85vh;
+    object-fit:contain;
     border-radius:12px;
     cursor:pointer;
-    box-shadow:0 0 20px rgba(255,255,255,0.3);
 }
-
 .close-popup{
-    position:absolute;
-    top:-15px;
-    right:-15px;
+    position:fixed;
+    top:20px;
+    right:20px;
+
+    width:45px;
+    height:45px;
+
     background:white;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    text-align:center;
+    color:black;
+
     border-radius:50%;
-    font-size:28px;
+
+    font-size:32px;
     font-weight:bold;
+
+    text-align:center;
+    line-height:45px;
+
     cursor:pointer;
+
+    z-index:10001;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
 .popup-message{
