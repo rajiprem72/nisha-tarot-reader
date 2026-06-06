@@ -177,41 +177,64 @@ Your details are kept confidential.
 </div>
 
 <script>
+
 document.getElementById("registrationForm")
 .addEventListener("submit", function(e){
 
     e.preventDefault();
 
     const payload = {
+
         action:"register",
-        fullname: document.getElementById("fullname").value,
-        gender: document.getElementById("gender").value,
-        mobile: document.getElementById("mobile").value,
-        whatsapp: document.getElementById("whatsapp").value,
-        email: document.getElementById("email").value,
-        age: document.getElementById("age").value,
-        profession: document.getElementById("profession").value
+
+        fullname:
+        document.getElementById("fullname").value,
+
+        gender:
+        document.getElementById("gender").value,
+
+        mobile:
+        document.getElementById("mobile").value,
+
+        whatsapp:
+        document.getElementById("whatsapp").value,
+
+        email:
+        document.getElementById("email").value,
+
+        age:
+        document.getElementById("age").value,
+
+        profession:
+        document.getElementById("profession").value
     };
 
-    const form = document.createElement("form");
+    const form =
+    document.createElement("form");
 
     form.method = "POST";
 
     form.action =
     "https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
 
-    const input = document.createElement("input");
+    const input =
+    document.createElement("input");
 
     input.type = "hidden";
+
     input.name = "data";
-    input.value = JSON.stringify(payload);
+
+    input.value =
+    JSON.stringify(payload);
 
     form.appendChild(input);
 
     document.body.appendChild(form);
 
     form.submit();
+
 });
+
 </script>
 </body>
 </html>
