@@ -367,3 +367,92 @@ footer {
     margin:0;
     padding:0;
 }
+body{
+    background:#ebe8e3;
+}
+
+.workshop-header{
+    text-align:center;
+    padding:20px 20px 40px;
+}
+
+.workshop-header h3{
+    font-size:38px;
+    margin-bottom:15px;
+    font-weight:700;
+    color:#000;
+}
+
+.workshop-header h2{
+    font-size:42px;
+    margin:0 0 25px;
+    color:#000;
+    font-weight:700;
+}
+
+.workshop-header h2 span{
+    font-weight:400;
+}
+
+.progress-bar{
+    width:90%;
+    max-width:950px;
+    margin:0 auto 50px;
+    background:#eee;
+    height:45px;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.progress-fill{
+    width:80%;
+    height:100%;
+    background:
+    repeating-linear-gradient(
+    -45deg,
+    #efb14a,
+    #efb14a 15px,
+    #e6a844 15px,
+    #e6a844 30px
+    );
+    color:white;
+    font-size:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.event-title{
+    font-size:54px;
+    font-weight:700;
+    color:#6a0dad;
+    margin-bottom:10px;
+}
+
+.event-date{
+    font-size:48px;
+    font-weight:700;
+    color:#000;
+    margin-bottom:40px;
+}
+
+@media(max-width:768px){
+
+.workshop-header h3{
+    font-size:24px;
+}
+
+.workshop-header h2{
+    font-size:28px;
+}
+
+.event-title{
+    font-size:34px;
+}
+
+.event-date{
+    font-size:28px;
+}
+
+}
