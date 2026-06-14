@@ -93,7 +93,122 @@ h1{
     background:#fafafa;
     color:#555;
 }
+.tarot-challenges-section{
+    padding:80px 20px;
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #fffdf8
+    );
+}
 
+.tarot-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.main-title{
+    text-align:center;
+    font-size:58px;
+    color:#5a2d0c;
+    margin-bottom:20px;
+    font-family:Georgia, serif;
+    line-height:1.2;
+}
+
+.sub-title{
+    text-align:center;
+    font-size:24px;
+    color:#666;
+    margin-bottom:50px;
+    line-height:1.7;
+}
+
+.sub-title strong{
+    color:#c47b18;
+    font-size:30px;
+}
+
+.challenge-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.challenge-card{
+    background:white;
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.challenge-card:hover{
+    transform:translateY(-6px);
+}
+
+.icon{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.challenge-card h3{
+    font-size:24px;
+    color:#333;
+    margin-bottom:10px;
+    line-height:1.4;
+}
+
+.challenge-card p{
+    font-size:22px;
+    color:#b36b00;
+    font-weight:600;
+    margin:0;
+}
+
+.bottom-message{
+    margin-top:50px;
+    text-align:center;
+    background:#fff3dd;
+    padding:25px;
+    border-radius:15px;
+    font-size:28px;
+    color:#444;
+    font-weight:500;
+}
+
+.bottom-message span{
+    color:#d28a00;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.main-title{
+    font-size:38px;
+}
+
+.sub-title{
+    font-size:18px;
+}
+
+.challenge-card h3{
+    font-size:20px;
+}
+
+.challenge-card p{
+    font-size:18px;
+}
+
+.bottom-message{
+    font-size:22px;
+}
+
+}
+
+
+    
 </style>
 
 </head>
@@ -278,6 +393,70 @@ function closeRegistrationPopup(){
     <img src="images/strategy-call.jpg"
          alt="Tarot Strategy Call"
          class="hero-image">
+
+    <section class="tarot-challenges-section">
+
+    <div class="tarot-container">
+
+        <h2 class="main-title">
+            Are You Facing These Challenges?
+        </h2>
+
+        <p class="sub-title">
+            You're not alone. Every Tarot Reader was once where you are now.
+            <br>
+            <strong>Let's change that together.</strong>
+        </p>
+
+        <div class="challenge-grid">
+
+            <div class="challenge-card">
+                <div class="icon">📺</div>
+                <h3>You watch YouTube videos</h3>
+                <p>but still feel confused</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">🧠</div>
+                <h3>You struggle to remember</h3>
+                <p>card meanings</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">🧘</div>
+                <h3>You don't trust your</h3>
+                <p>intuition</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">🔮</div>
+                <h3>You fear giving</h3>
+                <p>wrong readings</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">💰</div>
+                <h3>You want to earn</h3>
+                <p>through Tarot but don't know how</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">🌟</div>
+                <h3>You feel overwhelmed</h3>
+                <p>by too much information</p>
+            </div>
+
+        </div>
+
+        <div class="bottom-message">
+            It's time to learn Tarot the <span>RIGHT WAY</span>
+            with guidance, clarity and confidence.
+        </div>
+
+    </div>
+
+</section>
+
 
     <!-- Tarot Reader Images Section -->
 
