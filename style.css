@@ -353,3 +353,17 @@ footer {
     margin-top:10px;
     font-size:16px;
 }
+
+
+.tarot-images{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+.tarot-images img{
+    width:100%;
+    display:block;
+    margin:0;
+    padding:0;
+}
