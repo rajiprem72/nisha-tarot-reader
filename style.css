@@ -369,6 +369,7 @@ footer {
 }
 body{
     background:#ebe8e3;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .workshop-header{
@@ -377,17 +378,22 @@ body{
 }
 
 .workshop-header h3{
-    font-size:38px;
-    margin-bottom:15px;
+    font-size:54px;
     font-weight:700;
     color:#000;
+    margin:0 0 20px;
+    line-height:1.2;
 }
 
 .workshop-header h2{
-    font-size:42px;
-    margin:0 0 25px;
+    font-size:52px;
+    margin:0 0 35px;
     color:#000;
-    font-weight:700;
+    line-height:1.2;
+}
+
+.workshop-header h2 strong{
+    font-weight:800;
 }
 
 .workshop-header h2 span{
@@ -395,64 +401,56 @@ body{
 }
 
 .progress-bar{
-    width:90%;
-    max-width:950px;
+    width:95%;
+    max-width:1100px;
     margin:0 auto 50px;
-    background:#eee;
-    height:45px;
+    background:#efefef;
     border-radius:8px;
     overflow:hidden;
-    box-shadow:0 0 10px rgba(0,0,0,0.15);
+    height:48px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.20);
+    border:1px solid #d6d6d6;
 }
 
 .progress-fill{
     width:80%;
     height:100%;
-    background:
-    repeating-linear-gradient(
-    -45deg,
-    #efb14a,
-    #efb14a 15px,
-    #e6a844 15px,
-    #e6a844 30px
-    );
-    color:white;
+    color:#fff;
     font-size:24px;
+    font-weight:500;
     display:flex;
     justify-content:center;
     align-items:center;
+
+    background:
+    repeating-linear-gradient(
+        -45deg,
+        #f1b44c 0px,
+        #f1b44c 18px,
+        #e8aa42 18px,
+        #e8aa42 36px
+    );
 }
 
 .event-title{
-    font-size:54px;
-    font-weight:700;
-    color:#6a0dad;
-    margin-bottom:10px;
+    font-size:72px;
+    font-weight:800;
+
+    background:linear-gradient(
+        90deg,
+        #4c00a4,
+        #8a00ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:15px;
 }
 
 .event-date{
-    font-size:48px;
-    font-weight:700;
+    font-size:64px;
+    font-weight:800;
     color:#000;
-    margin-bottom:40px;
-}
-
-@media(max-width:768px){
-
-.workshop-header h3{
-    font-size:24px;
-}
-
-.workshop-header h2{
-    font-size:28px;
-}
-
-.event-title{
-    font-size:34px;
-}
-
-.event-date{
-    font-size:28px;
-}
-
+    margin-bottom:45px;
 }
