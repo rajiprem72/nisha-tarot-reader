@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tarot Reading Membership Participants</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    margin:20px;
+    background:#f4f4f4;
+}
+
+h2{
+    background:#333;
+    color:white;
+    padding:10px;
+    border-radius:5px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    margin-bottom:30px;
+}
+
+th{
+    background:#007bff;
+    color:white;
+    padding:10px;
+    text-align:left;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+a{
+    color:#007bff;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.details-row{
+    display:none;
+    background:#f9f9f9;
+}
+
+.details-box{
+    padding:15px;
+    line-height:1.8;
+}
+
+.loading{
+    text-align:center;
+    font-size:20px;
+    margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Tarot Reading Membership Participants</h1>
+
+<div id="content" class="loading">
+Loading Participants...
+</div>
+
+<script>
+
+const API_URL =
+"https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
+
+fetch(API_URL)
+.then(response => response.json())
+.then(data => {
+
+    let html = "";
+
+    html += createSection(
+        "PAID Participants (" + data.paid.length + ")",
+        data.paid
+    );
+
+    html += createSection(
+        "PENDING Participants (" + data.pending.length + ")",
+        data.pending
+    );
+
+    document.getElementById("content").innerHTML = html;
+});
+
+function createSection(title, participants){
+
+    let html = `
+    <h2>${title}</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Participant ID</th>
+                <th>Full Name</th>
+                <th>Gender</th>
+                <th>Mobile Number</th>
+                <th>WhatsApp Number</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+    `;
+
+    participants.forEach((p,index)=>{
+
+        const rowId =
+        title.replace(/\s/g,'') + index;
+
+        html += `
+        <tr>
+            <td>
+                <a onclick="toggleRow('${rowId}')">
+                    ${p["Participant ID"]}
+                </a>
+            </td>
+            <td>${p["Full Name"] || ''}</td>
+            <td>${p["Gender"] || ''}</td>
+            <td>${p["Mobile Number"] || ''}</td>
+            <td>${p["WhatsApp Number"] || ''}</td>
+            <td>${p["Email"] || ''}</td>
+        </tr>
+
+        <tr id="${rowId}" class="details-row">
+            <td colspan="6">
+
+                <div class="details-box">
+
+                    <strong>Age:</strong>
+                    ${p["Age"] || ''}<br>
+
+                    <strong>Profession:</strong>
+                    ${p["Profession"] || ''}<br>
+
+                    <strong>Payment ID:</strong>
+                    ${p["Payment ID"] || ''}<br>
+
+                    <strong>Payment Date:</strong>
+                    ${p["Payment Date"] || ''}<br>
+
+                    <strong>Razorpay Link:</strong>
+                    <a href="${p["Razorpay Link"] || '#'}"
+                       target="_blank">
+                       Open Link
+                    </a><br>
+
+                    <strong>State:</strong>
+                    ${p["State"] || ''}
+
+                </div>
+
+            </td>
+        </tr>
+        `;
+    });
+
+    html += `
+        </tbody>
+    </table>
+    `;
+
+    return html;
+}
+
+function toggleRow(id){
+
+    let row = document.getElementById(id);
+
+    if(row.style.display === "table-row"){
+        row.style.display = "none";
+    }else{
+        row.style.display = "table-row";
+    }
+}
+
+</script>
+
+</body>
+</html>
