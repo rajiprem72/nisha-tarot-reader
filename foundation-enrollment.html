@@ -5,7 +5,50 @@
 <head>
 
 <title>Foundation Course Enrollments</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  margin:0;
+  padding:15px;
+}
+
+.container{
+  max-width:800px;
+  margin:auto;
+}
+    
+input{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  font-size:16px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.card{
+  border:1px solid #ccc;
+  padding:15px;
+  margin-top:20px;
+  display:none;
+  width:100%;
+  overflow-wrap:break-word;
+}
+
+</style>
+      
 
 <style>
 
@@ -51,7 +94,7 @@ tr:nth-child(even){
 </head>
 
 <body>
-
+<div class="container">
 <h2>15 Days Tarot Foundation Course</h2>
 
 <div id="summary" class="summary">
@@ -159,7 +202,7 @@ document.getElementById("summary").innerHTML = `
 });
 
 </script>
-
+</div>
 </body>
 
 </html>
