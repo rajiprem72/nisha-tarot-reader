@@ -95,11 +95,30 @@ fetch(API_URL,{
         return;
     }
 
-    document.getElementById("summary")
-    .innerHTML =
+    let totalCollection = 0;
 
-    "<b>Total Enrollments :</b> "
-    + data.count;
+data.records.forEach(record => {
+
+
+totalCollection +=
+Number(record["Paid Amount"] || 0);
+
+
+});
+
+document.getElementById("summary")
+.innerHTML =
+
+"<h3>Total Enrollments : "
+
+* data.count +
+  "</h3>" +
+
+"<h3>Total Collection : ₹"
+
+* totalCollection.toLocaleString("en-IN") +
+  "</h3>";
+
 
     const tbody =
     document.querySelector(
