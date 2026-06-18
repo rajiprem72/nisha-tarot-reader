@@ -63,69 +63,63 @@ const API_URL =
 
 function searchParticipant(){
 
+
 const participantId =
 document.getElementById("participantId").value;
 
-
 fetch(API_URL,{
-method:"POST",
-body: JSON.stringify({
-action:"findParticipant",
-participantId:participantId
-})
+    method:"POST",
+    body: JSON.stringify({
+        action:"findParticipant",
+        participantId:participantId
+    })
 })
 .then(r => r.json())
 .then(data => {
 
+    console.log(data);
 
-console.log(data);
+    if(!data.success){
+        alert("Participant ID not found");
+        return;
+    }
 
-if(!data.success){
-   alert(JSON.stringify(data));
-   return;
-}}
+    let p = data.participant;
 
-// Existing code here
+    document.getElementById("details").style.display="block";
 
+    document.getElementById("details").innerHTML=`
 
+    <h3>Verify Your Details</h3>
+
+    <p><b>Name:</b> ${p["Full Name"]}</p>
+    <p><b>Gender:</b> ${p["Gender"]}</p>
+    <p><b>Mobile:</b> ${p["Mobile Number"]}</p>
+    <p><b>WhatsApp:</b> ${p["WhatsApp Number"]}</p>
+    <p><b>Email:</b> ${p["Email"]}</p>
+    <p><b>Age:</b> ${p["Age"]}</p>
+    <p><b>Profession:</b> ${p["Profession"]}</p>
+    <p><b>State:</b> ${p["State"]}</p>
+
+    <button onclick="payNow(
+    '${p["Participant ID"]}',
+    '${p["Full Name"]}'
+    )">
+    Join 15 Days Tarot Foundation Course - Pay ₹7000
+    </button>
+    `;
 })
 .catch(err => {
-console.error(err);
+    console.error(err);
+    alert(err);
 });
 
-
-
-  
-let p=data.data;
-
-document.getElementById("details").style.display="block";
-
-document.getElementById("details").innerHTML=`
-
-<h3>Verify Your Details</h3>
-
-<p><b>Name:</b> ${p["Full Name"]}</p>
-<p><b>Gender:</b> ${p["Gender"]}</p>
-<p><b>Mobile:</b> ${p["Mobile Number"]}</p>
-<p><b>WhatsApp:</b> ${p["WhatsApp Number"]}</p>
-<p><b>Email:</b> ${p["Email"]}</p>
-<p><b>Age:</b> ${p["Age"]}</p>
-<p><b>Profession:</b> ${p["Profession"]}</p>
-<p><b>State:</b> ${p["State"]}</p>
-
-<button onclick="payNow(
-'${p["Participant ID"]}',
-'${p["Full Name"]}'
-)">
-Join 15 Days Tarot Foundation Course - Pay ₹7000
-</button>
-
-`;
-
-});
 
 }
 
+
+
+   
 function payNow(participantId,fullName){
 
 localStorage.setItem(
