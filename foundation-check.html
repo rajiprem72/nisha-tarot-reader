@@ -66,24 +66,36 @@ function searchParticipant(){
 const participantId =
 document.getElementById("participantId").value;
 
-fetch(
-API_URL,
-{
+
+fetch(API_URL,{
 method:"POST",
-body:new URLSearchParams({
+body: JSON.stringify({
 action:"findParticipant",
 participantId:participantId
 })
-}
-)
-.then(r=>r.json())
-.then(data=>{
+})
+.then(r => r.json())
+.then(data => {
+
+
+console.log(data);
 
 if(!data.success){
-alert("Participant ID not found");
-return;
-}
+   alert(JSON.stringify(data));
+   return;
+}}
 
+// Existing code here
+
+
+})
+.catch(err => {
+console.error(err);
+});
+
+
+
+  
 let p=data.data;
 
 document.getElementById("details").style.display="block";
