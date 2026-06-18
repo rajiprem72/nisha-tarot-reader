@@ -117,27 +117,97 @@ fetch(API_URL,{
 
 }
 
-
-
-   
 function payNow(participantId,fullName){
 
-localStorage.setItem(
-"participantId",
-participantId
-);
 
-localStorage.setItem(
-"fullName",
-fullName
-);
+var options = {
 
-window.location.href =
-"https://YOUR-RAZORPAY-PAYMENT-LINK";
+    key: "Key rzp_live_SxjzwcAJLI0SlC",
+
+    amount: 700000,
+
+    currency: "INR",
+
+    name: "Tarot Shakti by Nisha",
+
+    description:
+    "15 Days Tarot Foundation Course",
+
+    handler: function (response) {
+
+        saveFoundationPayment(
+            participantId,
+            fullName,
+            response.razorpay_payment_id
+        );
+
+    },
+
+    notes: {
+        participantId: participantId
+    },
+
+    theme: {
+        color: "#3399cc"
+    }
+};
+
+var rzp = new Razorpay(options);
+
+rzp.open();
 
 }
 
-</script>
+function saveFoundationPayment(
+participantId,
+fullName,
+paymentId
+)
+{
+fetch(API_URL,{
+method:"POST",
+body:JSON.stringify({
 
+
+        action:"saveFoundationPayment",
+
+        participantId:participantId,
+
+        fullName:fullName,
+
+        paymentId:paymentId,
+
+        amount:7000
+
+    })
+})
+.then(r=>r.json())
+.then(data=>{
+
+    if(data.success)
+    {
+        alert(
+        "Payment Successful. Welcome to the 15 Days Tarot Foundation Course."
+        );
+
+        location.href =
+        "foundation-success.html";
+    }
+    else
+    {
+        alert(
+        "Payment received but save failed. Please contact support."
+        );
+    }
+
+});
+
+
+}
+
+   
+
+</script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </body>
 </html>
