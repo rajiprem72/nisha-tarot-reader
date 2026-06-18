@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>15 Days Tarot Foundation Course</title>
+
+<style>
+
+body{
+font-family:Arial;
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:10px;
+}
+
+button{
+padding:12px 20px;
+margin-top:10px;
+cursor:pointer;
+}
+
+.card{
+border:1px solid #ccc;
+padding:20px;
+margin-top:20px;
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>15 Days Tarot Foundation Course</h2>
+
+<p>
+Enter your Participant ID.
+If you don't know it, please check your Email.
+</p>
+
+<input
+type="text"
+id="participantId"
+placeholder="Enter Participant ID">
+
+<button onclick="searchParticipant()">
+Submit
+</button>
+
+<div id="details" class="card"></div>
+
+<script>
+
+const API_URL =
+"https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
+
+function searchParticipant(){
+
+const participantId =
+document.getElementById("participantId").value;
+
+fetch(
+API_URL,
+{
+method:"POST",
+body:new URLSearchParams({
+action:"findParticipant",
+participantId:participantId
+})
+}
+)
+.then(r=>r.json())
+.then(data=>{
+
+if(!data.success){
+alert("Participant ID not found");
+return;
+}
+
+let p=data.data;
+
+document.getElementById("details").style.display="block";
+
+document.getElementById("details").innerHTML=`
+
+<h3>Verify Your Details</h3>
+
+<p><b>Name:</b> ${p["Full Name"]}</p>
+<p><b>Gender:</b> ${p["Gender"]}</p>
+<p><b>Mobile:</b> ${p["Mobile Number"]}</p>
+<p><b>WhatsApp:</b> ${p["WhatsApp Number"]}</p>
+<p><b>Email:</b> ${p["Email"]}</p>
+<p><b>Age:</b> ${p["Age"]}</p>
+<p><b>Profession:</b> ${p["Profession"]}</p>
+<p><b>State:</b> ${p["State"]}</p>
+
+<button onclick="payNow(
+'${p["Participant ID"]}',
+'${p["Full Name"]}'
+)">
+Join 15 Days Tarot Foundation Course - Pay ₹7000
+</button>
+
+`;
+
+});
+
+}
+
+function payNow(participantId,fullName){
+
+localStorage.setItem(
+"participantId",
+participantId
+);
+
+localStorage.setItem(
+"fullName",
+fullName
+);
+
+window.location.href =
+"https://YOUR-RAZORPAY-PAYMENT-LINK";
+
+}
+
+</script>
+
+</body>
+</html>
