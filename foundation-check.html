@@ -7,38 +7,50 @@
 
 <style>
 
-body{
-font-family:Arial;
-max-width:800px;
-margin:auto;
-padding:20px;
+*{
+  box-sizing:border-box;
 }
 
+body{
+  font-family:Arial,sans-serif;
+  margin:0;
+  padding:15px;
+}
+
+.container{
+  max-width:800px;
+  margin:auto;
+}
+    
 input{
-width:100%;
-padding:10px;
-margin-top:10px;
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  font-size:16px;
 }
 
 button{
-padding:12px 20px;
-margin-top:10px;
-cursor:pointer;
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  font-size:16px;
+  cursor:pointer;
 }
 
 .card{
-border:1px solid #ccc;
-padding:20px;
-margin-top:20px;
-display:none;
+  border:1px solid #ccc;
+  padding:15px;
+  margin-top:20px;
+  display:none;
+  width:100%;
+  overflow-wrap:break-word;
 }
 
 </style>
-
 </head>
 
 <body>
-
+<div class="container">
 <h2>15 Days Tarot Foundation Course</h2>
 
 <p>
@@ -213,5 +225,6 @@ body:JSON.stringify({
 
 </script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</div>    
 </body>
 </html>
