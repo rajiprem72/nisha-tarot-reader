@@ -101,24 +101,20 @@ fetch(API_URL,{
 data.records.forEach(record => {
 
 
-totalCollection +=
-Number(record["Paid Amount"] || 0);
+console.log(record);
+
+totalCollection += parseFloat(
+    record["Paid Amount"] || 0
+);
 
 
 });
 
-document.getElementById("summary")
-.innerHTML =
+document.getElementById("summary").innerHTML = `
 
-"<h3>Total Enrollments : "
-
-* data.count +
-  "</h3>" +
-
-"<h3>Total Collection : ₹"
-
-* totalCollection.toLocaleString("en-IN") +
-  "</h3>";
+<h3>Total Enrollments : ${data.count}</h3>
+<h3>Total Collection : ₹${totalCollection.toLocaleString('en-IN')}</h3>
+`;
 
 
     const tbody =
