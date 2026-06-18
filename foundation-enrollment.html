@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Foundation Course Enrollments</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    margin:20px;
+}
+
+h2{
+    color:#333;
+}
+
+.summary{
+    background:#f2f2f2;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:5px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#1f4e79;
+    color:white;
+    padding:10px;
+    text-align:left;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:8px;
+}
+
+tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>15 Days Tarot Foundation Course</h2>
+
+<div id="summary" class="summary">
+Loading...
+</div>
+
+<table id="reportTable">
+
+<thead>
+<tr>
+<th>Participant ID</th>
+<th>Full Name</th>
+<th>Payment Status</th>
+<th>Payment ID</th>
+<th>Paid Amount</th>
+<th>Payment Date</th>
+</tr>
+</thead>
+
+<tbody>
+</tbody>
+
+</table>
+
+<script>
+
+const API_URL =
+"https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
+
+fetch(API_URL,{
+    method:"POST",
+    body:JSON.stringify({
+        action:"getFoundationReport"
+    })
+})
+.then(r=>r.json())
+.then(data=>{
+
+    if(!data.success)
+    {
+        alert("Unable to load report");
+        return;
+    }
+
+    document.getElementById("summary")
+    .innerHTML =
+
+    "<b>Total Enrollments :</b> "
+    + data.count;
+
+    const tbody =
+    document.querySelector(
+      "#reportTable tbody"
+    );
+
+    data.records.forEach(record=>{
+
+        let row =
+        "<tr>" +
+
+        "<td>" +
+        record["Participant ID"] +
+        "</td>" +
+
+        "<td>" +
+        record["Full Name"] +
+        "</td>" +
+
+        "<td>" +
+        record["Payment Status"] +
+        "</td>" +
+
+        "<td>" +
+        record["Payment ID"] +
+        "</td>" +
+
+        "<td>" +
+        record["Paid Amount"] +
+        "</td>" +
+
+        "<td>" +
+        record["Payment Date"] +
+        "</td>" +
+
+        "</tr>";
+
+        tbody.innerHTML += row;
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
