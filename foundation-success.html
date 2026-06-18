@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment Success</title>
+</head>
+<body>
+
+<h2>Payment Successful</h2>
+
+<p>
+Please wait...
+</p>
+
+<script>
+
+const API_URL =
+"https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
+
+/*
+Normally Razorpay passes payment_id
+through webhook.
+
+For demo:
+*/
+
+const paymentId =
+new URLSearchParams(
+window.location.search
+).get("payment_id");
+
+fetch(
+API_URL,
+{
+method:"POST",
+body:new URLSearchParams({
+
+action:"saveFoundationPayment",
+
+participantId:
+localStorage.getItem("participantId"),
+
+fullName:
+localStorage.getItem("fullName"),
+
+paymentId:
+paymentId
+
+})
+}
+)
+.then(r=>r.json())
+.then(data=>{
+
+document.body.innerHTML=`
+<h2>Thank You</h2>
+<p>
+Your registration for the
+15 Days Tarot Foundation Course
+has been completed successfully.
+</p>
+`;
+
+});
+
+</script>
+
+</body>
+</html>
