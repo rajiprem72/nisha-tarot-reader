@@ -369,31 +369,25 @@ document.getElementById("registrationForm")
     
     };
 
-    const form =
-    document.createElement("form");
-
-    form.method = "POST";
-
-    form.action =
-    "https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
-
-    const input =
-    document.createElement("input");
-
-    input.type = "hidden";
-
-    input.name = "data";
-
-    input.value =
-    JSON.stringify(payload);
-
-    form.appendChild(input);
-
-    document.body.appendChild(form);
-
-    form.submit();
-
-});
+   fetch(
+        "https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec",
+        {
+            method:"POST",
+            body:JSON.stringify(payload)
+        })
+        .then(res=>res.text())
+        .then(data=>{
+        
+            // Redirect to Razorpay after saving lead
+        
+            window.location.href =
+            "YOUR_RAZORPAY_LINK";
+        
+        })
+        .catch(err=>{
+            alert("Error saving registration");
+        });
+        });
 
 </script>
 </body>
