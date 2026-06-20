@@ -369,27 +369,30 @@ document.getElementById("registrationForm")
     
     };
 
-  fetch(
-"https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec",
-{
-    method:"POST",
-    body:JSON.stringify(payload)
-})
-.then(response => response.text())
-.then(data => {
+  const form =
+document.createElement("form");
 
-    console.log("Server Response:", data);
+form.method = "POST";
 
-    alert(data);
+form.action =
+"https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
 
-})
-.catch(error => {
+const input =
+document.createElement("input");
 
-    console.error(error);
+input.type = "hidden";
 
-    alert("Error Saving Registration: " + error);
+input.name = "data";
 
-});
+input.value =
+JSON.stringify(payload);
+
+form.appendChild(input);
+
+document.body.appendChild(form);
+
+form.submit();
+    
 </script>
 </body>
 </html>
