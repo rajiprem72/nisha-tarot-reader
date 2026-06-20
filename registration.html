@@ -369,26 +369,27 @@ document.getElementById("registrationForm")
     
     };
 
-   fetch(
-        "https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec",
-        {
-            method:"POST",
-            body:JSON.stringify(payload)
-        })
-        .then(res=>res.text())
-        .then(data=>{
-        
-            // Redirect to Razorpay after saving lead
-        
-            window.location.href =
-            "https://rzp.io/rzp/zzelDU7";
-        
-        })
-        .catch(err=>{
-            alert("Error saving registration");
-        });
-        });
+  fetch(
+"https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec",
+{
+    method:"POST",
+    body:JSON.stringify(payload)
+})
+.then(response => response.text())
+.then(data => {
 
+    console.log("Server Response:", data);
+
+    alert(data);
+
+})
+.catch(error => {
+
+    console.error(error);
+
+    alert("Error Saving Registration: " + error);
+
+});
 </script>
 </body>
 </html>
