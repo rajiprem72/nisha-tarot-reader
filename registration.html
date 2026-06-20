@@ -343,56 +343,41 @@ document.getElementById("registrationForm")
 
         action:"register",
 
-        fullname:
-        document.getElementById("fullname").value,
+        fullname: document.getElementById("fullname").value,
+        gender: document.getElementById("gender").value,
+        mobile: document.getElementById("mobile").value,
+        whatsapp: document.getElementById("whatsapp").value,
+        email: document.getElementById("email").value,
+        age: document.getElementById("age").value,
+        profession: document.getElementById("profession").value,
+        place: document.getElementById("state").value
 
-        gender:
-        document.getElementById("gender").value,
-
-        mobile:
-        document.getElementById("mobile").value,
-
-        whatsapp:
-        document.getElementById("whatsapp").value,
-
-        email:
-        document.getElementById("email").value,
-
-        age:
-        document.getElementById("age").value,
-
-        profession:
-        document.getElementById("profession").value,
-
-        place:
-        document.getElementById("state").value
-    
     };
 
-  const form =
-document.createElement("form");
+    const form = document.createElement("form");
 
-form.method = "POST";
+    form.method = "POST";
 
-form.action =
-"https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
+    form.action =
+    "https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
 
-const input =
-document.createElement("input");
+    const input = document.createElement("input");
 
-input.type = "hidden";
+    input.type = "hidden";
+    input.name = "data";
+    input.value = JSON.stringify(payload);
 
-input.name = "data";
+    form.appendChild(input);
 
-input.value =
-JSON.stringify(payload);
+    document.body.appendChild(form);
 
-form.appendChild(input);
+    form.submit();
 
-document.body.appendChild(form);
+});
 
-form.submit();
-    
 </script>
+
+
+
 </body>
 </html>
