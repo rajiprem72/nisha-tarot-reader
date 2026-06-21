@@ -490,45 +490,15 @@ function closeRegistrationPopup(){
 
         <div class="feature-grid">
 
-            <div class="feature-card">
-                <h3>📖 Simplified Learning System</h3>
-                <p>
-                    I break down complex Tarot concepts into easy patterns,
-                    stories and practical frameworks.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>✨ Intuition First Approach</h3>
-                <p>
-                    I help you develop your intuition so you can read
-                    with clarity and confidence.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>🃏 Practical & Experience Based</h3>
-                <p>
-                    Learn through real readings, examples and guided
-                    practice — not just theory.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>🤝 Personalized Mentorship</h3>
-                <p>
-                    I guide you step-by-step, answer your doubts
-                    and support your growth.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>📈 Skill + Income Focused</h3>
-                <p>
-                    Learn how to transform Tarot into a meaningful skill
-                    and professional opportunity.
-                </p>
-            </div>
+    <div class="feature-card">
+    <ul>
+        <li>📖 Simplified Learning System</li>
+        <li>✨ Intuition First Approach</li>
+        <li>🃏 Practical & Experience Based</li>
+        <li>🤝 Personalized Mentorship</li>
+        <li>📈 Skill + Income Focused</li>
+    </ul>
+</div>
 
         </div>
 
@@ -719,12 +689,21 @@ function closeRegistrationPopup(){
 }
 
 .feature-card{
-    background:white;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    text-align:center;
 }
 
+.feature-card ul{
+    display:inline-block;
+    text-align:left;
+    margin:0;
+    padding-left:20px;
+}
+
+.feature-card li{
+    margin:6px 0;
+    line-height:1.4;
+}
+    
 .feature-card h3{
     color:#5c2f91;
 }
