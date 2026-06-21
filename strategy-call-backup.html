@@ -1,0 +1,4837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tarot Reading Skills</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+}
+
+.hero-image{
+    width:100%;
+    display:block;
+}
+
+.content{
+    padding:30px;
+    text-align:center;
+}
+
+h1{
+    color:#4b006e;
+    margin-bottom:15px;
+}
+
+.sub-title{
+    font-size:20px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.benefits{
+    text-align:left;
+    max-width:700px;
+    margin:0 auto 30px auto;
+}
+
+.benefits ul{
+    list-style:none;
+    padding:0;
+}
+
+.benefits li{
+    padding:10px 0;
+    font-size:18px;
+    border-bottom:1px solid #eee;
+}
+
+.cta-section{
+    text-align:center;
+    padding:20px;
+}
+
+.enroll-btn{
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    padding:18px 40px;
+    font-size:24px;
+    font-weight:bold;
+    border-radius:8px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.enroll-btn:hover{
+    background:#e68900;
+}
+
+.note{
+    margin-top:20px;
+    color:#666;
+    font-size:14px;
+}
+
+.footer{
+    text-align:center;
+    padding:25px;
+    background:#fafafa;
+    color:#555;
+}
+.tarot-challenges-section{
+    padding:80px 20px;
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #fffdf8
+    );
+}
+
+.tarot-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.main-title{
+    text-align:center;
+    font-size:58px;
+    color:#5a2d0c;
+    margin-bottom:20px;
+    font-family:Georgia, serif;
+    line-height:1.2;
+}
+
+.sub-title{
+    text-align:center;
+    font-size:24px;
+    color:#666;
+    margin-bottom:50px;
+    line-height:1.7;
+}
+
+.sub-title strong{
+    color:#c47b18;
+    font-size:30px;
+}
+
+.challenge-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.challenge-card{
+    background:white;
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.challenge-card:hover{
+    transform:translateY(-6px);
+}
+
+.icon{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.challenge-card h3{
+    font-size:24px;
+    color:#333;
+    margin-bottom:10px;
+    line-height:1.4;
+}
+
+.challenge-card p{
+    font-size:22px;
+    color:#b36b00;
+    font-weight:600;
+    margin:0;
+}
+
+.bottom-message{
+    margin-top:50px;
+    text-align:center;
+    background:#fff3dd;
+    padding:25px;
+    border-radius:15px;
+    font-size:28px;
+    color:#444;
+    font-weight:500;
+}
+
+.bottom-message span{
+    color:#d28a00;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.main-title{
+    font-size:38px;
+}
+
+.sub-title{
+    font-size:18px;
+}
+
+.challenge-card h3{
+    font-size:20px;
+}
+
+.challenge-card p{
+    font-size:18px;
+}
+
+.bottom-message{
+    font-size:22px;
+}
+
+}
+
+    
+</style>
+
+</head>
+
+<body>
+
+<!-- Registration Countdown Strip START -->
+
+<style>
+
+.registration-strip{
+    background:#d62828;
+    color:#fff;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.registration-left{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.timer-wrapper{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.timer-box{
+    background:#fff;
+    color:#d62828;
+    font-weight:bold;
+    font-size:22px;
+    padding:8px 12px;
+    border-radius:12px;
+    min-width:55px;
+    text-align:center;
+}
+
+.register-btn{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.register-btn:hover{
+    background:#3d9140;
+}
+
+.popup-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    z-index:9999;
+}
+
+.popup-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:1100px;
+    height:90%;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.popup-content iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+.close-popup{
+    position:absolute;
+    right:10px;
+    top:10px;
+    background:red;
+    color:white;
+    border:none;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:10;
+}
+
+@media(max-width:768px){
+
+.registration-strip{
+    justify-content:center;
+    text-align:center;
+}
+
+}
+.register-btn{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.register-btn:hover{
+    background:#3d9140;
+}    
+
+</style>
+
+<div class="registration-strip">
+
+    <div class="registration-left">
+        Limited Time Registrations Ending In...
+    </div>
+
+    <div class="timer-wrapper">
+        <div class="timer-box" id="minutes">15</div>
+        <div class="timer-box" id="seconds">00</div>
+    </div>
+    <button class="register-btn"
+            onclick="openRegistrationPopup()">
+        Register Now!
+    </button>
+  
+</div>
+
+<div class="popup-overlay" id="registrationPopup">
+
+    <div class="popup-content">
+
+        <button class="close-popup"
+        onclick="closeRegistrationPopup()">×</button>
+
+        <iframe src="registration.html"></iframe>
+
+    </div>
+
+</div>
+
+<script>
+let totalSeconds = 15 * 60;
+
+function updateTimer(){
+
+    let mins = Math.floor(totalSeconds / 60);
+    let secs = totalSeconds % 60;
+
+    document.querySelectorAll('.minutes').forEach(el=>{
+        el.innerHTML = String(mins).padStart(2,'0');
+    });
+
+    document.querySelectorAll('.seconds').forEach(el=>{
+        el.innerHTML = String(secs).padStart(2,'0');
+    });
+
+    if(totalSeconds > 0){
+        totalSeconds--;
+    }
+}
+
+updateTimer();
+setInterval(updateTimer,1000);
+
+function openRegistrationPopup(){
+     window.location.href="registration.html";
+}
+
+function closeRegistrationPopup(){
+    document.getElementById("registrationPopup").style.display="none";
+}
+
+</script>
+
+<!-- Registration Countdown Strip END -->
+
+    
+<div class="container">
+
+    <!-- Advertisement Image -->
+
+    <img src="images/strategy-call.jpg"
+         alt="Tarot Strategy Call"
+         class="hero-image">
+
+    <section class="tarot-challenges-section">
+
+    <div class="tarot-container">
+
+        <h2 class="main-title">
+            Are You Facing These Challenges?
+        </h2>
+
+        <p class="sub-title">
+            You're not alone. Every Tarot Reader was once where you are now.
+            <br>
+            <strong>Let's change that together.</strong>
+        </p>
+
+        <div class="challenge-grid">
+
+            <div class="challenge-card">
+                <div class="icon">📺</div>
+                <h3>You watch YouTube videos</h3>
+                <p>but still feel confused</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">🧠</div>
+                <h3>You struggle to remember</h3>
+                <p>card meanings</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">🧘</div>
+                <h3>You don't trust your</h3>
+                <p>intuition</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">🔮</div>
+                <h3>You fear giving</h3>
+                <p>wrong readings</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">💰</div>
+                <h3>You want to earn</h3>
+                <p>through Tarot but don't know how</p>
+            </div>
+
+            <div class="challenge-card">
+                <div class="icon">🌟</div>
+                <h3>You feel overwhelmed</h3>
+                <p>by too much information</p>
+            </div>
+
+        </div>
+
+        <div class="bottom-message">
+            It's time to learn Tarot the <span>RIGHT WAY</span>
+            with guidance, clarity and confidence.
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="method-section">
+
+    <div class="method-container">
+
+        <div class="hero-box">
+
+            <h5>MY UNIQUE METHOD TO</h5>
+
+            <h1>Teach Tarot</h1>
+
+            <p class="tagline">
+                Learn Deeper. Read Intuitively. Transform Confidently.
+            </p>
+
+        </div>
+
+        <div class="intro-box">
+
+            <h2>
+                A Unique, Intuitive & Practical System That Turns
+                <span>Complete Beginners Into Confident Tarot Readers</span>
+            </h2>
+
+            <p>
+                My teaching method is not about memorizing meanings —
+                it's about understanding, connecting and trusting your intuition.
+            </p>
+
+        </div>
+
+        <h2 class="section-title">
+            What Makes My Method Unique?
+        </h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>📖 Simplified Learning System</h3>
+                <p>
+                    I break down complex Tarot concepts into easy patterns,
+                    stories and practical frameworks.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>✨ Intuition First Approach</h3>
+                <p>
+                    I help you develop your intuition so you can read
+                    with clarity and confidence.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🃏 Practical & Experience Based</h3>
+                <p>
+                    Learn through real readings, examples and guided
+                    practice — not just theory.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🤝 Personalized Mentorship</h3>
+                <p>
+                    I guide you step-by-step, answer your doubts
+                    and support your growth.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📈 Skill + Income Focused</h3>
+                <p>
+                    Learn how to transform Tarot into a meaningful skill
+                    and professional opportunity.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="framework-experience">
+
+            <div class="framework-box">
+
+                <h2>My 5-Step Teaching Framework</h2>
+
+                <div class="step">
+                    <span>1</span>
+                    <div>
+                        <strong>Connect</strong>
+                        <p>Build a connection with your deck, energy and intuition.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span>2</span>
+                    <div>
+                        <strong>Understand</strong>
+                        <p>Learn the core meanings, symbols and story behind each card.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span>3</span>
+                    <div>
+                        <strong>Interpret</strong>
+                        <p>Use simple frameworks to interpret cards in any spread.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span>4</span>
+                    <div>
+                        <strong>Practice</strong>
+                        <p>Apply in real-life situations with guided practice and feedback.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span>5</span>
+                    <div>
+                        <strong>Transform</strong>
+                        <p>Gain confidence, read accurately and start helping others.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="experience-box">
+
+                <h2>What You Will Experience</h2>
+
+                <ul>
+                    <li>Intuitive understanding of every card</li>
+                    <li>Confidence in giving accurate readings</li>
+                    <li>Ability to read for yourself and others</li>
+                    <li>Clarity in life decisions</li>
+                    <li>Spiritual growth & self-awareness</li>
+                    <li>Opportunity to create income doing what you love</li>
+                </ul>
+
+                <div class="bonus-box">
+                    <h3>🎁 Bonus Training</h3>
+                    <p>
+                        How to start your Tarot journey professionally
+                        and attract clients.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h2 class="section-title">
+            The Transformation You Will Achieve
+        </h2>
+
+        <div class="journey-row">
+
+            <div class="journey-card">
+                <h4>From Confusion & Self-Doubt</h4>
+            </div>
+
+            <div class="arrow">➜</div>
+
+            <div class="journey-card">
+                <h4>To Clarity & Understanding</h4>
+            </div>
+
+            <div class="arrow">➜</div>
+
+            <div class="journey-card">
+                <h4>To Confidence & Intuition</h4>
+            </div>
+
+            <div class="arrow">➜</div>
+
+            <div class="journey-card">
+                <h4>To Becoming A Confident Tarot Reader</h4>
+            </div>
+
+        </div>
+
+        <div class="quote-box">
+            This is not just a course. It is a journey to discover
+            the reader within you.
+        </div>
+
+        <div class="footer-message">
+
+            <h2>
+                Learn Intuitively. Read Confidently. Inspire Others.
+            </h2>
+
+            <p>
+                Your Tarot Journey Starts Here!
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.method-section{
+    padding:80px 20px;
+    background:linear-gradient(135deg,#fffaf2,#fef6ea);
+    font-family:'Segoe UI',sans-serif;
+}
+
+.method-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero-box{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hero-box h5{
+    color:#8b6b25;
+    font-size:22px;
+    letter-spacing:2px;
+}
+
+.hero-box h1{
+    font-size:72px;
+    color:#5c2f91;
+    margin:10px 0;
+}
+
+.tagline{
+    font-size:24px;
+    color:#666;
+}
+
+.intro-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    margin-bottom:50px;
+}
+
+.intro-box span{
+    color:#7c3aed;
+    font-weight:700;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#5c2f91;
+    margin:50px 0 30px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.feature-card h3{
+    color:#5c2f91;
+}
+
+.framework-experience{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:50px;
+}
+
+.framework-box,
+.experience-box{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.step{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.step span{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#7c3aed;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.experience-box ul{
+    padding-left:20px;
+    line-height:2;
+}
+
+.bonus-box{
+    margin-top:30px;
+    background:#f5eaff;
+    padding:20px;
+    border-radius:15px;
+}
+
+.journey-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+    align-items:center;
+    margin-top:40px;
+}
+
+.journey-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    width:220px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.arrow{
+    font-size:36px;
+    color:#7c3aed;
+}
+
+.quote-box{
+    margin-top:40px;
+    text-align:center;
+    background:#fff2d9;
+    padding:30px;
+    border-radius:20px;
+    font-size:24px;
+    font-style:italic;
+}
+
+.footer-message{
+    text-align:center;
+    margin-top:50px;
+}
+
+.footer-message h2{
+    color:#5c2f91;
+    font-size:42px;
+}
+
+.footer-message p{
+    font-size:32px;
+    color:#b57b00;
+    font-family:cursive;
+}
+
+@media(max-width:768px){
+
+.hero-box h1{
+    font-size:46px;
+}
+
+.framework-experience{
+    grid-template-columns:1fr;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+}
+
+</style>
+
+<!-- Registration Banner -->
+
+<div class="registration-strip">
+
+    <div class="registration-left">
+        Limited Time Registrations Ending In...
+    </div>
+
+    <div class="timer-wrapper">
+
+        <div class="timer-box minutes">15</div>
+
+        <div class="timer-box seconds">00</div>
+
+    </div>
+
+    <button class="register-btn"
+            onclick="openRegistrationPopup()">
+        Register Now!
+    </button>
+
+</div>
+
+
+<!-- End Registration Banner -->
+
+
+    
+<section class="mentor-section">
+
+    <div class="mentor-container">
+
+        <div class="mentor-header">
+
+            <h5>MEET YOUR MENTOR</h5>
+
+            <h1>Nisha</h1>
+
+            <div class="mentor-role">
+                Tarot Coach | Intuition Mentor | Spiritual Guide
+            </div>
+
+            <p class="mentor-mission">
+                "My mission is simple — to help you connect with your intuition,
+                read Tarot with confidence and create a meaningful life filled
+                with purpose and abundance."
+            </p>
+
+        </div>
+
+        <!-- Achievement Cards -->
+
+        <div class="achievement-grid">
+
+            <div class="achievement-card">
+                <h2>10+</h2>
+                <p>Years of Experience</p>
+            </div>
+
+            <div class="achievement-card">
+                <h2>500+</h2>
+                <p>Students Trained</p>
+            </div>
+
+            <div class="achievement-card">
+                <h2>5000+</h2>
+                <p>Tarot Readings Done</p>
+            </div>
+
+            <div class="achievement-card">
+                <h2>🌍</h2>
+                <p>International Trainer</p>
+            </div>
+
+        </div>
+
+        <!-- Story and Benefits -->
+
+        <div class="story-benefits">
+
+            <div class="story-box">
+
+                <h2>My Story</h2>
+
+                <p>
+                    My spiritual journey began many years ago when I was searching
+                    for answers and clarity in my own life.
+                </p>
+
+                <p>
+                    Tarot became my guide and a powerful tool of transformation.
+                    It helped me heal, gain clarity and understand the deeper
+                    purpose of my life.
+                </p>
+
+                <p>
+                    I realized that when we connect with our intuition,
+                    we can change not only our lives but also the lives of others.
+                </p>
+
+                <p>
+                    This inspired me to study, practice and master Tarot,
+                    intuition development and coaching so that I could
+                    help more people.
+                </p>
+
+                <p>
+                    Today, I feel blessed to guide hundreds of beautiful souls
+                    on their journey of self-discovery, confidence and
+                    spiritual growth.
+                </p>
+
+            </div>
+
+            <div class="help-box">
+
+                <h2>I Help You</h2>
+
+                <ul>
+
+                    <li>
+                        Understand Tarot in a simple and intuitive way
+                    </li>
+
+                    <li>
+                        Develop deep trust in your inner guidance
+                    </li>
+
+                    <li>
+                        Read cards confidently for yourself and others
+                    </li>
+
+                    <li>
+                        Find clarity, direction and emotional healing
+                    </li>
+
+                    <li>
+                        Build a soul-aligned career and earn with purpose
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Certifications -->
+
+        <h2 class="section-heading">
+            My Certifications & Trainings
+        </h2>
+
+        <div class="certification-grid">
+
+            <div class="certificate-card">
+                <h3>Life Coaching Certificate</h3>
+                <p>
+                    Equipping and empowering individuals to overcome
+                    challenges and create fulfilling lives.
+                </p>
+            </div>
+
+            <div class="certificate-card">
+                <h3>Career & Life Purpose Readings</h3>
+                <p>
+                    Specialized training to guide people towards
+                    their true career path and life purpose.
+                </p>
+            </div>
+
+            <div class="certificate-card">
+                <h3>NLP Practitioner Certification</h3>
+                <p>
+                    Neuro-Linguistic Programming techniques to understand
+                    minds, improve communication and create transformation.
+                </p>
+            </div>
+
+            <div class="certificate-card">
+                <h3>International Trainer Certification</h3>
+                <p>
+                    Globally recognized training to deliver impactful
+                    learning experiences worldwide.
+                </p>
+            </div>
+
+            <div class="certificate-card">
+                <h3>Vedic Numerology Certification</h3>
+                <p>
+                    Expertise in numbers and their influence to unlock
+                    insights and life patterns.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Closing Message -->
+
+        <div class="closing-message">
+
+            <p>
+                I am here to walk beside you on your journey from confusion
+                to clarity, from doubt to confidence and from learning
+                to transforming lives.
+            </p>
+
+            <h2>
+                Let's Create Magic Together!
+            </h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.mentor-section{
+    padding:90px 20px;
+    background:linear-gradient(
+        135deg,
+        #fffaf4,
+        #fef5eb
+    );
+    font-family:'Segoe UI',sans-serif;
+}
+
+.mentor-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.mentor-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.mentor-header h5{
+    color:#9c6a00;
+    font-size:20px;
+    letter-spacing:3px;
+}
+
+.mentor-header h1{
+    font-size:80px;
+    color:#5b2e91;
+    margin:10px 0;
+}
+
+.mentor-role{
+    font-size:28px;
+    color:#444;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.mentor-mission{
+    max-width:850px;
+    margin:auto;
+    font-size:26px;
+    color:#666;
+    font-style:italic;
+    line-height:1.7;
+}
+
+.achievement-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin:60px 0;
+}
+
+.achievement-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.achievement-card h2{
+    font-size:52px;
+    color:#c48a00;
+    margin-bottom:10px;
+}
+
+.achievement-card p{
+    font-size:22px;
+    font-weight:600;
+}
+
+.story-benefits{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    margin-bottom:60px;
+}
+
+.story-box,
+.help-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.story-box h2,
+.help-box h2{
+    color:#5b2e91;
+    margin-bottom:25px;
+}
+
+.story-box p{
+    font-size:20px;
+    line-height:1.8;
+    color:#444;
+}
+
+.help-box ul{
+    padding-left:25px;
+}
+
+.help-box li{
+    font-size:22px;
+    line-height:2;
+    margin-bottom:10px;
+}
+
+.section-heading{
+    text-align:center;
+    color:#5b2e91;
+    font-size:48px;
+    margin-bottom:40px;
+}
+
+.certification-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.certificate-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.certificate-card h3{
+    color:#b57a00;
+    margin-bottom:15px;
+}
+
+.certificate-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+.closing-message{
+    margin-top:60px;
+    text-align:center;
+    background:white;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.closing-message p{
+    font-size:26px;
+    color:#444;
+    line-height:1.8;
+}
+
+.closing-message h2{
+    color:#c48a00;
+    font-size:52px;
+    margin-top:25px;
+}
+
+@media(max-width:768px){
+
+.story-benefits{
+    grid-template-columns:1fr;
+}
+
+.mentor-header h1{
+    font-size:50px;
+}
+
+.section-heading{
+    font-size:34px;
+}
+
+.closing-message h2{
+    font-size:36px;
+}
+
+}
+
+</style>
+
+
+ <!-- VIDEO -->
+    <div class="video-section">
+
+        <div class="video-title">
+            Testimonial Video
+        </div>
+
+       <div class="video-wrapper">
+            <video controls>
+                <source src="videos/testimonial_geetha.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </div>    
+<style>
+.video-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-wrapper video {
+    max-width: 100%;
+    height: auto;
+}
+.video-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px; /* Adjust size as needed */
+    margin-bottom: 20px;
+}
+</style>    
+
+    
+
+<section class="curriculum-section">
+
+    <div class="curriculum-container">
+
+        <div class="curriculum-header">
+
+            <h5>15-Day Certification Program</h5>
+
+            <h1>Tarot Foundation Course</h1>
+
+            <p>
+                Learn Intuitively • Interpret 78 Cards Confidently •
+                Perform Accurate Readings • Read for Yourself & Others •
+                Build Confidence as a Tarot Reader
+            </p>
+
+        </div>
+
+        <div class="objective-box">
+
+            <h2>Course Objective</h2>
+
+            <ul>
+                <li>Understand Tarot fundamentals</li>
+                <li>Connect intuitively with cards</li>
+                <li>Interpret all 78 cards confidently</li>
+                <li>Perform structured Tarot readings</li>
+                <li>Read for self and others</li>
+                <li>Handle client questions professionally</li>
+                <li>Build confidence as a Tarot Reader</li>
+            </ul>
+
+        </div>
+
+        <h2 class="section-title">
+            Course Curriculum
+        </h2>
+
+        <div class="module-grid">
+
+            <div class="module-card">
+                <h3>Module 1 – Introduction to Tarot</h3>
+                <p>
+                    History, evolution, myths, misconceptions,
+                    ethics and responsibilities of a Tarot Reader.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 2 – Building Intuition</h3>
+                <p>
+                    Intuition vs imagination, intuition strengthening,
+                    grounding and centering practices.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 3 – Understanding Tarot Structure</h3>
+                <p>
+                    Major Arcana, Minor Arcana, Court Cards,
+                    suits and card meanings.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 4 – Major Arcana Mastery Part 1</h3>
+                <p>
+                    The Fool to Wheel of Fortune.
+                    Meanings, symbolism and life lessons.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 5 – Major Arcana Mastery Part 2</h3>
+                <p>
+                    Justice to The World.
+                    Transformation, symbolism and spiritual messages.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 6 – Suit of Cups</h3>
+                <p>
+                    Emotions, relationships, intuition and
+                    relationship-focused readings.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 7 – Suit of Wands</h3>
+                <p>
+                    Career, motivation, ambition,
+                    creativity and purpose readings.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 8 – Suit of Swords</h3>
+                <p>
+                    Thoughts, communication,
+                    challenges and decision-making.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 9 – Suit of Pentacles</h3>
+                <p>
+                    Money, business, health,
+                    wealth and finance readings.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 10 – Court Cards Deep Dive</h3>
+                <p>
+                    Understanding personalities,
+                    behaviours and character archetypes.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 11 – Card Combinations</h3>
+                <p>
+                    Storytelling with Tarot,
+                    patterns and card interactions.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 12 – Tarot Spreads</h3>
+                <p>
+                    Daily card, 3-card, 5-card,
+                    7-card and relationship spreads.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 13 – Reading for Others</h3>
+                <p>
+                    Client communication,
+                    ethical readings and mock sessions.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 14 – Practical Reading Workshop</h3>
+                <p>
+                    Live practice sessions with mentor feedback
+                    and confidence building.
+                </p>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 15 – Certification & Graduation</h3>
+                <p>
+                    Final assessment, practical test,
+                    ethics and certification requirements.
+                </p>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">
+            Bonus Modules
+        </h2>
+
+        <div class="bonus-grid">
+
+            <div class="bonus-card">
+                <h3>Bonus Module 1</h3>
+                <p>
+                    Tarot Journal Mastery, tracking accuracy,
+                    reading records and intuition building.
+                </p>
+            </div>
+
+            <div class="bonus-card">
+                <h3>Bonus Module 2</h3>
+                <p>
+                    Daily Tarot Rituals, morning card pull,
+                    energy check-ins and reflection practices.
+                </p>
+            </div>
+
+            <div class="bonus-card">
+                <h3>Bonus Module 3</h3>
+                <p>
+                    Reading Accuracy Framework –
+                    The C.L.E.A.R Method™
+                </p>
+            </div>
+
+        </div>
+
+        <div class="clear-method">
+
+            <h2>The C.L.E.A.R Method™</h2>
+
+            <ul>
+                <li><strong>C</strong> – Connect with your intuition</li>
+                <li><strong>L</strong> – Listen to impressions</li>
+                <li><strong>E</strong> – Explore card symbolism</li>
+                <li><strong>A</strong> – Analyze and link cards together</li>
+                <li><strong>R</strong> – Respond with practical guidance</li>
+            </ul>
+
+        </div>
+
+        <div class="deliverables-box">
+
+            <h2>Student Deliverables</h2>
+
+            <ul>
+                <li>Tarot Foundation Course Workbook</li>
+                <li>Major Arcana Cheat Sheet</li>
+                <li>Minor Arcana Cheat Sheet</li>
+                <li>Tarot Spreads Guide</li>
+                <li>Practice Reading Journal</li>
+                <li>Assessment Workbook</li>
+                <li>Certificate of Completion</li>
+            </ul>
+
+        </div>
+
+        <div class="footer-highlight">
+
+            <h2>
+                Learn Tarot Intuitively in Just 15 Days
+            </h2>
+
+            <p>
+                Gain the confidence to read for yourself,
+                family, friends and future clients without
+                memorizing hundreds of meanings.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.curriculum-section{
+    padding:90px 20px;
+    background:linear-gradient(
+        135deg,
+        #fdfaf4,
+        #fff8ec
+    );
+    font-family:'Segoe UI',sans-serif;
+}
+
+.curriculum-container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.curriculum-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.curriculum-header h5{
+    color:#b57b00;
+    font-size:22px;
+    letter-spacing:2px;
+}
+
+.curriculum-header h1{
+    font-size:72px;
+    color:#5b2e91;
+}
+
+.curriculum-header p{
+    font-size:24px;
+    color:#555;
+    line-height:1.8;
+}
+
+.objective-box,
+.clear-method,
+.deliverables-box,
+.footer-highlight{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    margin-bottom:40px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:44px;
+    color:#5b2e91;
+    margin:60px 0 30px;
+}
+
+.module-grid,
+.bonus-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.module-card,
+.bonus-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.module-card h3,
+.bonus-card h3{
+    color:#b57b00;
+}
+
+.footer-highlight{
+    text-align:center;
+}
+
+.footer-highlight h2{
+    color:#5b2e91;
+}
+
+@media(max-width:768px){
+
+.curriculum-header h1{
+    font-size:46px;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+}
+
+</style>
+    
+<!-- Registration Banner -->
+
+<div class="registration-strip">
+
+    <div class="registration-left">
+        Limited Time Registrations Ending In...
+    </div>
+
+    <div class="timer-wrapper">
+
+        <div class="timer-box minutes">15</div>
+
+        <div class="timer-box seconds">00</div>
+
+    </div>
+
+    <button class="register-btn"
+            onclick="openRegistrationPopup()">
+        Register Now!
+    </button>
+
+</div>
+
+
+<!-- End Registration Banner -->
+
+
+<section class="transformation-section">
+
+    <div class="transformation-container">
+
+        <div class="transformation-header">
+
+            <h1>Tarot Transformation</h1>
+
+            <p class="tagline">
+                Beyond Cards. Into Clarity, Growth & Empowerment.
+            </p>
+
+            <div class="top-benefits">
+
+                <span>✨ Self-Awareness</span>
+                <span>💜 Emotional Healing</span>
+                <span>🌱 Intuitive Growth</span>
+                <span>🎯 Life Clarity</span>
+                <span>🧭 Aligned Decisions</span>
+                <span>🌟 Empowered Living</span>
+
+            </div>
+
+            <div class="main-message">
+                Tarot doesn't change your future.
+                It transforms how you see yourself,
+                so you can create a better one.
+            </div>
+
+        </div>
+
+        <!-- What Is Tarot Transformation -->
+
+        <div class="info-box">
+
+            <h2>What Is Tarot Transformation?</h2>
+
+            <p>
+                Tarot Transformation is the journey of using Tarot
+                as a powerful mirror for self-discovery, healing
+                and personal evolution.
+            </p>
+
+            <p>
+                It helps you understand your patterns, release blocks
+                and step into your highest potential with confidence.
+            </p>
+
+        </div>
+
+        <!-- How Tarot Transforms You -->
+
+        <h2 class="section-title">
+            How Tarot Transforms You
+        </h2>
+
+        <div class="transform-grid">
+
+            <div class="transform-card">
+                <h3>1. Self-Awareness</h3>
+                <p>
+                    Understand your true self,
+                    strengths, weaknesses and life purpose.
+                </p>
+            </div>
+
+            <div class="transform-card">
+                <h3>2. Emotional Healing</h3>
+                <p>
+                    Identify emotional wounds,
+                    release past pain and heal with compassion.
+                </p>
+            </div>
+
+            <div class="transform-card">
+                <h3>3. Intuitive Growth</h3>
+                <p>
+                    Strengthen your intuition and trust
+                    your inner wisdom deeply.
+                </p>
+            </div>
+
+            <div class="transform-card">
+                <h3>4. Life Clarity</h3>
+                <p>
+                    Gain clear guidance in relationships,
+                    career, finances and life decisions.
+                </p>
+            </div>
+
+            <div class="transform-card">
+                <h3>5. Aligned Decisions</h3>
+                <p>
+                    Make choices that align with your soul's path
+                    and highest good.
+                </p>
+            </div>
+
+            <div class="transform-card">
+                <h3>6. Empowered Living</h3>
+                <p>
+                    Step into confidence,
+                    create your reality and live purposefully.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Transformation Journey -->
+
+        <h2 class="section-title">
+            The Transformation Journey
+        </h2>
+
+        <div class="journey-row">
+
+            <div class="journey-step">Awareness<br><small>You face your truth.</small></div>
+
+            <div class="arrow">➜</div>
+
+            <div class="journey-step">Acceptance<br><small>You embrace what is.</small></div>
+
+            <div class="arrow">➜</div>
+
+            <div class="journey-step">Healing<br><small>You release what no longer serves you.</small></div>
+
+            <div class="arrow">➜</div>
+
+            <div class="journey-step">Growth<br><small>You evolve and expand.</small></div>
+
+            <div class="arrow">➜</div>
+
+            <div class="journey-step">Transformation<br><small>You become your best version.</small></div>
+
+        </div>
+
+        <!-- Areas Of Life -->
+
+        <h2 class="section-title">
+            Areas Of Life Transformed Through Tarot
+        </h2>
+
+        <div class="life-grid">
+
+            <div class="life-card">
+                <h3>❤️ Love & Relationships</h3>
+                <ul>
+                    <li>Improve relationships</li>
+                    <li>Heal heartbreak</li>
+                    <li>Attract your soulmate</li>
+                    <li>Build self-love</li>
+                </ul>
+            </div>
+
+            <div class="life-card">
+                <h3>💼 Career & Purpose</h3>
+                <ul>
+                    <li>Discover your passion</li>
+                    <li>Find career clarity</li>
+                    <li>Overcome obstacles</li>
+                    <li>Achieve success</li>
+                </ul>
+            </div>
+
+            <div class="life-card">
+                <h3>💰 Wealth & Abundance</h3>
+                <ul>
+                    <li>Improve money mindset</li>
+                    <li>Attract abundance</li>
+                    <li>Make wise financial decisions</li>
+                </ul>
+            </div>
+
+            <div class="life-card">
+                <h3>🌿 Health & Well-Being</h3>
+                <ul>
+                    <li>Mind-body connection</li>
+                    <li>Reduce stress</li>
+                    <li>Promote emotional wellness</li>
+                </ul>
+            </div>
+
+            <div class="life-card">
+                <h3>🕊 Spiritual Growth</h3>
+                <ul>
+                    <li>Deepen spiritual connection</li>
+                    <li>Understand life lessons</li>
+                    <li>Raise your vibration</li>
+                </ul>
+            </div>
+
+            <div class="life-card">
+                <h3>🌟 Personal Development</h3>
+                <ul>
+                    <li>Build confidence</li>
+                    <li>Break limiting beliefs</li>
+                    <li>Develop resilience</li>
+                    <li>Live authentically</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Practices -->
+
+        <div class="two-column">
+
+            <div class="practice-box">
+
+                <h2>Tarot Transformation Practices</h2>
+
+                <ul>
+                    <li>Daily Card Pull</li>
+                    <li>Reflection & Journaling</li>
+                    <li>Energy Check-In</li>
+                    <li>Intuitive Meditation</li>
+                    <li>Action & Integration</li>
+                </ul>
+
+            </div>
+
+            <div class="benefit-box">
+
+                <h2>Benefits You Will Experience</h2>
+
+                <ul>
+                    <li>Increased self-awareness</li>
+                    <li>Emotional balance & healing</li>
+                    <li>Better decision-making skills</li>
+                    <li>Stronger intuition</li>
+                    <li>Life clarity</li>
+                    <li>Confidence & empowerment</li>
+                    <li>A meaningful and purposeful life</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Powerful Quote -->
+
+        <div class="quote-box">
+
+            <h2>
+                Tarot Isn't Just About Predictions.
+                It's About Transformation.
+            </h2>
+
+            <p>
+                Every card is a message.
+                Every message is a lesson.
+                Every lesson is a step toward your best life.
+            </p>
+
+            <div class="journey-begins">
+                Your Journey Begins With You.
+            </div>
+
+        </div>
+
+        <!-- Remember -->
+
+        <div class="remember-box">
+
+            <h2>Remember</h2>
+
+            <p>
+                Tarot Transformation is not about changing
+                what happens to you.
+            </p>
+
+            <p>
+                It's about transforming how you respond,
+                how you grow and who you become.
+            </p>
+
+        </div>
+
+        <!-- Final Message -->
+
+        <div class="final-message">
+
+            <h2>
+                You Are Not Just Reading Cards.
+                You Are Reading Your Soul.
+            </h2>
+
+            <p>
+                Let Tarot be your guide, mirror and companion
+                on your journey toward a more awakened,
+                aligned and empowered version of yourself.
+            </p>
+
+        </div>
+
+        <div class="footer-banner">
+            Transform Yourself. Transform Your Life.
+            This Is The Power Of Tarot.
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.transformation-section{
+    padding:90px 20px;
+    background:linear-gradient(135deg,#fffaf4,#fef6ea);
+    font-family:'Segoe UI',sans-serif;
+}
+
+.transformation-container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.transformation-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.transformation-header h1{
+    font-size:72px;
+    color:#5b2e91;
+}
+
+.tagline{
+    font-size:26px;
+    color:#666;
+}
+
+.top-benefits{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin:30px 0;
+}
+
+.top-benefits span{
+    background:white;
+    padding:12px 18px;
+    border-radius:30px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.main-message{
+    background:#fff2d9;
+    padding:20px;
+    border-radius:15px;
+    font-size:24px;
+    color:#444;
+}
+
+.section-title{
+    text-align:center;
+    color:#5b2e91;
+    font-size:42px;
+    margin:60px 0 30px;
+}
+
+.transform-grid,
+.life-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.transform-card,
+.life-card,
+.info-box,
+.practice-box,
+.benefit-box,
+.quote-box,
+.remember-box,
+.final-message{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.journey-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+}
+
+.journey-step{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    width:180px;
+    text-align:center;
+}
+
+.arrow{
+    font-size:32px;
+    color:#b57b00;
+}
+
+.two-column{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:40px;
+}
+
+.quote-box,
+.remember-box,
+.final-message{
+    margin-top:40px;
+    text-align:center;
+}
+
+.journey-begins{
+    margin-top:20px;
+    color:#b57b00;
+    font-size:30px;
+    font-style:italic;
+}
+
+.footer-banner{
+    margin-top:50px;
+    text-align:center;
+    background:#5b2e91;
+    color:white;
+    padding:25px;
+    border-radius:20px;
+    font-size:28px;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.transformation-header h1{
+    font-size:48px;
+}
+
+.two-column{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+    
+
+<section class="program-difference-section">
+
+    <div class="program-container">
+
+        <!-- Header -->
+
+        <div class="program-header">
+
+            <h1>What Makes Our Program Different?</h1>
+
+            <p class="header-subtitle">
+                Not just another Tarot course —
+                it's a complete transformation experience.
+            </p>
+
+            <div class="program-tagline">
+                Learn. Connect. Transform. Empower.
+            </div>
+
+        </div>
+
+        <!-- Features -->
+
+        <h2 class="section-title">
+            Here's What Sets Our Tarot Foundation Program Apart
+        </h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>✨ Intuition First Approach</h3>
+                <p>
+                    We don't just teach meanings.
+                    We help you develop your intuition so you can
+                    read with clarity and confidence.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🃏 Practical & Experience-Based Learning</h3>
+                <p>
+                    Every day is packed with practical exercises,
+                    real-life examples and hands-on practice.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎯 Step-by-Step Structured Curriculum</h3>
+                <p>
+                    15 days. 15 steps.
+                    Designed for beginners to learn systematically
+                    without feeling overwhelmed.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🤝 Personal Mentorship & Support</h3>
+                <p>
+                    You're never alone.
+                    Get guidance, feedback and support
+                    throughout your journey.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📚 Complete Resources & Tools</h3>
+                <p>
+                    Workbooks, cheat sheets, spreads guide,
+                    journals and more —
+                    everything you need to succeed.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔮 Real Reading Confidence</h3>
+                <p>
+                    We train you to read for yourself and others
+                    with accuracy, compassion and professionalism.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🦋 Transformation Focused Learning</h3>
+                <p>
+                    This isn't just about cards.
+                    It's about personal growth,
+                    self-awareness and inner healing.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💻 Flexible Learning Options</h3>
+                <p>
+                    Join live sessions, watch replays
+                    and learn at your own pace —
+                    anytime, anywhere.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⚖ Ethics & Responsible Practices</h3>
+                <p>
+                    We emphasize ethics, boundaries and
+                    responsible reading practices to build trust
+                    and integrity.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🏆 Certification That Matters</h3>
+                <p>
+                    Earn a recognized Certificate of Completion
+                    and step into your journey as a confident
+                    Tarot Reader.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Promise Section -->
+
+        <div class="promise-section">
+
+            <h2>Our Promise To You</h2>
+
+            <div class="promise-grid">
+
+                <div class="promise-card">
+                    🌟
+                    <p>We believe in your potential.</p>
+                </div>
+
+                <div class="promise-card">
+                    💜
+                    <p>We are committed to your growth.</p>
+                </div>
+
+                <div class="promise-card">
+                    ☀️
+                    <p>We walk with you every step of the way.</p>
+                </div>
+
+                <div class="promise-card">
+                    🦋
+                    <p>We help you transform your passion into purpose.</p>
+                </div>
+
+                <div class="promise-card">
+                    ✨
+                    <p>We empower you to make a difference through Tarot.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Emotional CTA -->
+
+        <div class="cta-box">
+
+            <h2>
+                You're Not Just Learning Tarot,
+                You're Becoming The Best Version Of Yourself.
+            </h2>
+
+            <p>
+                Your journey. Your transformation.
+                Our guidance. Unlimited possibilities.
+            </p>
+
+            <div class="cta-highlight">
+                Let's Begin!
+            </div>
+
+        </div>
+
+        <!-- Footer Line -->
+
+        <div class="footer-line">
+            Learn • Connect • Transform • Empower
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.program-difference-section{
+    padding:90px 20px;
+    background:linear-gradient(
+        135deg,
+        #fffaf5,
+        #fdf5ea
+    );
+    font-family:'Poppins',sans-serif;
+}
+
+.program-container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.program-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.program-header h1{
+    font-size:72px;
+    color:#5d2f91;
+    margin-bottom:15px;
+}
+
+.header-subtitle{
+    font-size:28px;
+    color:#555;
+    max-width:900px;
+    margin:auto;
+}
+
+.program-tagline{
+    margin-top:25px;
+    display:inline-block;
+    background:#fff;
+    padding:12px 30px;
+    border-radius:40px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    font-weight:600;
+    color:#b67d00;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#5d2f91;
+    margin-bottom:40px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.feature-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.feature-card h3{
+    color:#b67d00;
+    margin-bottom:15px;
+}
+
+.feature-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+.promise-section{
+    margin-top:70px;
+}
+
+.promise-section h2{
+    text-align:center;
+    color:#5d2f91;
+    margin-bottom:35px;
+}
+
+.promise-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.promise-card{
+    background:white;
+    text-align:center;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    font-size:26px;
+}
+
+.promise-card p{
+    font-size:18px;
+    margin-top:12px;
+    color:#555;
+}
+
+.cta-box{
+    margin-top:70px;
+    background:white;
+    padding:60px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.cta-box h2{
+    color:#5d2f91;
+    font-size:52px;
+    line-height:1.3;
+}
+
+.cta-box p{
+    font-size:24px;
+    color:#555;
+    margin-top:20px;
+}
+
+.cta-highlight{
+    margin-top:30px;
+    font-size:56px;
+    font-weight:700;
+    color:#b67d00;
+    font-family:cursive;
+}
+
+.footer-line{
+    text-align:center;
+    margin-top:50px;
+    font-size:24px;
+    font-weight:600;
+    color:#5d2f91;
+    letter-spacing:2px;
+}
+
+@media(max-width:768px){
+
+.program-header h1{
+    font-size:44px;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+.cta-box{
+    padding:35px 25px;
+}
+
+.cta-box h2{
+    font-size:34px;
+}
+
+.cta-highlight{
+    font-size:40px;
+}
+
+}
+
+</style>
+
+
+<!-- Registration Banner -->
+
+<div class="registration-strip">
+
+    <div class="registration-left">
+        Limited Time Registrations Ending In...
+    </div>
+
+    <div class="timer-wrapper">
+
+        <div class="timer-box minutes">15</div>
+
+        <div class="timer-box seconds">00</div>
+
+    </div>
+
+    <button class="register-btn"
+            onclick="openRegistrationPopup()">
+        Register Now!
+    </button>
+
+</div>
+
+
+<!-- End Registration Banner -->
+
+
+<section class="offer-stack-section">
+
+    <div class="offer-container">
+
+        <!-- Header -->
+
+        <div class="offer-header">
+
+            <h5>Your Transformation Starts Here</h5>
+
+            <h1>Offer Stack</h1>
+
+            <p>
+                All the tools, training and support you need
+                to become a confident Tarot Reader.
+            </p>
+
+            <div class="limited-seats">
+                🔥 Limited Seats • One Life-Changing Opportunity
+            </div>
+
+        </div>
+
+        <!-- Main Promise -->
+
+        <div class="promise-banner">
+
+            <h2>
+                One Investment. Lifetime Transformation.
+            </h2>
+
+            <p>
+                Everything you need in one powerful program.
+            </p>
+
+        </div>
+
+        <!-- What's Included -->
+
+        <div class="inclusion-grid">
+
+            <div class="inclusion-card">
+
+                <h3>🧠 Core Program</h3>
+
+                <ul>
+                    <li>15-Day Structured Step-by-Step Training</li>
+                    <li>Live Interactive Sessions with Personal Support</li>
+                    <li>Learn Intuitive Tarot Mastery Framework™</li>
+                </ul>
+
+            </div>
+
+            <div class="inclusion-card">
+
+                <h3>♾ Lifetime Access</h3>
+
+                <ul>
+                    <li>Access to All Recordings</li>
+                    <li>Workshop & Practice Resource Sheets</li>
+                    <li>Learn at your own pace</li>
+                    <li>Rewatch anytime</li>
+                </ul>
+
+            </div>
+
+            <div class="inclusion-card">
+
+                <h3>🏆 Certification</h3>
+
+                <ul>
+                    <li>Certificate of Completion</li>
+                    <li>Add credibility to your spiritual career</li>
+                    <li>Stand out and attract more clients</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Bonuses -->
+
+        <h2 class="section-title">
+            Exclusive Bonuses (Worth ₹11,999)
+        </h2>
+
+        <div class="bonus-grid">
+
+            <div class="bonus-card">
+                <h3>🎥 Bonus 1</h3>
+                <p>
+                    5 Powerful Live Sessions
+                    (Q&A + Clarity + Guidance)
+                </p>
+                <span>₹2,999 Value</span>
+            </div>
+
+            <div class="bonus-card">
+                <h3>🎙 Bonus 2</h3>
+                <p>
+                    Access to Recordings
+                </p>
+                <span>₹2,999 Value</span>
+            </div>
+
+            <div class="bonus-card">
+                <h3>📘 Bonus 3</h3>
+                <p>
+                    Printable Workbook &
+                    Practice Sheets
+                </p>
+                <span>₹1,999 Value</span>
+            </div>
+
+            <div class="bonus-card">
+                <h3>👥 Bonus 4</h3>
+                <p>
+                    Live Practice &
+                    Feedback Sessions
+                </p>
+                <span>₹1,999 Value</span>
+            </div>
+
+            <div class="bonus-card">
+                <h3>⭐ Bonus 5</h3>
+                <p>
+                    Priority Support &
+                    Personal Guidance
+                </p>
+                <span>₹1,999 Value</span>
+            </div>
+
+        </div>
+
+        <div class="bonus-total">
+            Total Bonus Value: ₹11,999 — Included FREE!
+        </div>
+
+        <!-- Pricing -->
+
+        <div class="pricing-section">
+
+            <div class="value-box">
+
+                <h3>The True Value</h3>
+
+                <ul>
+                    <li>15-Day Live Training — ₹5,999</li>
+                    <li>Lifetime Access — ₹4,999</li>
+                    <li>Certificate of Completion — ₹1,999</li>
+                    <li>Exclusive Bonuses — ₹11,999</li>
+                </ul>
+
+                <div class="total-value">
+                    Total Value: ₹24,996
+                </div>
+
+            </div>
+
+            <div class="price-box">
+
+                <div class="special-price">
+                    Special Price For You
+                </div>
+
+                <div class="price">
+                    ₹11
+                </div>
+
+                <div class="only-text">
+                    ONLY
+                </div>
+
+                <p>
+                    High Value. Low Investment.
+                    Life Changing.
+                </p>
+
+            </div>
+
+            <div class="benefits-box">
+
+                <h3>Priceless Benefits</h3>
+
+                <ul>
+                    <li>Clarity in life & emotions</li>
+                    <li>Stronger intuition & inner wisdom</li>
+                    <li>Build a meaningful spiritual career</li>
+                    <li>Create additional income doing what you love</li>
+                    <li>Confidence, purpose & freedom</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Guarantees -->
+
+        <div class="guarantee-grid">
+
+            <div class="guarantee-card">
+                👑 Beginner Friendly
+                <small>Zero Experience? No Problem!</small>
+            </div>
+
+            <div class="guarantee-card">
+                💛 Practice Oriented
+                <small>Real Readings. Real Confidence.</small>
+            </div>
+
+            <div class="guarantee-card">
+                🛡 100% Risk Free
+                <small>Your Growth Is Guaranteed.</small>
+            </div>
+
+        </div>
+
+        <!-- Final CTA -->
+
+        <div class="final-cta">
+
+            <h2>
+                Limited Seats — Book Your Spot Now!
+            </h2>
+
+            <p>
+                Don't miss this opportunity to change your life.
+                Your Tarot journey starts today.
+            </p>
+
+            <a href="#registration-form" class="register-btn">
+                Register Now – Just ₹11 & Secure Your Seat →
+            </a>
+
+        </div>
+
+        <!-- Footer Features -->
+
+        <div class="footer-features">
+
+            <span>15 Days Transformation</span>
+
+            <span>Live Interactive Sessions</span>
+
+            <span>Lifetime Access To Recordings</span>
+
+            <span>Certificate Of Completion</span>
+
+            <span>Beginner Friendly</span>
+
+            <span>Practice Oriented</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.offer-stack-section{
+    padding:90px 20px;
+    background:linear-gradient(
+        135deg,
+        #fffaf5,
+        #fef6eb
+    );
+    font-family:'Poppins',sans-serif;
+}
+
+.offer-container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.offer-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.offer-header h5{
+    color:#b67d00;
+    letter-spacing:2px;
+}
+
+.offer-header h1{
+    font-size:72px;
+    color:#5d2f91;
+}
+
+.offer-header p{
+    font-size:24px;
+    color:#555;
+}
+
+.limited-seats{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#fff;
+    border-radius:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    color:#b67d00;
+    font-weight:600;
+}
+
+.promise-banner{
+    background:white;
+    text-align:center;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.promise-banner h2{
+    color:#5d2f91;
+}
+
+.inclusion-grid,
+.bonus-grid,
+.guarantee-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.inclusion-card,
+.bonus-card,
+.guarantee-card,
+.value-box,
+.price-box,
+.benefits-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.section-title{
+    text-align:center;
+    color:#5d2f91;
+    margin-top:60px;
+}
+
+.bonus-card span{
+    display:inline-block;
+    margin-top:10px;
+    color:#b67d00;
+    font-weight:700;
+}
+
+.bonus-total{
+    text-align:center;
+    margin-top:25px;
+    font-size:26px;
+    color:#b67d00;
+    font-weight:700;
+}
+
+.pricing-section{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:25px;
+    margin-top:50px;
+}
+
+.price-box{
+    text-align:center;
+    border:3px solid #b67d00;
+}
+
+.price{
+    font-size:90px;
+    font-weight:700;
+    color:#5d2f91;
+}
+
+.special-price{
+    color:#b67d00;
+    font-weight:700;
+}
+
+.only-text{
+    font-size:28px;
+    font-weight:700;
+}
+
+.final-cta{
+    margin-top:60px;
+    text-align:center;
+    background:white;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.register-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:18px 40px;
+    background:#5d2f91;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.footer-features{
+    margin-top:40px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.footer-features span{
+    background:white;
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+@media(max-width:768px){
+
+.offer-header h1{
+    font-size:48px;
+}
+
+.pricing-section{
+    grid-template-columns:1fr;
+}
+
+.price{
+    font-size:70px;
+}
+
+}
+
+</style>
+    
+
+
+<section class="guarantee-section">
+
+    <div class="guarantee-container">
+
+        <!-- Header -->
+
+        <div class="guarantee-header">
+
+            <h1>Your Satisfaction Is 100% Guaranteed</h1>
+
+            <p class="headline">
+                I'm so confident this workshop will transform your life
+                that I'm making you a completely risk-free promise.
+            </p>
+
+            <div class="risk-free-badge">
+                Try It Risk-Free Today!
+            </div>
+
+        </div>
+
+        <!-- Main Guarantee -->
+
+        <div class="guarantee-box">
+
+            <div class="guarantee-seal">
+
+                <div class="seal-circle">
+                    <span>15-Day</span>
+                    <strong>100%</strong>
+                    <small>Satisfaction Guarantee</small>
+                </div>
+
+            </div>
+
+            <div class="guarantee-content">
+
+                <h2>Love It Or Get Your Money Back!</h2>
+
+                <p>
+                    If for any reason you feel that this workshop is not for you
+                    or it doesn't meet your expectations, simply let me know
+                    within 15 days of your purchase and I'll refund
+                    100% of your investment.
+                </p>
+
+                <div class="guarantee-highlight">
+                    No Questions Asked.
+                    No Hassle.
+                    No Risk.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Mission -->
+
+        <div class="mission-box">
+
+            <h2>Your Success Is My Mission</h2>
+
+            <p>
+                That's why I'm giving you this iron-clad promise.
+            </p>
+
+        </div>
+
+        <!-- What You Get -->
+
+        <h2 class="section-title">
+            What You Get
+        </h2>
+
+        <div class="benefits-grid">
+
+            <div class="benefit-card">
+                <h3>🎯 Powerful Training</h3>
+                <p>
+                    Step-by-step guidance to build real confidence.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>👥 Live Interactive Sessions</h3>
+                <p>
+                    Personal support to clear your doubts.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>📘 Practice Resources</h3>
+                <p>
+                    Workbooks and practice sheets to help you learn faster.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>🃏 Real Tarot Skills</h3>
+                <p>
+                    Learn, practice and read with confidence.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>🏆 Certificate</h3>
+                <p>
+                    Add value and credibility to your spiritual journey.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <h3>🌱 Beginner Friendly</h3>
+                <p>
+                    Perfect for complete beginners.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Doubts Section -->
+
+        <h2 class="section-title">
+            Still Have Doubts?
+        </h2>
+
+        <p class="section-subtitle">
+            That's normal. Here's what you don't have to worry about:
+        </p>
+
+        <div class="doubt-grid">
+
+            <div class="doubt-card">
+                <h3>🚫 No Hidden Fees</h3>
+                <p>
+                    What you see is exactly what you pay.
+                </p>
+            </div>
+
+            <div class="doubt-card">
+                <h3>⏳ No Long-Term Commitment</h3>
+                <p>
+                    You're not locked into anything.
+                </p>
+            </div>
+
+            <div class="doubt-card">
+                <h3>🚀 Start At Your Own Pace</h3>
+                <p>
+                    Go slow or fast.
+                    It's your journey.
+                </p>
+            </div>
+
+            <div class="doubt-card">
+                <h3>🌟 Beginner Friendly</h3>
+                <p>
+                    No prior experience required.
+                </p>
+            </div>
+
+            <div class="doubt-card">
+                <h3>❤️ Support Always</h3>
+                <p>
+                    I'm here to support you throughout your journey.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Emotional Section -->
+
+        <div class="emotional-box">
+
+            <h2>
+                I Don't Just Want You To Join.
+                I Want You To Win.
+            </h2>
+
+            <p>
+                That's why your happiness is
+                100% guaranteed.
+            </p>
+
+        </div>
+
+        <!-- Final CTA -->
+
+        <div class="cta-box">
+
+            <h2>
+                Ready To Transform Your Life?
+            </h2>
+
+            <p>
+                Take the first step with complete peace of mind.
+            </p>
+
+            <a href="#registration-form" class="cta-btn">
+                Enroll Now Risk-Free!
+            </a>
+
+        </div>
+
+        <!-- Closing Message -->
+
+        <div class="closing-box">
+
+            <h3>
+                You Have Nothing To Lose,
+                But A Life Of Clarity To Gain.
+            </h3>
+
+            <p>
+                I can't wait to see you grow!
+            </p>
+
+            <span>— Nisha</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.guarantee-section{
+    padding:90px 20px;
+    background:linear-gradient(
+        135deg,
+        #fffaf5,
+        #fdf3e7
+    );
+    font-family:'Poppins',sans-serif;
+}
+
+.guarantee-container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.guarantee-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.guarantee-header h1{
+    font-size:72px;
+    color:#5d2f91;
+}
+
+.headline{
+    font-size:26px;
+    color:#555;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.risk-free-badge{
+    display:inline-block;
+    margin-top:25px;
+    background:#fff;
+    padding:15px 35px;
+    border-radius:50px;
+    color:#b67d00;
+    font-weight:700;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.guarantee-box{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:40px;
+    align-items:center;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.seal-circle{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        #f7d889,
+        #c8921d
+    );
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#333;
+    margin:auto;
+}
+
+.seal-circle strong{
+    font-size:70px;
+}
+
+.guarantee-content h2{
+    color:#5d2f91;
+    font-size:48px;
+}
+
+.guarantee-highlight{
+    margin-top:20px;
+    background:#fff3d8;
+    padding:18px;
+    border-radius:12px;
+    font-weight:700;
+    color:#b67d00;
+}
+
+.mission-box,
+.emotional-box,
+.cta-box,
+.closing-box{
+    margin-top:50px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.section-title{
+    text-align:center;
+    color:#5d2f91;
+    margin-top:60px;
+    margin-bottom:30px;
+    font-size:42px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.benefits-grid,
+.doubt-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.benefit-card,
+.doubt-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.cta-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:18px 40px;
+    background:#5d2f91;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.closing-box h3{
+    color:#b67d00;
+}
+
+.closing-box span{
+    display:block;
+    margin-top:15px;
+    font-style:italic;
+}
+
+@media(max-width:768px){
+
+.guarantee-header h1{
+    font-size:42px;
+}
+
+.guarantee-box{
+    grid-template-columns:1fr;
+}
+
+.guarantee-content h2{
+    font-size:32px;
+}
+
+}
+
+</style>
+
+<!-- Registration Banner -->
+
+<div class="registration-strip">
+
+    <div class="registration-left">
+        Limited Time Registrations Ending In...
+    </div>
+
+    <div class="timer-wrapper">
+
+        <div class="timer-box minutes">15</div>
+
+        <div class="timer-box seconds">00</div>
+
+    </div>
+
+    <button class="register-btn"
+            onclick="openRegistrationPopup()">
+        Register Now!
+    </button>
+
+</div>
+
+
+<!-- End Registration Banner -->
+
+<section class="faq-section">
+
+    <div class="faq-container">
+
+        <!-- Header -->
+
+        <div class="faq-header">
+
+            <div class="faq-tag">
+                Limited Seats • One Life-Changing Opportunity
+            </div>
+
+            <h1>Frequently Asked Questions</h1>
+
+            <h3>Get All Your Queries Answered</h3>
+
+            <p>
+                Everything you need to know before you start
+                your transformational journey.
+            </p>
+
+            <div class="mentor-tag">
+                Live Workshop With Nisha
+            </div>
+
+        </div>
+
+        <!-- FAQ List -->
+
+        <div class="faq-grid">
+
+            <div class="faq-card">
+
+                <div class="faq-number">01</div>
+
+                <h3>What Is This Workshop About?</h3>
+
+                <p>
+                    This 15-day live workshop is designed to help you build clarity,
+                    strengthen your intuition, learn Tarot with confidence,
+                    and take the first step toward a meaningful spiritual career.
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <div class="faq-number">02</div>
+
+                <h3>Who Can Join This Workshop?</h3>
+
+                <p>
+                    Anyone who is a beginner or looking to deepen their Tarot knowledge.
+                    No prior experience is needed.
+                    Just an open mind and a willingness to learn.
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <div class="faq-number">03</div>
+
+                <h3>Will The Sessions Be Recorded?</h3>
+
+                <p>
+                    Yes. All live sessions will be recorded.
+                    You'll have access to the recordings so you can learn
+                    at your own pace and revisit the lessons anytime.
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <div class="faq-number">04</div>
+
+                <h3>What Materials Will I Get?</h3>
+
+                <p>
+                    You'll receive workbooks, practice sheets,
+                    bonus resources and downloadable guides
+                    to help you practice and implement what you learn.
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <div class="faq-number">05</div>
+
+                <h3>How Much Time Do I Need Daily?</h3>
+
+                <p>
+                    Just 1–2 hours a day.
+                    The program is designed to fit into your schedule
+                    so you can learn without feeling overwhelmed.
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <div class="faq-number">06</div>
+
+                <h3>Will I Get A Certificate?</h3>
+
+                <p>
+                    Yes.
+                    You'll receive a Certificate of Completion
+                    after successfully finishing the workshop.
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <div class="faq-number">07</div>
+
+                <h3>Is This A One-Time Payment?</h3>
+
+                <p>
+                    Yes.
+                    This is a one-time payment.
+                    No hidden charges.
+                    No recurring payments.
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <div class="faq-number">08</div>
+
+                <h3>What If I Have More Questions?</h3>
+
+                <p>
+                    I'm here to support you.
+                    You'll receive personal guidance and support
+                    throughout the workshop whenever you need help.
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <div class="faq-number">09</div>
+
+                <h3>What If I Am Not Satisfied?</h3>
+
+                <p>
+                    Your satisfaction is 100% guaranteed.
+                    If for any reason you're not happy,
+                    you can claim a full refund within 15 days.
+                    No questions asked.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Encouragement -->
+
+        <div class="motivation-box">
+
+            <h2>
+                Still Thinking?
+            </h2>
+
+            <p>
+                Remember, every expert was once a beginner.
+            </p>
+
+            <div class="highlight-text">
+                This Is Your Sign To Start!
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+
+        <div class="cta-box">
+
+            <h2>
+                Ready To Transform Your Life?
+            </h2>
+
+            <p>
+                Pay just once and secure your spot today.
+            </p>
+
+            <a href="#registration-form" class="cta-btn">
+                Enroll Now
+            </a>
+
+        </div>
+
+        <!-- Footer Features -->
+
+        <div class="footer-features">
+
+            <div>🎥 Live Interactive Sessions</div>
+
+            <div>♾ Access To Recordings</div>
+
+            <div>📘 Workbooks & Practice Sheets</div>
+
+            <div>🏆 Certificate Of Completion</div>
+
+            <div>🌱 Beginner Friendly</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.faq-section{
+    padding:90px 20px;
+    background:linear-gradient(
+        135deg,
+        #fffaf5,
+        #fdf4e8
+    );
+    font-family:'Poppins',sans-serif;
+}
+
+.faq-container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.faq-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.faq-tag,
+.mentor-tag{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:40px;
+    background:white;
+    color:#b67d00;
+    font-weight:600;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    margin:10px;
+}
+
+.faq-header h1{
+    font-size:72px;
+    color:#5d2f91;
+    margin-top:25px;
+}
+
+.faq-header h3{
+    font-size:32px;
+    color:#b67d00;
+}
+
+.faq-header p{
+    font-size:22px;
+    color:#555;
+}
+
+.faq-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.faq-card{
+    background:white;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    position:relative;
+}
+
+.faq-number{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#5d2f91;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.faq-card h3{
+    color:#b67d00;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.faq-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+.motivation-box{
+    margin-top:60px;
+    background:white;
+    padding:50px;
+    text-align:center;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.highlight-text{
+    margin-top:20px;
+    font-size:42px;
+    color:#b67d00;
+    font-weight:700;
+}
+
+.cta-box{
+    margin-top:40px;
+    text-align:center;
+    background:#fff;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.cta-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:18px 45px;
+    background:#5d2f91;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:20px;
+    font-weight:600;
+}
+
+.footer-features{
+    margin-top:50px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.footer-features div{
+    background:white;
+    padding:12px 20px;
+    border-radius:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+@media(max-width:768px){
+
+.faq-header h1{
+    font-size:46px;
+}
+
+.faq-header h3{
+    font-size:24px;
+}
+
+.highlight-text{
+    font-size:30px;
+}
+
+.faq-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+<section class="decision-section">
+
+    <div class="decision-container">
+
+        <!-- Header -->
+
+        <div class="decision-header">
+
+            <div class="top-badge">
+                Limited Seats • One Life-Changing Opportunity
+            </div>
+
+            <h1>
+                Opportunities Like This
+                <span>Don't Stay Forever</span>
+            </h1>
+
+            <div class="live-tag">
+                Live Workshop With Nisha
+            </div>
+
+            <div class="action-banner">
+                This Is Your Sign To Take Action Now!
+            </div>
+
+            <p class="intro-text">
+                You already know how this workshop can
+                transform your life.
+            </p>
+
+            <p class="intro-text">
+                The only question is —
+                <strong>Will you grab this opportunity today
+                or regret missing it later?</strong>
+            </p>
+
+        </div>
+
+        <!-- Reasons -->
+
+        <div class="reasons-header">
+
+            Limited Seats. High Value. Life Changing.
+
+            <span>
+                That's Why This Offer Is For A Limited Time Only!
+            </span>
+
+        </div>
+
+        <div class="reasons-grid">
+
+            <div class="reason-card">
+
+                <h3>⏰ Time Is Limited</h3>
+
+                <p>
+                    This 15-day live workshop is happening
+                    for a limited time only.
+                </p>
+
+                <strong>
+                    Once it closes,
+                    it may not open again.
+                </strong>
+
+            </div>
+
+            <div class="reason-card">
+
+                <h3>👥 Seats Are Limited</h3>
+
+                <p>
+                    To ensure personal attention
+                    and high-quality support,
+                    only a limited number of seats
+                    are available.
+                </p>
+
+                <strong>
+                    When they're gone,
+                    they're gone!
+                </strong>
+
+            </div>
+
+            <div class="reason-card">
+
+                <h3>📈 Don't Fall Behind</h3>
+
+                <p>
+                    Every day you wait
+                    is a day you could have spent
+                    building your intuition,
+                    confidence and spiritual career.
+                </p>
+
+                <strong>
+                    Your future self is counting on you!
+                </strong>
+
+            </div>
+
+        </div>
+
+        <!-- Scarcity Alert -->
+
+        <div class="scarcity-box">
+
+            <div class="scarcity-left">
+
+                <h2>⏳ Scarcity Alert!</h2>
+
+                <h3>Only A Few Seats Left</h3>
+
+                <p>
+                    Join now before we close registrations.
+                </p>
+
+            </div>
+
+            <div class="scarcity-right">
+
+                <p>
+                    This is more than a workshop.
+                </p>
+
+                <p>
+                    It's a turning point in your life.
+                </p>
+
+                <h3>
+                    Don't Miss Your Moment.
+                </h3>
+
+                <h3>
+                    Make It Happen!
+                </h3>
+
+            </div>
+
+        </div>
+
+        <!-- Countdown -->
+
+        <div class="countdown-section">
+
+            <h2>Registrations Close In:</h2>
+
+            <div class="countdown-grid">
+
+                <div class="count-box">
+                    <span>02</span>
+                    <small>Days</small>
+                </div>
+
+                <div class="count-box">
+                    <span>18</span>
+                    <small>Hours</small>
+                </div>
+
+                <div class="count-box">
+                    <span>45</span>
+                    <small>Minutes</small>
+                </div>
+
+                <div class="count-box">
+                    <span>30</span>
+                    <small>Seconds</small>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Warning -->
+
+        <div class="warning-box">
+
+            ⚠️ Once The Seats Are Full,
+            Registrations Will Close Automatically.
+
+            <strong>
+                There Will Be No Extensions.
+            </strong>
+
+        </div>
+
+        <!-- Final Decision -->
+
+        <div class="final-decision">
+
+            <h2>
+                The Best Investment You Can Make Is In Yourself.
+            </h2>
+
+            <h1>
+                Don't Think. Just Decide.
+            </h1>
+
+            <p>
+                Your Transformation Starts Now!
+            </p>
+
+        </div>
+
+        <!-- CTA -->
+
+        <div class="cta-area">
+
+            <a href="#registration-form" class="decision-btn">
+
+                YES, I'M READY TO TRANSFORM MY LIFE!
+
+                <span>
+                    Secure Your Seat Before It's Too Late!
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.decision-section{
+    padding:90px 20px;
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #fef2df
+    );
+    font-family:'Poppins',sans-serif;
+}
+
+.decision-container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.decision-header{
+    text-align:center;
+}
+
+.top-badge{
+    display:inline-block;
+    background:#fff;
+    padding:12px 30px;
+    border-radius:40px;
+    color:#b67d00;
+    font-weight:600;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.decision-header h1{
+    font-size:70px;
+    color:#5d2f91;
+    margin-top:30px;
+    line-height:1.2;
+}
+
+.decision-header h1 span{
+    display:block;
+    color:#b67d00;
+}
+
+.live-tag{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#fff;
+    border-radius:30px;
+    color:#5d2f91;
+    font-weight:600;
+}
+
+.action-banner{
+    margin:30px auto;
+    max-width:700px;
+    background:#5d2f91;
+    color:white;
+    padding:18px;
+    border-radius:15px;
+    font-size:26px;
+    font-weight:700;
+}
+
+.intro-text{
+    font-size:24px;
+    color:#555;
+    line-height:1.8;
+}
+
+.reasons-header{
+    text-align:center;
+    margin-top:60px;
+    font-size:36px;
+    font-weight:700;
+    color:#b67d00;
+}
+
+.reasons-header span{
+    display:block;
+    font-size:22px;
+    color:#555;
+    margin-top:10px;
+}
+
+.reasons-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.reason-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.reason-card h3{
+    color:#5d2f91;
+}
+
+.reason-card strong{
+    color:#b67d00;
+}
+
+.scarcity-box{
+    margin-top:50px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.scarcity-left h2{
+    color:#d35400;
+}
+
+.scarcity-right h3{
+    color:#5d2f91;
+}
+
+.countdown-section{
+    text-align:center;
+    margin-top:60px;
+}
+
+.countdown-section h2{
+    color:#5d2f91;
+    font-size:42px;
+}
+
+.countdown-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:30px;
+}
+
+.count-box{
+    width:140px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.count-box span{
+    display:block;
+    font-size:48px;
+    font-weight:700;
+    color:#b67d00;
+}
+
+.count-box small{
+    text-transform:uppercase;
+    color:#666;
+}
+
+.warning-box{
+    margin-top:40px;
+    background:#fff4d9;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    color:#8a5a00;
+    font-size:22px;
+}
+
+.warning-box strong{
+    display:block;
+    margin-top:10px;
+}
+
+.final-decision{
+    margin-top:50px;
+    text-align:center;
+}
+
+.final-decision h2{
+    color:#5d2f91;
+}
+
+.final-decision h1{
+    font-size:72px;
+    color:#b67d00;
+}
+
+.final-decision p{
+    font-size:28px;
+    color:#555;
+}
+
+.cta-area{
+    text-align:center;
+    margin-top:40px;
+}
+
+.decision-btn{
+    display:inline-block;
+    padding:25px 50px;
+    background:#5d2f91;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+    font-size:28px;
+    font-weight:700;
+}
+
+.decision-btn span{
+    display:block;
+    margin-top:10px;
+    font-size:18px;
+    font-weight:400;
+}
+
+@media(max-width:768px){
+
+.decision-header h1{
+    font-size:42px;
+}
+
+.final-decision h1{
+    font-size:42px;
+}
+
+.scarcity-box{
+    grid-template-columns:1fr;
+}
+
+.count-box{
+    width:110px;
+}
+
+}
+
+</style>    
+<!-- Registration Banner -->
+
+<div class="registration-strip">
+
+    <div class="registration-left">
+        Limited Time Registrations Ending In...
+    </div>
+
+    <div class="timer-wrapper">
+
+        <div class="timer-box minutes">15</div>
+
+        <div class="timer-box seconds">00</div>
+
+    </div>
+
+    <button class="register-btn"
+            onclick="openRegistrationPopup()">
+        Register Now!
+    </button>
+
+</div>
+
+
+<!-- End Registration Banner -->
+    
+<section class="intuition-section">
+
+    <div class="intuition-container">
+
+        <!-- Header -->
+
+        <div class="intuition-header">
+
+            <h1>
+                Your Intuition
+                <span>Brought You Here For A Reason...</span>
+            </h1>
+
+            <div class="dear-reader">
+                Dear Future Tarot Reader,
+            </div>
+
+        </div>
+
+        <!-- Main Story -->
+
+        <div class="story-grid">
+
+            <div class="story-box">
+
+                <p>
+                    Maybe you joined this workshop because you were curious about Tarot.
+                </p>
+
+                <p>
+                    Maybe you wanted answers.
+                </p>
+
+                <p>
+                    Maybe you wanted clarity.
+                </p>
+
+                <p>
+                    Maybe you were simply looking for something more meaningful in life.
+                </p>
+
+                <div class="highlight-message">
+
+                    But deep inside, there is a bigger reason you are here.
+
+                </div>
+
+                <ul>
+
+                    <li>You are capable of helping people.</li>
+
+                    <li>You are capable of understanding energies.</li>
+
+                    <li>You are capable of creating a life filled with purpose, freedom and confidence.</li>
+
+                </ul>
+
+                <p>
+                    The only thing missing until now was the right guidance.
+                </p>
+
+            </div>
+
+            <div class="future-box">
+
+                <h2>
+                    Imagine Looking Back 6 Months From Today...
+                </h2>
+
+                <p>
+                    And realizing that this was the moment everything changed.
+                </p>
+
+                <p>
+                    The moment you stopped doubting yourself.
+                </p>
+
+                <p>
+                    The moment you finally trusted your intuition.
+                </p>
+
+                <p>
+                    The moment you learned a skill that not only transformed your own life
+                    but also allowed you to guide others with confidence.
+                </p>
+
+                <div class="future-quote">
+
+                    Most people will close this page and continue wondering:
+
+                    <strong>
+                        "Could I have done it?"
+                    </strong>
+
+                    <br><br>
+
+                    But a few people will make a decision today and proudly say:
+
+                    <strong>
+                        "I'm so glad I started."
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Future Version -->
+
+        <div class="future-version">
+
+            <h2>
+                Your Future Self Is Waiting...
+            </h2>
+
+            <h3>
+                The Version Of You Who...
+            </h3>
+
+            <div class="future-grid">
+
+                <div class="future-card">
+                    🃏
+                    <p>Understands Tarot Confidently</p>
+                </div>
+
+                <div class="future-card">
+                    🔮
+                    <p>Reads Cards Without Fear Or Confusion</p>
+                </div>
+
+                <div class="future-card">
+                    ✨
+                    <p>Trusts Her Intuition</p>
+                </div>
+
+                <div class="future-card">
+                    👥
+                    <p>Helps Friends, Family & Clients</p>
+                </div>
+
+                <div class="future-card">
+                    🪷
+                    <p>Feels Spiritually Connected</p>
+                </div>
+
+                <div class="future-card">
+                    💰
+                    <p>Creates An Additional Source Of Income</p>
+                </div>
+
+            </div>
+
+            <p class="future-note">
+                That future version of you already exists.
+                She is simply waiting for you to take the first step.
+            </p>
+
+        </div>
+
+        <!-- Three Boxes -->
+
+        <div class="decision-grid">
+
+            <div class="decision-card">
+
+                <h3>A Personal Message From Nisha</h3>
+
+                <p>
+                    For over 10 years, I have seen countless students start exactly where you are today.
+                </p>
+
+                <p>
+                    Unsure. Nervous. Wondering if Tarot is really for them.
+                </p>
+
+                <p>
+                    Today many of those same students confidently read Tarot for themselves and others.
+                </p>
+
+                <p>
+                    Not because they were gifted.
+                </p>
+
+                <p>
+                    Not because they were special.
+                </p>
+
+                <p>
+                    But because they decided to begin.
+                </p>
+
+                <p>
+                    If they can do it...
+                    You can too.
+                </p>
+
+                <div class="signature">
+                    — Nisha
+                </div>
+
+            </div>
+
+            <div class="decision-card">
+
+                <h3>The Biggest Risk Is Not Starting</h3>
+
+                <p>
+                    A year from now...
+                    You'll either be:
+                </p>
+
+                <div class="compare-box">
+
+                    <div class="compare-side">
+
+                        <h4>Person A</h4>
+
+                        <ul>
+                            <li>Still watching random videos</li>
+                            <li>Still feeling confused</li>
+                            <li>Still wishing you had started</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="or-box">
+                        OR
+                    </div>
+
+                    <div class="compare-side">
+
+                        <h4>Person B</h4>
+
+                        <ul>
+                            <li>Reading Tarot confidently</li>
+                            <li>Helping people</li>
+                            <li>Growing spiritually</li>
+                            <li>Proud you took action today</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="decision-card">
+
+                <h3>Your Journey Begins With One Decision</h3>
+
+                <ul class="journey-list">
+
+                    <li>You don't need to know everything.</li>
+
+                    <li>You don't need to be perfect.</li>
+
+                    <li>You don't need special gifts.</li>
+
+                    <li>You only need the willingness to begin.</li>
+
+                </ul>
+
+                <div class="journey-message">
+
+                    Because sometimes the smallest decision creates the biggest transformation.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Final CTA -->
+
+        <div class="final-yes">
+
+            <h2>
+                Say YES To Yourself Today.
+            </h2>
+
+            <h3>
+                Say YES To Your Intuition.
+                Say YES To Your Future.
+            </h3>
+
+            <p>
+                We Can't Wait To Welcome You Inside
+                The Tarot Foundation Course.
+            </p>
+
+            <div class="see-you">
+                See You On The Other Side.
+            </div>
+
+        </div>
+
+       
+
+    </div>
+
+</section>
+
+<style>
+
+.intuition-section{
+    padding:90px 20px;
+    background:linear-gradient(
+        135deg,
+        #fffaf4,
+        #fdf3e6
+    );
+    font-family:'Playfair Display',serif;
+}
+
+.intuition-container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.intuition-header{
+    text-align:center;
+}
+
+.intuition-header h1{
+    font-size:72px;
+    color:#5d2f91;
+    line-height:1.2;
+}
+
+.intuition-header h1 span{
+    display:block;
+    color:#b67d00;
+    font-size:56px;
+}
+
+.dear-reader{
+    margin-top:20px;
+    font-size:42px;
+    font-style:italic;
+    color:#8a5a00;
+}
+
+.story-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:60px;
+}
+
+.story-box,
+.future-box,
+.decision-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.highlight-message{
+    background:#fff3d8;
+    padding:15px;
+    border-radius:12px;
+    margin:20px 0;
+    color:#b67d00;
+    font-weight:700;
+}
+
+.future-quote{
+    margin-top:25px;
+    background:#fdf7ef;
+    padding:20px;
+    border-radius:15px;
+}
+
+.future-version{
+    margin-top:70px;
+    text-align:center;
+}
+
+.future-version h2{
+    color:#5d2f91;
+    font-size:52px;
+}
+
+.future-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.future-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    font-size:28px;
+}
+
+.future-note{
+    margin-top:25px;
+    font-size:24px;
+    color:#8a5a00;
+}
+
+.decision-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+    margin-top:60px;
+}
+
+.compare-box{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.compare-side{
+    flex:1;
+}
+
+.or-box{
+    font-size:28px;
+    font-weight:bold;
+    color:#b67d00;
+}
+
+.journey-message{
+    margin-top:20px;
+    color:#b67d00;
+    font-weight:700;
+}
+
+.final-yes{
+    margin-top:70px;
+    text-align:center;
+    background:white;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.final-yes h2{
+    font-size:56px;
+    color:#5d2f91;
+}
+
+.final-yes h3{
+    color:#b67d00;
+}
+
+.see-you{
+    margin-top:20px;
+    font-size:32px;
+    font-style:italic;
+    color:#8a5a00;
+}
+
+.join-box{
+    text-align:center;
+    margin-top:40px;
+}
+
+.join-btn{
+    display:inline-block;
+    padding:25px 60px;
+    background:linear-gradient(
+        90deg,
+        #d9a63a,
+        #b67d00
+    );
+    color:white;
+    text-decoration:none;
+    border-radius:60px;
+    font-size:36px;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.story-grid{
+    grid-template-columns:1fr;
+}
+
+.intuition-header h1{
+    font-size:42px;
+}
+
+.intuition-header h1 span{
+    font-size:32px;
+}
+
+.dear-reader{
+    font-size:28px;
+}
+
+.final-yes h2{
+    font-size:34px;
+}
+
+.join-btn{
+    font-size:24px;
+}
+
+}
+
+</style>
+
+
+
+
+    <!-- Content -->
+
+    <div class="content">
+
+        <h1>₹11 Tarot Reading Skills</h1>
+
+        <div class="sub-title">
+            Discover the Exact Roadmap to Become a Confident Tarot Reader
+        </div>
+
+        <div class="benefits">
+
+            <ul>
+
+                <li>✅ Learn Tarot Reading Step-by-Step</li>
+
+                <li>✅ Gain Confidence in Your Readings</li>
+
+                <li>✅ Understand Card Meanings Naturally</li>
+
+                <li>✅ Read for Yourself and Others</li>
+
+                <li>✅ Personal Guidance from an Expert</li>
+
+                <li>✅ Learn How to Earn Through Tarot</li>
+
+                <li>✅ Clear All Your Doubts</li>
+
+            </ul>
+
+        </div>
+
+        <div class="cta-section">
+
+          <!-- Registration Banner -->
+
+<div class="registration-strip">
+
+    <div class="registration-left">
+        Limited Time Registrations Ending In...
+    </div>
+
+    <div class="timer-wrapper">
+
+        <div class="timer-box minutes">15</div>
+
+        <div class="timer-box seconds">00</div>
+
+    </div>
+
+    <button class="register-btn"
+            onclick="openRegistrationPopup()">
+        Register Now!
+    </button>
+
+</div>
+
+
+<!-- End Registration Banner -->
+
+
+            <div class="note">
+                Limited Seats Available. Secure Your Spot Today.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        Start Your Tarot Journey Today and Transform Your Life.
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
