@@ -1673,94 +1673,20 @@ function closeRegistrationPopup(){
         </h2>
 
         <div class="feature-grid">
-
-            <div class="feature-card">
-                <h3>✨ Intuition First Approach</h3>
-                <p>
-                    We don't just teach meanings.
-                    We help you develop your intuition so you can
-                    read with clarity and confidence.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>🃏 Practical & Experience-Based Learning</h3>
-                <p>
-                    Every day is packed with practical exercises,
-                    real-life examples and hands-on practice.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>🎯 Step-by-Step Structured Curriculum</h3>
-                <p>
-                    15 days. 15 steps.
-                    Designed for beginners to learn systematically
-                    without feeling overwhelmed.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>🤝 Personal Mentorship & Support</h3>
-                <p>
-                    You're never alone.
-                    Get guidance, feedback and support
-                    throughout your journey.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>📚 Complete Resources & Tools</h3>
-                <p>
-                    Workbooks, cheat sheets, spreads guide,
-                    journals and more —
-                    everything you need to succeed.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>🔮 Real Reading Confidence</h3>
-                <p>
-                    We train you to read for yourself and others
-                    with accuracy, compassion and professionalism.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>🦋 Transformation Focused Learning</h3>
-                <p>
-                    This isn't just about cards.
-                    It's about personal growth,
-                    self-awareness and inner healing.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>💻 Flexible Learning Options</h3>
-                <p>
-                    Join live sessions, watch replays
-                    and learn at your own pace —
-                    anytime, anywhere.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>⚖ Ethics & Responsible Practices</h3>
-                <p>
-                    We emphasize ethics, boundaries and
-                    responsible reading practices to build trust
-                    and integrity.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>🏆 Certification That Matters</h3>
-                <p>
-                    Earn a recognized Certificate of Completion
-                    and step into your journey as a confident
-                    Tarot Reader.
-                </p>
-            </div>
+<div class="feature-card">
+    <ul>
+        <li>✨ Intuition First Approach</li>
+        <li>🃏 Practical & Experience-Based Learning</li>
+        <li>🎯 Step-by-Step Structured Curriculum</li>
+        <li>🤝 Personal Mentorship & Support</li>
+        <li>📚 Complete Resources & Tools</li>
+        <li>🔮 Real Reading Confidence</li>
+        <li>🦋 Transformation Focused Learning</li>
+        <li>💻 Flexible Learning Options</li>
+        <li>⚖ Ethics & Responsible Practices</li>
+        <li>🏆 Certification That Matters</li>
+    </ul>
+</div>
 
         </div>
 
@@ -1889,12 +1815,20 @@ function closeRegistrationPopup(){
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
-
 .feature-card{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.feature-card ul{
+    display:inline-block;
+    text-align:left;
+    margin:0;
+    padding-left:20px;
+}
+
+.feature-card li{
+    margin:6px 0;
+    line-height:1.4;
 }
 
 .feature-card h3{
