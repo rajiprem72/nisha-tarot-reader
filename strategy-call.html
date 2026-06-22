@@ -1821,88 +1821,132 @@ function closeRegistrationPopup(){
 
                 <div class="faq-number">01</div>
 
-                <h3>What Is This Workshop About?</h3>
+<div class="workshop-toggle">
 
-                <p>
-                    This 15-day live workshop is designed to help you build clarity,
-                    strengthen your intuition, learn Tarot with confidence,
-                    and take the first step toward a meaningful spiritual career.
-                </p>
+    <h3 onclick="toggleWorkshop()" class="toggle-title">
+        What Is This Workshop About? ▼
+    </h3>
 
+    <div id="workshopContent" class="toggle-content">
+        <p>
+            This 15-day live workshop is designed to help you build clarity,
+            strengthen your intuition, learn Tarot with confidence,
+            and take the first step toward a meaningful spiritual career.
+        </p>
+    </div>
+
+</div>
+               
             </div>
 
             <div class="faq-card">
 
                 <div class="faq-number">02</div>
 
-                <h3>Who Can Join This Workshop?</h3>
+<div class="workshop-toggle">
 
-                <p>
+    <h3 onclick="toggleWorkshop()" class="toggle-title">
+        Who Can Join This Workshop?▼
+    </h3>
+
+    <div id="workshopContent" class="toggle-content">
+        <p>
                     Anyone who is a beginner or looking to deepen their Tarot knowledge.
                     No prior experience is needed.
                     Just an open mind and a willingness to learn.
-                </p>
+            
+        </p>
+    </div>
 
-            </div>
-
+</div>
+              
+ 
             <div class="faq-card">
 
                 <div class="faq-number">03</div>
+<div class="workshop-toggle">
 
-                <h3>Will The Sessions Be Recorded?</h3>
+    <h3 onclick="toggleWorkshop()" class="toggle-title">
+        Will The Sessions Be Recorded? ▼
+    </h3>
 
-                <p>
+    <div id="workshopContent" class="toggle-content">
+        <p>
                     Yes. All live sessions will be recorded.
                     You'll have access to the recordings so you can learn
                     at your own pace and revisit the lessons anytime.
-                </p>
+        </p>
+    </div>
 
-            </div>
+</div>
 
-            
-            
+ </div>
+
             <div class="faq-card">
 
                 <div class="faq-number">04</div>
+<div class="workshop-toggle">
 
-                <h3>Will I Get A Certificate?</h3>
+    <h3 onclick="toggleWorkshop()" class="toggle-title">
+        Will I Get A Certificate? ▼
+    </h3>
 
-                <p>
+    <div id="workshopContent" class="toggle-content">
+        <p>
+
                     Yes.
                     You'll receive a Certificate of Completion
-                    after successfully finishing the workshop.
-                </p>
+                    after successfully finishing the workshop.        </p>
+    </div>
 
-            </div>
+</div>
+  </div>
 
         
             <div class="faq-card">
 
                 <div class="faq-number">05</div>
 
-                <h3>What If I Have More Questions?</h3>
+<div class="workshop-toggle">
 
-                <p>
-                    I'm here to support you.
-                    You'll receive personal guidance and support
-                    throughout the workshop whenever you need help.
-                </p>
+    <h3 onclick="toggleWorkshop()" class="toggle-title">
+        What If I Have More Questions? ▼
+    </h3>
 
+    <div id="workshopContent" class="toggle-content">
+        <p>
+              I'm here to support you.
+              You'll receive personal guidance and support
+              throughout the workshop whenever you need help.
+              </p>
+    </div>
+
+</div>
             </div>
 
             <div class="faq-card">
 
                 <div class="faq-number">06</div>
 
-                <h3>What If I Am Not Satisfied?</h3>
+ <div class="workshop-toggle">
 
-                <p>
-                    Your satisfaction is 100% guaranteed.
+    <h3 onclick="toggleWorkshop()" class="toggle-title">
+        What If I Am Not Satisfied? ▼
+    </h3>
+
+    <div id="workshopContent" class="toggle-content">
+        <p>
+               Your satisfaction is 100% guaranteed.
                     If for any reason you're not happy,
                     you can claim a full refund within 15 days.
                     No questions asked.
-                </p>
+     
+        </p>
+    </div>
 
+</div>
+               
+           
             </div>
 
         </div>
@@ -3091,6 +3135,18 @@ function closeRegistrationPopup(){
     </div>
 
 </div>
+<script>
+function toggleWorkshop() {
+    var content = document.getElementById("workshopContent");
+
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
+</script>
+    
 
 </body>
 
