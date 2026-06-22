@@ -2042,47 +2042,15 @@ function closeRegistrationPopup(){
         </h2>
 
         <div class="benefits-grid">
-
             <div class="benefit-card">
-                <h3>🎯 Powerful Training</h3>
-                <p>
-                    Step-by-step guidance to build real confidence.
-                </p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>👥 Live Interactive Sessions</h3>
-                <p>
-                    Personal support to clear your doubts.
-                </p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>📘 Practice Resources</h3>
-                <p>
-                    Workbooks and practice sheets to help you learn faster.
-                </p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>🃏 Real Tarot Skills</h3>
-                <p>
-                    Learn, practice and read with confidence.
-                </p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>🏆 Certificate</h3>
-                <p>
-                    Add value and credibility to your spiritual journey.
-                </p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>🌱 Beginner Friendly</h3>
-                <p>
-                    Perfect for complete beginners.
-                </p>
+                <ul>
+                    <li>🎯 Powerful Training</li>
+                    <li>👥 Live Interactive Sessions</li>
+                    <li>📘 Practice Resources</li>
+                    <li>🃏 Real Tarot Skills</li>
+                    <li>🏆 Certificate</li>
+                    <li>🌱 Beginner Friendly</li>
+                </ul>
             </div>
 
         </div>
@@ -2316,8 +2284,21 @@ function closeRegistrationPopup(){
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:25px;
 }
+.benefit-card{
+    text-align:center;
+}
 
-.benefit-card,
+.benefit-card ul{
+    display:inline-block;
+    text-align:left;
+    margin:0;
+    padding-left:20px;
+}
+
+.benefit-card li{
+    margin:6px 0;
+    line-height:1.4;
+}
 .doubt-card{
     background:white;
     padding:30px;
