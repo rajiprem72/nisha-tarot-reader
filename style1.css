@@ -1,4 +1,208 @@
 /* ================= Section 1================= */
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+}
+
+.hero-image{
+    width:100%;
+    display:block;
+}
+
+.content{
+    padding:30px;
+    text-align:center;
+}
+
+h1{
+    color:#4b006e;
+    margin-bottom:15px;
+}
+
+.sub-title{
+    font-size:20px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.benefits{
+    text-align:left;
+    max-width:700px;
+    margin:0 auto 30px auto;
+}
+
+.benefits ul{
+    list-style:none;
+    padding:0;
+}
+
+.benefits li{
+    padding:10px 0;
+    font-size:18px;
+    border-bottom:1px solid #eee;
+}
+
+.cta-section{
+    text-align:center;
+    padding:20px;
+}
+
+.enroll-btn{
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    padding:18px 40px;
+    font-size:24px;
+    font-weight:bold;
+    border-radius:8px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.enroll-btn:hover{
+    background:#e68900;
+}
+
+.note{
+    margin-top:20px;
+    color:#666;
+    font-size:14px;
+}
+
+.footer{
+    text-align:center;
+    padding:25px;
+    background:#fafafa;
+    color:#555;
+}
+.tarot-challenges-section{
+    padding:80px 20px;
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #fffdf8
+    );
+}
+
+.tarot-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.main-title{
+    text-align:center;
+    font-size:58px;
+    color:#5a2d0c;
+    margin-bottom:20px;
+    font-family:Georgia, serif;
+    line-height:1.2;
+}
+
+.sub-title{
+    text-align:center;
+    font-size:24px;
+    color:#666;
+    margin-bottom:50px;
+    line-height:1.7;
+}
+
+.sub-title strong{
+    color:#c47b18;
+    font-size:30px;
+}
+
+.challenge-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+
+.challenge-card:hover{
+    transform:translateY(-6px);
+}
+
+.icon{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.challenge-card h3{
+    font-size:24px;
+    color:#333;
+    margin-bottom:10px;
+    line-height:1.4;
+}
+
+.challenge-card p{
+    font-size:22px;
+    color:#b36b00;
+    font-weight:600;
+    margin:0;
+}
+
+.challenge-card{
+    text-align:center;
+}
+
+.challenge-card ul{
+    display:inline-block;
+    text-align:left;
+    margin:0;
+    padding-left:20px;
+}
+
+.challenge-card li{
+    margin:6px 0;
+    line-height:1.4;
+}    
+
+.bottom-message{
+    margin-top:50px;
+    text-align:center;
+    background:#fff3dd;
+    padding:25px;
+    border-radius:15px;
+    font-size:28px;
+    color:#444;
+    font-weight:500;
+}
+
+.bottom-message span{
+    color:#d28a00;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.main-title{
+    font-size:38px;
+}
+
+.sub-title{
+    font-size:18px;
+}
+
+.challenge-card h3{
+    font-size:20px;
+}
+
+.challenge-card p{
+    font-size:18px;
+}
+
+.bottom-message{
+    font-size:22px;
+}
+
 .main-title {
     font-size: 3rem;
 }
@@ -32,4 +236,121 @@
     width: 95%;
     max-width: 100%;
 }
+/* ================= Registration Countdown================= */
+
+.registration-strip{
+    background:#d62828;
+    color:#fff;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.registration-left{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.timer-wrapper{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.timer-box{
+    background:#fff;
+    color:#d62828;
+    font-weight:bold;
+    font-size:22px;
+    padding:8px 12px;
+    border-radius:12px;
+    min-width:55px;
+    text-align:center;
+}
+
+.register-btn{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.register-btn:hover{
+    background:#3d9140;
+}
+
+.popup-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    z-index:9999;
+}
+
+.popup-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:1100px;
+    height:90%;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.popup-content iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+.close-popup{
+    position:absolute;
+    right:10px;
+    top:10px;
+    background:red;
+    color:white;
+    border:none;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:10;
+}
+
+@media(max-width:768px){
+
+.registration-strip{
+    justify-content:center;
+    text-align:center;
+}
+
+}
+.register-btn{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.register-btn:hover{
+    background:#3d9140;
+}    
 /* ================= Section 2================= */
+
+
+
