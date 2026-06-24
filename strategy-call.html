@@ -9,8 +9,8 @@
 </head>
 
 <body>
+<!-- Registration Banner -->
 
-<!-- Registration Countdown Strip START -->
 <div class="registration-strip">
 
     <div class="registration-left">
@@ -18,28 +18,22 @@
     </div>
 
     <div class="timer-wrapper">
-        <div class="timer-box" id="minutes">15</div>
-        <div class="timer-box" id="seconds">00</div>
+
+        <div class="timer-box minutes">15</div>
+
+        <div class="timer-box seconds">00</div>
+
     </div>
+
     <button class="register-btn"
             onclick="openRegistrationPopup()">
         Register Now!
     </button>
-  
-</div>
-
-<div class="popup-overlay" id="registrationPopup">
-
-    <div class="popup-content">
-
-        <button class="close-popup"
-        onclick="closeRegistrationPopup()">×</button>
-
-        <iframe src="registration.html"></iframe>
-
-    </div>
 
 </div>
+
+
+<!-- End Registration Banner -->
 
 <script>
 let totalSeconds = 15 * 60;
