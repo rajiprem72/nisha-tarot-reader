@@ -188,7 +188,7 @@ h1{
 }
 
 .sub-title{
-    font-size:18px;
+    font-size:24px;
 }
 
 .challenge-card h3{
@@ -196,7 +196,7 @@ h1{
 }
 
 .challenge-card p{
-    font-size:18px;
+    font-size:22px;
 }
 
 .bottom-message{
@@ -236,4 +236,3 @@ h1{
     width: 95%;
     max-width: 100%;
 }
-
