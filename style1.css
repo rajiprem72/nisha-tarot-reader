@@ -114,6 +114,10 @@ h1{
     line-height:1.7;
 }
 
+
+.sub-title p{
+        font-size:28px;
+}
 .sub-title strong{
     color:#c47b18;
     font-size:30px;
