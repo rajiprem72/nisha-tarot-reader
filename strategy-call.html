@@ -118,6 +118,10 @@ function closeRegistrationPopup(){
 
 </section>
 
+<div class="tarot-divider">
+    ☾ ✦ ✧ ✦ ☽
+</div>
+ 
 <section class="method-section">
 
     <div class="method-container">
@@ -2818,7 +2822,40 @@ function toggleWorkshop() {
 }
 
 </style>
- 
+ <style>
+.tarot-divider{
+    position:relative;
+    text-align:center;
+    margin:50px 0;
+    color:#d4af37;
+    font-size:28px;
+    letter-spacing:10px;
+}
+
+.tarot-divider:before,
+.tarot-divider:after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:35%;
+    height:2px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        transparent
+    );
+}
+
+.tarot-divider:before{
+    left:0;
+}
+
+.tarot-divider:after{
+    right:0;
+}
+  
+ </style>
 </body>
 
 </html>
