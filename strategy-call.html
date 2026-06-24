@@ -2620,13 +2620,18 @@ function toggleWorkshop() {
 <style> 
 @media (max-width:768px){
 
-    .registration-strip{
-        padding:25px 15px !important;
-        gap:20px !important;
-        justify-content:center;
-        text-align:center;
+ .registration-strip{
+    background:#d62828;
+    gap:20px !important;
+    color:#fff;
+    padding:25px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    font-family:Arial, Helvetica, sans-serif;
     }
-
     .registration-left{
         font-size:32px !important;
         line-height:1.4;
@@ -2634,39 +2639,84 @@ function toggleWorkshop() {
         text-align:center;
     }
 
-    .timer-box{
-        font-size:48px !important;
-        min-width:110px !important;
-        padding:18px 25px !important;
+       .timer-wrapper{
+          display:flex;
+          align-items:center;
+          gap:8px;
+      }
+
+      .timer-box{
+         background:#fff;
+         color:#d62828;
+         font-weight:bold;
+         font-size:48px;
+         padding:25px 12px;
+         border-radius:12px;
+         min-width:55px;
+         text-align:center;
+     }
+
+     .register-btn{
+         background:#4CAF50;
+         color:white;
+         border:none;
+         padding:22px 50px;
+         border-radius:30px;
+         font-size:34px;
+         font-weight:bold;
+         cursor:pointer;
+     }
+     
+
+      .register-btn:hover{
+        background:#3d9140;
     }
 
-    .register-btn{
-        font-size:34px !important;
-        padding:22px 50px !important;
-        width:100%;
-    }
-
-}
-
-.register-btn{
-    background:#4CAF50;
-    color:white;
-    border:none;
-    padding:12px 30px;
-    border-radius:30px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.register-btn:hover{
-    background:#3d9140;
-}
-
-.timer-box{
-    font-size:56px !important;
-    min-width:130px !important;
-    padding:20px 30px !important;
+     .timer-box{
+         font-size:56px !important;
+         min-width:130px !important;
+         padding:20px 30px !important;
+     } 
+     .popup-overlay{
+         display:none;
+         position:fixed;
+         inset:0;
+         background:rgba(0,0,0,0.7);
+         z-index:9999;
+     }
+     
+     .popup-content{
+         position:absolute;
+         top:50%;
+         left:50%;
+         transform:translate(-50%,-50%);
+         width:90%;
+         max-width:1100px;
+         height:90%;
+         background:white;
+         border-radius:10px;
+         overflow:hidden;
+     }
+     
+     .popup-content iframe{
+         width:100%;
+         height:100%;
+         border:none;
+     }
+     
+     .close-popup{
+         position:absolute;
+         right:10px;
+         top:10px;
+         background:red;
+         color:white;
+         border:none;
+         width:35px;
+         height:35px;
+         border-radius:50%;
+         cursor:pointer;
+         z-index:10;
+     }
 } 
  
 </style>
