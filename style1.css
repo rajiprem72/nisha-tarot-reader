@@ -115,8 +115,8 @@ h1{
 }
 
 
-.sub-title p{
-        font-size:28px;
+.p sub-title {
+        font-size:32px;
 }
 .sub-title strong{
     color:#c47b18;
@@ -168,7 +168,7 @@ h1{
 .challenge-card li{
     margin:6px 0;
     line-height:1.4;
-    font-size:24px;
+    font-size:32px;
 }    
 
 .bottom-message{
