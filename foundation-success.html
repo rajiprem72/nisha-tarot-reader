@@ -19,11 +19,20 @@ body{
   max-width:800px;
   margin:auto;
 }
-.h2{
- font-size:32px;
+h2{
+    font-size:48px;
+    font-weight:bold;
+    text-align:center;
+    color:#008000;
+    margin-bottom:20px;
 }
-.p{
- font-size:28px;
+
+p{
+    font-size:34px;
+    font-weight:bold;
+    text-align:center;
+    line-height:1.6;
+    color:#333;
 }
   
 input{
@@ -60,7 +69,7 @@ button{
 <p>
 Please wait...
 </p>
-
+</div>
 <script>
 
 const API_URL =
@@ -101,15 +110,49 @@ paymentId
 .then(r=>r.json())
 .then(data=>{
 
-document.body.innerHTML=`
-<h2>Thank You</h2>
-<p>
-Your registration for the
-15 Days Tarot Foundation Course
+document.body.innerHTML = `
+<div style="
+    max-width:800px;
+    margin:40px auto;
+    text-align:center;
+    font-family:Arial,sans-serif;
+    padding:20px;
+">
+
+<h2 style="
+    font-size:48px;
+    font-weight:bold;
+    color:#008000;
+    margin-bottom:30px;
+">
+🎉 Payment Successful
+</h2>
+
+<p style="
+    font-size:34px;
+    font-weight:bold;
+    line-height:1.6;
+    color:#333;
+">
+Thank You!<br><br>
+
+Your registration for the<br>
+
+<b>15 Days Tarot Foundation Course</b><br>
+
 has been completed successfully.
 </p>
-`;
 
+<p style="
+    font-size:26px;
+    color:#666;
+    margin-top:40px;
+">
+Our team will contact you shortly with further instructions.
+</p>
+
+</div>
+`;
 });
 
 </script>
