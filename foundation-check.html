@@ -140,65 +140,58 @@ participantId,
 fullName,
 email,
 mobile
-){
+)
+{
 
-var options = {
+fetch(API_URL,{
 
-    key: "rzp_live_SxjzwcAJLI0SlC",
+    method:"POST",
 
-    amount:700000,
+    body:JSON.stringify({
 
-    currency:"INR",
+        action:"createFoundationPayment",
 
-    name:"Tarot Shakti by Nisha",
+        participantId:participantId,
 
-    description:"15 Days Tarot Foundation Course",
+        fullName:fullName,
 
-    image:"https://yourdomain.com/logo.png",
+        mobile:mobile,
 
-    prefill:{
-        name:fullName,
-        email:email,
-        contact:mobile
-    },
+        email:email
 
-    notes:{
-        participantId:participantId
-    },
+    })
 
-    theme:{
-        color:"#3399cc"
-    },
+})
 
-    modal:{
-        backdropclose:false,
-        escape:false
-    },
+.then(r=>r.json())
 
-    config:{
-        display:{
-            language:"en"
-        }
-    },
+.then(data=>{
 
-    handler: function (response) {
+    if(data.success)
+    {
+        window.location.href =
+        data.paymentLink;
+    }
+    else
+    {
+        alert("Unable to create payment link.");
+    }
 
-        saveFoundationPayment(
-            participantId,
-            fullName,
-            response.razorpay_payment_id
-        );
+})
 
-    },
+.catch(err=>{
 
-};
+    console.log(err);
 
-var rzp = new Razorpay(options);
+    alert("Server Error");
 
-rzp.open();
+});
 
 }
 
+
+
+  
 function saveFoundationPayment(
 participantId,
 fullName,
