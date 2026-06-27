@@ -4,7 +4,7 @@
 <head>
 <title>15 Days Tarot Foundation Course</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <style>
 
 *{
@@ -135,20 +135,44 @@ fetch(API_URL,{
 
 function payNow(participantId,fullName){
 
-
 var options = {
 
-    key: "rzp_live_SxjzwcAJLI0SlC",
-    //actual amount 
-    amount: 700000,
-    //test amount
-    //amount:100,
-    currency: "INR",
+    key: "rzp_live_xxxxxxxxx",
 
-    name: "Tarot Shakti by Nisha",
+    amount:700000,
 
-    description:
-    "15 Days Tarot Foundation Course",
+    currency:"INR",
+
+    name:"Tarot Shakti by Nisha",
+
+    description:"15 Days Tarot Foundation Course",
+
+    image:"https://yourdomain.com/logo.png",
+
+    prefill:{
+        name:fullName,
+        email:p["Email"],
+        contact:p["Mobile Number"]
+    },
+
+    notes:{
+        participantId:participantId
+    },
+
+    theme:{
+        color:"#3399cc"
+    },
+
+    modal:{
+        backdropclose:false,
+        escape:false
+    },
+
+    config:{
+        display:{
+            language:"en"
+        }
+    },
 
     handler: function (response) {
 
@@ -227,7 +251,6 @@ body:JSON.stringify({
    
 
 </script>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </div>    
 </body>
 </html>
