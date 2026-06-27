@@ -338,21 +338,29 @@ document.getElementById("registrationForm")
 
     form.method = "POST";
 
-    form.action =
-    "https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec";
+   
+   fetch("https://script.google.com/macros/s/AKfycbwMK9Er-4VAW96cRc4wOpDZ2JBitfsxkvLAecweZ4skh9uZeiiPprguGiQUOIgsu7i6Lg/exec", {
+    method: "POST",
+    headers: {
+        "Content-Type": "text/plain"
+    },
+    body: JSON.stringify(payload)
+})
+.then(response => response.json())
+.then(result => {
 
-    const input = document.createElement("input");
+    if(result.success){
+        window.location.href = result.paymentLink;
+    }else{
+        alert("Unable to create payment link.");
+    }
 
-    input.type = "hidden";
-    input.name = "data";
-    input.value = JSON.stringify(payload);
-
-    form.appendChild(input);
-
-    document.body.appendChild(form);
-
-    form.submit();
-
+})
+.catch(err=>{
+    console.error(err);
+    alert("Server Error");
+}); 
+    
 });
 
 </script>
