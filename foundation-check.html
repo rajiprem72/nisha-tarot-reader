@@ -117,9 +117,11 @@ fetch(API_URL,{
     <p><b>Profession:</b> ${p["Profession"]}</p>
     <p><b>State:</b> ${p["State"]}</p>
 
-    <button onclick="payNow(
+   <button onclick="payNow(
     '${p["Participant ID"]}',
-    '${p["Full Name"]}'
+    '${p["Full Name"]}',
+    '${p["Email"]}',
+    '${p["Mobile Number"]}'
     )">
     Join 15 Days Tarot Foundation Course - Pay ₹7000
     </button>
@@ -133,7 +135,12 @@ fetch(API_URL,{
 
 }
 
-function payNow(participantId,fullName){
+function payNow(
+participantId,
+fullName,
+email,
+mobile
+){
 
 var options = {
 
@@ -151,8 +158,8 @@ var options = {
 
     prefill:{
         name:fullName,
-        email:p["Email"],
-        contact:p["Mobile Number"]
+        email:email,
+        contact:mobile
     },
 
     notes:{
@@ -184,13 +191,6 @@ var options = {
 
     },
 
-    notes: {
-        participantId: participantId
-    },
-
-    theme: {
-        color: "#3399cc"
-    }
 };
 
 var rzp = new Razorpay(options);
