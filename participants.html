@@ -266,5 +266,78 @@ SEND EMAIL TO PENDING CUSTOMERS
 
 }
 </script>    
+
+
+
+<br><br>
+
+<button onclick="inviteFoundationCourse()"
+style="
+padding:12px 25px;
+background:#dc3545;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;">
+Invite Participants for 15 Days Tarot Foundation Course
+</button>
+
+<br><br>
+
+<div id="foundationResult"></div>
+
+
+
+function inviteFoundationCourse(){
+
+    if(!confirm("Send invitation to all PAID participants?"))
+        return;
+
+    document.getElementById("foundationResult").innerHTML =
+        "<h3>Sending Invitation Emails...</h3>";
+
+    fetch(API_URL + "?action=inviteFoundationCourse")
+    .then(res => res.json())
+    .then(result=>{
+
+        let html="<h3>Invitation Email Report</h3>";
+
+        html+="<table>";
+        html+="<tr>";
+        html+="<th>Participant ID</th>";
+        html+="<th>Name</th>";
+        html+="<th>Mobile</th>";
+        html+="<th>Email</th>";
+        html+="<th>Status</th>";
+        html+="</tr>";
+
+        result.forEach(r=>{
+
+            html+="<tr>";
+
+            html+="<td>"+r.id+"</td>";
+            html+="<td>"+r.name+"</td>";
+            html+="<td>"+r.mobile+"</td>";
+            html+="<td>"+r.email+"</td>";
+            html+="<td style='color:green'><b>Invitation Sent</b></td>";
+
+            html+="</tr>";
+
+        });
+
+        html+="</table>";
+
+        document.getElementById("foundationResult").innerHTML=html;
+
+    })
+    .catch(err=>{
+
+        document.getElementById("foundationResult").innerHTML=
+        "<span style='color:red'>"+err+"</span>";
+
+    });
+
+}    
 </body>
 </html>
