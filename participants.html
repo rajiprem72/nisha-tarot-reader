@@ -210,32 +210,62 @@ SEND EMAIL TO PENDING CUSTOMERS
 
 <div id="emailResult"></div>
 <script>
-function sendPendingEmails(){
+    function sendPendingEmails() {
+    
+        if (!confirm("Send email to all pending participants?"))
+            return;
+    
+        document.getElementById("emailResult").innerHTML =
+            "<h3>Sending Emails...</h3>";
+    
+        fetch(API_URL + "?action=sendPendingEmails")
+        .then(response => response.json())
+        .then(result => {
+    
+            console.log(result);
+    
+            let html = "<h3>Email Sending Report</h3>";
+    
+            html += "<table border='1' cellpadding='8'>";
+            html += "<tr>";
+            html += "<th>Participant ID</th>";
+            html += "<th>Name</th>";
+            html += "<th>Email</th>";
+            html += "<th>Status</th>";
+            html += "</tr>";
+    
+            result.forEach(r => {
+    
+                html += "<tr>";
+    
+                html += "<td>" + r.id + "</td>";
+    
+                html += "<td>" + r.name + "</td>";
+    
+                html += "<td>" + r.email + "</td>";
+    
+                html += "<td style='color:green'>✓ Sent</td>";
+    
+                html += "</tr>";
+    
+            });
+    
+            html += "</table>";
+    
+            document.getElementById("emailResult").innerHTML = html;
+    
+        })
+        .catch(err => {
+    
+            console.error(err);
+    
+            document.getElementById("emailResult").innerHTML =
+                "<span style='color:red'>" + err + "</span>";
+    
+        });
+    
+    }
 
-    if(!confirm("Send email to all Pending Participants?"))
-        return;
-
-    document.getElementById("emailResult").innerHTML =
-    "<h3>Sending Emails...</h3>";
-
-    fetch(API_URL + "?action=sendPendingEmails")
-    .then(res => res.text())
-    .then(text => {
-
-        console.log(text);
-
-        alert(text);
-
-    })
-    .catch(err => {
-
-        console.log(err);
-
-        alert(err);
-
-    });
-
-}
 </script>    
 </body>
 </html>
