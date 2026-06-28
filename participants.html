@@ -219,46 +219,23 @@ function sendPendingEmails(){
     "<h3>Sending Emails...</h3>";
 
     fetch(API_URL + "?action=sendPendingEmails")
-    .then(res => res.json())
-    .then(result=>{
+    .then(res => res.text())
+    .then(text => {
 
         console.log(text);
 
         alert(text);
 
-        let html="<h3>Email Sending Report</h3>";
+    })
+    .catch(err => {
 
-        html+="<table border='1' cellpadding='8' cellspacing='0'>";
-        html+="<tr>";
-        html+="<th>Participant ID</th>";
-        html+="<th>Name</th>";
-        html+="<th>Email</th>";
-        html+="<th>Status</th>";
-        html+="</tr>";
+        console.log(err);
 
-        result.forEach(r=>{
-
-            html+="<tr>";
-
-            html+="<td>"+r.id+"</td>";
-
-            html+="<td>"+r.name+"</td>";
-
-            html+="<td>"+r.email+"</td>";
-
-            html+="<td style='color:green'>Email Sent</td>";
-
-            html+="</tr>";
-
-        });
-
-        html+="</table>";
-
-        document.getElementById("emailResult").innerHTML=html;
+        alert(err);
 
     });
 
-}    
+}
 </script>    
 </body>
 </html>
