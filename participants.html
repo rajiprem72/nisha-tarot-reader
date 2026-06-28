@@ -192,5 +192,69 @@ function toggleRow(id){
 
 </script>
 
+<br><br>
+
+<button onclick="sendPendingEmails()"
+style="
+padding:12px 25px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;">
+SEND EMAIL TO PENDING CUSTOMERS
+</button>
+
+<br><br>
+
+<div id="emailResult"></div>
+<script>
+function sendPendingEmails(){
+
+    if(!confirm("Send email to all Pending Participants?"))
+        return;
+
+    document.getElementById("emailResult").innerHTML =
+    "<h3>Sending Emails...</h3>";
+
+    fetch(API_URL + "?action=sendPendingEmails")
+    .then(res => res.json())
+    .then(result=>{
+
+        let html="<h3>Email Sending Report</h3>";
+
+        html+="<table border='1' cellpadding='8' cellspacing='0'>";
+        html+="<tr>";
+        html+="<th>Participant ID</th>";
+        html+="<th>Name</th>";
+        html+="<th>Email</th>";
+        html+="<th>Status</th>";
+        html+="</tr>";
+
+        result.forEach(r=>{
+
+            html+="<tr>";
+
+            html+="<td>"+r.id+"</td>";
+
+            html+="<td>"+r.name+"</td>";
+
+            html+="<td>"+r.email+"</td>";
+
+            html+="<td style='color:green'>Email Sent</td>";
+
+            html+="</tr>";
+
+        });
+
+        html+="</table>";
+
+        document.getElementById("emailResult").innerHTML=html;
+
+    });
+
+}    
+</script>    
 </body>
 </html>
