@@ -346,6 +346,103 @@ Show Tarot Foundation ₹7000 Paid Participants List
 </button>
 
 <div id="foundationPaidReport"></div>
-    
+function showFoundationPaidParticipants(){
+
+    document.getElementById("foundationReport").innerHTML =
+        "<h3>Loading Foundation Students...</h3>";
+
+    fetch(API_URL + "?action=getFoundationPaidParticipants")
+    .then(res => res.json())
+    .then(result => {
+
+        let totalStudents = result.length;
+        let totalRevenue = 0;
+
+        let html = "";
+
+        html += "<h2>🎓 Tarot Foundation Students</h2>";
+
+        result.forEach(r => {
+
+            totalRevenue += Number(r.paidAmount);
+
+        });
+
+        html += "<p><b>Total Students :</b> " + totalStudents + "</p>";
+        html += "<p><b>Total Revenue :</b> ₹" + totalRevenue + "</p>";
+
+        html += "<table>";
+
+        html += "<thead>";
+
+        html += "<tr>";
+
+        html += "<th>Participant ID</th>";
+        html += "<th>Full Name</th>";
+        html += "<th>Payment Status</th>";
+        html += "<th>Payment ID</th>";
+        html += "<th>Paid Amount</th>";
+        html += "<th>Payment Date</th>";
+
+        html += "</tr>";
+
+        html += "</thead>";
+
+        html += "<tbody>";
+
+        result.forEach((r,index)=>{
+
+            let rowId="foundation"+index;
+
+            html += "<tr>";
+
+            html += "<td><a onclick=\"toggleRow('"+rowId+"')\">"
+                 + r.participantId + "</a></td>";
+
+            html += "<td>"+r.fullName+"</td>";
+
+            html += "<td>"+r.paymentStatus+"</td>";
+
+            html += "<td>"+r.paymentId+"</td>";
+
+            html += "<td>"+r.paidAmount+"</td>";
+
+            html += "<td>"+r.paymentDate.substring(0,10)+"</td>";
+
+            html += "</tr>";
+
+            html += "<tr id='"+rowId+"' class='details-row'>";
+
+            html += "<td colspan='6'>";
+
+            html += "<div class='details-box'>";
+
+            html += "<b>Gender :</b> "+r.gender+"<br>";
+
+            html += "<b>Mobile Number :</b> "+r.mobile+"<br>";
+
+            html += "<b>WhatsApp Number :</b> "+r.whatsapp+"<br>";
+
+            html += "<b>Email :</b> "+r.email+"<br>";
+
+            html += "<b>Age :</b> "+r.age+"<br>";
+
+            html += "<b>Profession :</b> "+r.profession+"<br>";
+
+            html += "</div>";
+
+            html += "</td>";
+
+            html += "</tr>";
+
+        });
+
+        html += "</tbody></table>";
+
+        document.getElementById("foundationReport").innerHTML = html;
+
+    });
+
+}    
 </body>
 </html>
