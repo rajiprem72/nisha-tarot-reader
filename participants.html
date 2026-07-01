@@ -387,8 +387,7 @@ Show Tarot Foundation ₹7000 Paid Participants List
 <script>
 function showFoundationPaidParticipants(){
 
-    document.getElementById("foundationReport").innerHTML =
-        "<h3>Loading Foundation Students...</h3>";
+   document.getElementById("foundationPaidReport").innerHTML =
 
     fetch(API_URL + "?action=getFoundationPaidParticipants")
     .then(res => res.json())
