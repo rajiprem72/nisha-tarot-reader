@@ -407,7 +407,15 @@ function showFoundationPaidParticipants(){
 
             html += "<td>"+r.paidAmount+"</td>";
 
-            html += "<td>"+r.paymentDate.substring(0,10)+"</td>";
+           let paymentDate = new Date(r.paymentDate);
+
+            let formattedDate = paymentDate.toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            }).replace(/ /g, "-");
+            
+            html += "<td>" + formattedDate + "</td>";
 
             html += "</tr>";
 
